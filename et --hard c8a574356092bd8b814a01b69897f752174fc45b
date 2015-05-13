@@ -1,0 +1,131 @@
+[33mcommit c8a574356092bd8b814a01b69897f752174fc45b[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Wed May 13 01:49:41 2015 -0700
+
+    picture displays
+
+[33mcommit 44cc5487456d0d2420102897c8d3c304da5e6875[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Wed May 13 00:53:14 2015 -0700
+
+    removed https
+
+[33mcommit a31ddd246afb9e23add8662798f4daf1c2cbd476[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Wed May 13 00:43:16 2015 -0700
+
+    Use SSL and the Puma webserver in production
+
+[33mcommit beae3ab5d0f0a44990b32ed825be68ff95c9720e[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Mon May 11 01:23:47 2015 -0700
+
+    add introductory blurb
+
+[33mcommit 80399883bc89825c23f246028f5cab62829650ad[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Mon May 11 00:55:02 2015 -0700
+
+    add font awesome gem, add icons with links to email, linked in, and github
+
+[33mcommit 31eb5fc8b9bda815a46e3f34f96ea0f4b4c0bb57[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Sun May 10 02:39:34 2015 -0700
+
+    Finish layout and routes
+
+[33mcommit 2599e01d2a0035a3055bc0b0d9f1625c7523d68e[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Sun May 10 02:36:06 2015 -0700
+
+    added integration test for routes
+
+[33mcommit 3a9dd8f021ce62f9a8a9d79106af5b789a07a1d1[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Sun May 10 01:48:37 2015 -0700
+
+    add my links to footer
+
+[33mcommit 3593f2518d8fb2d241d770b99079529486f8e0e3[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Sun May 10 01:37:27 2015 -0700
+
+    styling complete
+
+[33mcommit 35c2fb51cd5ff077158850bb976ff2a44be61e64[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Sun May 10 01:26:16 2015 -0700
+
+    refactor header and footer
+
+[33mcommit 086aa0734c053ac3417f7bdeb21df948e2b1a777[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Sun May 10 01:01:37 2015 -0700
+
+    add bootstrap
+
+[33mcommit d23377a8aeb149c41707c9150cbe129a1d8532f4[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Sun May 10 00:55:02 2015 -0700
+
+    add initial navbar header
+
+[33mcommit 5bed6714238e1eb401122cf689dc96e6aac5b5a3[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Sun May 10 00:46:39 2015 -0700
+
+    finish adding resources
+
+[33mcommit 67d0b69611bf6d199cdc7a04b7e8576fd939da87[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Sat May 9 23:39:20 2015 -0700
+
+    added general and java resources
+
+[33mcommit 50511b438e1dc01b207a2439bc8d859e4728cab6[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Fri May 8 03:48:19 2015 -0700
+
+    Finish static pages
+
+[33mcommit 9264e7b71eb03f545dc3b1ab3a6260a7b5c47428[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Fri May 8 03:43:32 2015 -0700
+
+    removed future chapter gems, passed title tests, refactored display of titles
+
+[33mcommit 1d5ffa874c406b857f32ece87ccfcd11e311e6a4[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Fri May 8 03:30:46 2015 -0700
+
+    added to home and resources pages
+
+[33mcommit f7fc331a705da2fdfa4ac39ae14f9728d5dee93e[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Fri May 8 03:26:44 2015 -0700
+
+    added gemfile from original tutorial
+
+[33mcommit cff2ad990014e8867c6850e221dbc51a0b66de35[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Fri May 8 03:18:12 2015 -0700
+
+    Add a Static Pages controller
+
+[33mcommit 14772e79eb83babdf7e4a13f62e82992239ae598[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Fri May 8 03:12:53 2015 -0700
+
+    Initialize repository
+
+[33mcommit fbe2c1b704ed9309e9248133dd5e8b72b96287b1[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Fri May 8 03:03:53 2015 -0700
+
+    add gems
+
+[33mcommit dfa20811d9709df9e0822ca477dbbb20b0e7ec47[m
+Author: bryantt23 <bryantt23@gmail.com>
+Date:   Fri May 8 03:00:43 2015 -0700
+
+    first commit
