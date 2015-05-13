@@ -9,7 +9,13 @@
 </head>
 
 <body>
-  <%= render 'layouts/header' %>
+
+  <% if current_page?(root_path) %>
+    <%= render 'layouts/home_header' %>
+  <% else %>
+    <%= render 'layouts/header' %>
+  <% end %>
+
   <div class="container">
     <%= yield %>
     <%= render 'layouts/footer' %>
