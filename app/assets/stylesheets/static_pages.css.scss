@@ -10,21 +10,32 @@
   position: relative;
   padding: 30px 15px;
   text-align: center;
-  color: rgba(255,255,255,.8);
+  // color: rgba(255,255,255,.8);
   height:490px; // You set the number
-  width:100%;
-  background-image: image-url("desk.jpg");
-  margin-bottom: 40px;
+  // width:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  // margin-bottom: 40px;
   font-size: 20px;
+  background-image: image-url("desk.jpg");
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-position: center;
 }
 
 .sb-page-header {
   position: relative;
   padding: 30px 15px;
   text-align: center;
-  color: rgba(255,255,255,.8);
+  // color: rgba(255,255,255,.8);
   height:490px; // You set the number
-  width:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  // width:100%;
   background-image: image-url("about.jpg");
   margin-bottom: 40px;
   font-size: 20px;
