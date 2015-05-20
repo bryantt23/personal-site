@@ -7,14 +7,30 @@
 @import "bootstrap";
 
 
-#jumb2 .pic img {
-	display: block;
-    width: 100%;
-    height: auto;
-    border: 1px solid #000000;
- }
+// #jumb2 .pic img {
+// 	display: block;
+//     width: 50%;
+//     height: auto;
+//     border: 1px solid #000000;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-bottom: 0px;
+//  }
 
+#jumb2 .pic{
+  margin: 3px;
+}
 
+#jumb2 .pic img{
+    height:285px;
+vertical-align: bottom;
+  display: block;
+  width: auto;
+  // width: 50%;
+  // height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 .home-page-header {
