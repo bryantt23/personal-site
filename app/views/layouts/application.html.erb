@@ -12,8 +12,10 @@
 
   <% if current_page?(root_path) %>
     <%= render 'layouts/home_header' %>
-  <% else %>
+  <% elsif current_page?(resources_path) %>
     <%= render 'layouts/header' %>
+  <% else %>
+
   <% end %>
 
   <div class="container">
