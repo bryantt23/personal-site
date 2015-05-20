@@ -6,6 +6,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+#jumb2 .pic img {
+	display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+ }
+
+
+
+
 .home-page-header {
   position: relative;
   padding: 30px 15px;

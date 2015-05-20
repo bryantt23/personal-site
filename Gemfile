@@ -33,3 +33,4 @@ group :production do
 end
 
 gem "font-awesome-rails"
+gem 'owlcarousel-rails'

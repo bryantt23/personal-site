@@ -14,3 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require owl.carousel
+
+
+
+// <script>
+$(document).ready(function() {
+
+  $("#jumb2").owlCarousel({
+
+    autoPlay: 8000,
+    navigation : false, // Show next and prev buttons
+    slideSpeed : 300,
+    paginationSpeed : 500,
+    singleItem:true
+
+    // "singleItem:true" is a shortcut for:
+    // items : 1,
+    // itemsDesktop : false,
+    // itemsDesktopSmall : false,
+    // itemsTablet: false,
+    // itemsMobile : false
+
+  });
+
+});
+// </script>
