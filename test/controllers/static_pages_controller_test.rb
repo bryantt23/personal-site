@@ -13,4 +13,10 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "title", "Resources | Bryant Tunbutr's Webpage"
   end
 
+    test "should get fun" do
+      get :fun
+      assert_response :success
+      assert_select "title", "Fun | Bryant Tunbutr's Webpage"
+    end
+
 end
