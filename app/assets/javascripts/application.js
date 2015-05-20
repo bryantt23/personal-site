@@ -26,7 +26,7 @@ $(document).ready(function() {
     autoPlay: 8000,
     navigation : false, // Show next and prev buttons
     slideSpeed : 300,
-    paginationSpeed : 500,
+    paginationSpeed : 300,
     singleItem:true
 
     // "singleItem:true" is a shortcut for:
