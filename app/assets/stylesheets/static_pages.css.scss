@@ -22,16 +22,49 @@
 }
 
 #jumb2 .pic img{
-    height:285px;
-vertical-align: bottom;
+  height:350px;
+  vertical-align: bottom;
   display: block;
   width: auto;
   // width: 50%;
   // height: auto;
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.plain-header {
+  position: relative;
+  padding: 30px 15px;
+  text-align: center;
+  // color: rgba(255,255,255,.8);
+  // height:490px; // You set the number
+  // width:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  // margin-bottom: 40px;
+  font-size: 20px;
+  // background-image: image-url("desk.jpg");
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: center;
+
+  #logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    &:hover {
+      color: blue;
+      text-decoration: none;
+    }
+  }
+}
 
 .home-page-header {
   position: relative;
@@ -47,9 +80,10 @@ vertical-align: bottom;
   // margin-bottom: 40px;
   font-size: 20px;
   background-image: image-url("desk.jpg");
-    background-repeat: no-repeat;
-    // background-attachment: fixed;
-    background-position: center;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+
+  background-position: center;
 }
 
 .sb-page-header {
