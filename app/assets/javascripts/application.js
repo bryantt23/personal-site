@@ -23,6 +23,8 @@ $(document).ready(function() {
 
   $("#jumb2").owlCarousel({
 
+    items : 13, //10 items above 1000px browser width
+
     autoPlay: 8000,
     navigation : false, // Show next and prev buttons
     slideSpeed : 300,
