@@ -34,3 +34,4 @@ end
 
 gem "font-awesome-rails"
 gem 'owlcarousel-rails'
+gem 'aws-sdk', '~> 2'
