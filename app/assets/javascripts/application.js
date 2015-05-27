@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require owl.carousel
+//= require bootstrap-sprockets
 
 
 
@@ -39,6 +39,10 @@ $(document).ready(function() {
     // itemsMobile : false
 
   });
+
+
+  $('.dropdown-toggle').dropdown();
+
 
 });
 // </script>
