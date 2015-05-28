@@ -18,6 +18,7 @@ group :development, :test do
   gem 'byebug',      '3.4.0'
   # gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
+  gem "better_errors"
 end
 
 group :test do
@@ -37,3 +38,5 @@ gem 'owlcarousel-rails'
 gem 'aws-sdk', '~> 2'
 gem 'mail_form'
 gem 'simple_form'
+
+gem 'jquery-turbolinks'

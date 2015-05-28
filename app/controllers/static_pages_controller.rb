@@ -4,4 +4,10 @@ class StaticPagesController < ApplicationController
 
   def resources
   end
+
+    def carousel
+    end
+
+      def projects
+      end
 end
