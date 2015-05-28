@@ -35,8 +35,12 @@ end
 
 gem "font-awesome-rails"
 gem 'owlcarousel-rails'
-gem 'aws-sdk', '~> 2'
+
 gem 'mail_form'
 gem 'simple_form'
 
 gem 'jquery-turbolinks'
+
+gem 'devise'
+gem "paperclip", "~> 4.2"
+gem 'aws-sdk', '< 2.0'
