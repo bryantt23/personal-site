@@ -66,7 +66,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   #congfiguring sendgrid: https://devcenter.heroku.com/articles/sendgrid#ruby-rails
   config.action_mailer.delivery_method = :smtp
-  host = 'https://obscure-thicket-4491.herokuapp.com/'
+  host = 'obscure-thicket-4491.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
