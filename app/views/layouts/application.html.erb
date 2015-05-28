@@ -18,6 +18,20 @@
     <%= render 'layouts/plain_header' %>
   <% end %>
 
+
+    <% if notice %>
+    <div id="notice_wrapper">
+      <p class="notice"><%= notice %></p>
+    </div>
+    <% elsif alert %>
+    <div id="notice_wrapper">
+      <p class="alert"><%= alert %></p>
+    </div>
+    <% end %>
+
+    
+
+
   <div class="container">
     <%= yield %>
     <%= render 'layouts/footer' %>
