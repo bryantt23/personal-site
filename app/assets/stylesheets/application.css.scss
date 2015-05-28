@@ -17,3 +17,17 @@
  */
 
  @import "font-awesome";
+
+#notice_wrapper{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index:999;
+
+    font-size: 1.7em;
+    color: white;
+    // text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+    text-align: center;
+}
