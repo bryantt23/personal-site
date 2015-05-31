@@ -54,15 +54,20 @@
     float: left;
     margin-right: 10px;
     font-size: 1.7em;
-    color: black;
+    color: #428BCA;
     text-transform: uppercase;
     letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
-    &:hover {
-      color: blue;
-      text-decoration: none;
+    // &:hover {
+    //   color: blue;
+    //   text-decoration: none;
+    // }
+    &:hover,
+    &:focus {
+      color: #0085a1;
     }
+
   }
 }
 
@@ -191,7 +196,8 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    // color: white;
+      color: #0085a1;
     text-decoration: none;
   }
 }
