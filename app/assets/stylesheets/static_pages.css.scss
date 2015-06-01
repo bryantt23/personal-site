@@ -33,6 +33,23 @@
 }
 
 .plain-header {
+
+  a{
+    color:#428bca;
+    // color:white;
+    // font-weight: bold;
+  }
+
+  // a {
+  //   color: #404040;
+  // }
+  a:hover,
+  a:focus {
+    // background-color: none;
+    background-color: #FFF;
+    color: #0085a1;
+  }
+
   position: relative;
   padding: 30px 15px;
   text-align: center;
@@ -51,23 +68,34 @@
   background-position: center;
 
   #logo {
-    float: left;
-    margin-right: 10px;
-    font-size: 1.7em;
-    color: #428BCA;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding-top: 9px;
-    font-weight: bold;
-    // &:hover {
-    //   color: blue;
-    //   text-decoration: none;
-    // }
-    &:hover,
-    &:focus {
+    color:#428bca;
+    a:hover,
+    a:focus {
+      // background-color: none;
+      background-color: #FFF;
       color: #0085a1;
     }
 
+  //   float: left;
+  //   margin-right: 10px;
+  //   font-size: 1.7em;
+  //   color: #428BCA;
+  //   text-transform: uppercase;
+  //   letter-spacing: -1px;
+  //   padding-top: 9px;
+  //   font-weight: bold;
+  //   // &:hover {
+  //   //   color: blue;
+  //   //   text-decoration: none;
+  //   // }
+  //
+  //
+  //   // &:hover,
+  //   // &:focus {
+  //   //   color: #0085a1;
+  //   //   background-color: #FFF;
+  //   // }
+  //
   }
 }
 
@@ -83,6 +111,9 @@
   // }
   a:hover,
   a:focus {
+    // background-color: none;
+    background-color: #FFF;
+
     color: #0085a1;
   }
 
@@ -114,6 +145,7 @@
   a:hover,
   a:focus {
     color: #0085a1;
+    background-color: #FFF;
   }
 
 
