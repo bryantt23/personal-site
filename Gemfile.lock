@@ -273,3 +273,6 @@ DEPENDENCIES
   turbolinks (= 2.3.0)
   uglifier (= 2.5.3)
   unicorn (= 4.8.3)
+
+BUNDLED WITH
+   1.10.3
