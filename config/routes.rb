@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :posts
+    resources :entries
 
   resources :contact_forms, only: [:new, :create]
 
