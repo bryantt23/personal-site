@@ -1,5 +1,9 @@
-<%= @entry.title %><br>
-<%= @entry.body %>
+<h1><%= @entry.title %></h1>
+
+
+	<div id="content">
+		<%= markdown @entry.body  %>
+	</div>
 
 <br>
 <br>

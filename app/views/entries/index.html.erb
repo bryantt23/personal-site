@@ -1,1 +1,8 @@
 <h1>Hello World!</h1>
+
+<h2>Stuff I've Written</h2>
+		<hr>
+		<% @entries.each do |entry| %>
+			<h3><a href="#"><%= link_to entry.title, entry %></a></h3>
+			<p class="date"><%= entry.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
