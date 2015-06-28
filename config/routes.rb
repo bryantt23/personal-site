@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  devise_for :bloggers
   devise_for :users
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :posts
