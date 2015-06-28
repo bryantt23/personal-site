@@ -2,6 +2,8 @@ class EntriesController < ApplicationController
 
   before_action :authenticate_user!, except: [:index, :show]
 
+  before_action :find_entry, only: [:show, :edit, :update, :destroy]
+
   def index
     @entries = Entry.all.order('created_at DESC')
   end
@@ -11,7 +13,6 @@ class EntriesController < ApplicationController
   end
 
   def show
-    @entry = Entry.find(params[:id])
   end
 
   def create
@@ -25,11 +26,9 @@ class EntriesController < ApplicationController
   end
 
   def edit
-    @entry = Entry.find(params[:id])
   end
 
   def update
-    @entry = Entry.find(params[:id])
 
     if @entry.update(params[:entry].permit(:title, :body))
       redirect_to @entry
@@ -39,7 +38,6 @@ class EntriesController < ApplicationController
   end
 
   def destroy
-    @entry = Entry.find(params[:id])
     @entry.destroy
 
     redirect_to entries_path
@@ -48,6 +46,10 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:title, :body)
+    params.require(:entry).permit(:title, :body, :slug)
   end
+
+	def find_entry
+		@entry = Entry.friendly.find(params[:id])
+	end
 end
