@@ -6,3 +6,5 @@
 			<h3><a href="#"><%= link_to entry.title, entry %></a></h3>
 			<p class="date"><%= entry.created_at.strftime("%A, %b %d") %></p>
 		<% end %>
+
+		<%= will_paginate @entries %>

@@ -248,6 +248,7 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    will_paginate (3.0.7)
     yajl-ruby (1.2.1)
 
 PLATFORMS
@@ -284,6 +285,7 @@ DEPENDENCIES
   turbolinks (= 2.3.0)
   uglifier (= 2.5.3)
   unicorn (= 4.8.3)
+  will_paginate (~> 3.0.7)
 
 BUNDLED WITH
    1.10.3
