@@ -32,74 +32,25 @@
   margin-right: auto;
 }
 
-.plain-header {
-
-  a{
-    color:#428bca;
-    // color:white;
-    // font-weight: bold;
-  }
-
-  // a {
-  //   color: #404040;
-  // }
-  a:hover,
-  a:focus {
-    // background-color: none;
-    background-color: #FFF;
-    color: #0085a1;
-  }
-
-  position: relative;
-  padding: 30px 15px;
-  text-align: center;
-  // color: rgba(255,255,255,.8);
-  // height:490px; // You set the number
-  // width:100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  // margin-bottom: 40px;
-  font-size: 20px;
-  // background-image: image-url("desk.jpg");
-  background-repeat: no-repeat;
-  // background-attachment: fixed;
-  background-position: center;
-
-  #logo {
-    color:#428bca;
-    &:hover,
-    &:focus {
-      // background-color: none;
-      background-color: #eeeeee;
-      color: #0085a1;
-    }
-
-  //   float: left;
-  //   margin-right: 10px;
-  //   font-size: 1.7em;
-  //   color: #428BCA;
-  //   text-transform: uppercase;
-  //   letter-spacing: -1px;
-  //   padding-top: 9px;
-  //   font-weight: bold;
-  //   // &:hover {
-  //   //   color: blue;
-  //   //   text-decoration: none;
-  //   // }
-  //
-  //
-  //   // &:hover,
-  //   // &:focus {
-  //   //   color: #0085a1;
-  //   //   background-color: #FFF;
-  //   // }
-  //
-  }
-}
-
 .home-page-header {
+
+// updates to make home page minimalist
+  #web-dev {
+  padding: 40px ;
+    color: white;
+    text-transform: uppercase;
+    font-size: 65px;
+    // font-weight: bold;
+    font-weight: 700;
+  }
+  hr {
+    max-width: 50px;
+    border-color: #f05f40;
+    border-width: 3px;
+  }
+
+
+
 
   a{
     color:white;
@@ -145,6 +96,53 @@
       }
     }
 
+}
+
+.plain-header {
+
+  a{
+    color:#428bca;
+    // color:white;
+    // font-weight: bold;
+  }
+
+  // a {
+  //   color: #404040;
+  // }
+  a:hover,
+  a:focus {
+    // background-color: none;
+    background-color: #FFF;
+    color: #0085a1;
+  }
+
+  position: relative;
+  padding: 30px 15px;
+  text-align: center;
+  // color: rgba(255,255,255,.8);
+  // height:490px; // You set the number
+  // width:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  // margin-bottom: 40px;
+  font-size: 20px;
+  // background-image: image-url("desk.jpg");
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: center;
+
+  #logo {
+    color:#428bca;
+    &:hover,
+    &:focus {
+      // background-color: none;
+      background-color: #eeeeee;
+      color: #0085a1;
+    }
+
+  }
 }
 
 .sb-page-header {
@@ -282,3 +280,15 @@ footer {
     }
   }
 }
+
+
+div.hr {
+  max-width: 50px;
+  border-top: 5px blue solid;
+  border-width: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+// div.hr {border-top: 1px red solid; }
+div.hr hr {display:none;}
