@@ -4,6 +4,8 @@ module ApplicationHelper
     base_title = "Bryant Tunbutr's Webpage"
     if page_title.empty?
       base_title
+    elsif page_title=="home"
+       "Bryant Tunbutr | Web Developer"
     else
       "#{page_title} | #{base_title}"
     end
@@ -14,7 +16,7 @@ module ApplicationHelper
       Pygments.highlight(code, lexer: language)
     end
   end
-  
+
   def markdown(content)
     renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
     options = {
