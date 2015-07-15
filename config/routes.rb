@@ -5,8 +5,15 @@ Rails.application.routes.draw do
   devise_for :bloggers
   devise_for :users
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :posts
-    resources :entries
+  resources :entries
+  
+  # resources :posts
+
+
+  # http://guides.rubyonrails.org/routing.html#translated-paths
+  scope() do
+    resources :posts, path: 'heroes'
+  end
 
   resources :contact_forms, only: [:new, :create]
 
@@ -17,6 +24,11 @@ Rails.application.routes.draw do
   get 'litebrite'    => 'litebrite#litebrite'
 
 
+
+
+  # resources :posts do
+  #   resources :posts, as: 'heroes'
+  # end
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
