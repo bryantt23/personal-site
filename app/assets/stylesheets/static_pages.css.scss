@@ -6,17 +6,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-// #jumb2 .pic img {
-// 	display: block;
-//     width: 50%;
-//     height: auto;
-//     border: 1px solid #000000;
-//     margin-left: auto;
-//     margin-right: auto;
-//     margin-bottom: 0px;
-//  }
-
 #jumb2 .pic{
   margin: 3px;
 }
@@ -32,6 +21,13 @@
   margin-right: auto;
 }
 
+hr {
+  max-width: 50px;
+  border-color: #428bca;
+  border-width: 3px;
+}
+
+
 .home-page-header {
 
   // updates to make home page minimalist
@@ -44,16 +40,9 @@
     font-weight: 700;
   }
   #subtitle {
-    padding: 40px ;
+    padding: 30px ;
     color: white;
   }
-  hr {
-    max-width: 50px;
-    border-color: #428bca;
-    border-width: 3px;
-  }
-
-
 
 
   a{
@@ -296,3 +285,9 @@ div.hr {
 
 // div.hr {border-top: 1px red solid; }
 div.hr hr {display:none;}
+
+
+
+.icons{
+  text-align: center;
+}
