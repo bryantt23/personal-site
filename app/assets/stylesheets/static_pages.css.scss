@@ -34,18 +34,22 @@
 
 .home-page-header {
 
-// updates to make home page minimalist
+  // updates to make home page minimalist
   #web-dev {
-  padding: 40px ;
+    padding: 40px ;
     color: white;
     text-transform: uppercase;
     font-size: 65px;
     // font-weight: bold;
     font-weight: 700;
   }
+  #subtitle {
+    padding: 40px ;
+    color: white;
+  }
   hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: #428bca;
     border-width: 3px;
   }
 
@@ -86,15 +90,15 @@
 
   background-position: center;
 
-    #logo {
-      // color:#428bca;
-      &:hover,
-      &:focus {
-        // background-color: none;
-        background-color: #eeeeee;
-        color: #0085a1;
-      }
+  #logo {
+    // color:#428bca;
+    &:hover,
+    &:focus {
+      // background-color: none;
+      background-color: #eeeeee;
+      color: #0085a1;
     }
+  }
 
 }
 
@@ -172,15 +176,15 @@
   margin-bottom: 40px;
   font-size: 20px;
 
-    #logo {
-      // color:#428bca;
-      &:hover,
-      &:focus {
-        // background-color: none;
-        background-color: #eeeeee;
-        color: #0085a1;
-      }
+  #logo {
+    // color:#428bca;
+    &:hover,
+    &:focus {
+      // background-color: none;
+      background-color: #eeeeee;
+      color: #0085a1;
     }
+  }
 
 }
 /* mixins, variables, etc. */
@@ -250,7 +254,7 @@ p {
   font-weight: bold;
   &:hover {
     // color: white;
-      color: #0085a1;
+    color: #0085a1;
     text-decoration: none;
   }
 }
@@ -288,7 +292,7 @@ div.hr {
   border-width: 3px;
   margin-left: auto;
   margin-right: auto;
-  }
+}
 
 // div.hr {border-top: 1px red solid; }
 div.hr hr {display:none;}
