@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   devise_for :bloggers
   devise_for :users
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :entries
   
-  # resources :posts
+  scope() do
+    resources :entries, path: 'blog'
+  end
 
 
   # http://guides.rubyonrails.org/routing.html#translated-paths
@@ -22,15 +23,5 @@ Rails.application.routes.draw do
   get 'carousel'    => 'static_pages#carousel'
   get 'projects'    => 'static_pages#projects'
   get 'litebrite'    => 'litebrite#litebrite'
-
-
-
-
-  # resources :posts do
-  #   resources :posts, as: 'heroes'
-  # end
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
 
 end
