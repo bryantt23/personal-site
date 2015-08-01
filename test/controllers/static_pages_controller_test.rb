@@ -4,7 +4,7 @@ class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
-    assert_select "title", "Home | Bryant Tunbutr's Webpage"
+    assert_select "title", "Bryant Tunbutr | Web Developer"
   end
 
   test "should get resources" do
@@ -13,10 +13,15 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "title", "Resources | Bryant Tunbutr's Webpage"
   end
 
-    test "should get fun" do
-      get :fun
-      assert_response :success
-      assert_select "title", "Fun | Bryant Tunbutr's Webpage"
-    end
+  test "should get carousel" do
+    get :carousel
+    assert_response :success
+    assert_select "title", "Carousel Images | Bryant Tunbutr's Webpage"
+  end
 
+    test "should get projects page" do
+      get :projects
+      assert_response :success
+      assert_select "title", "Projects | Bryant Tunbutr's Webpage"
+    end
 end

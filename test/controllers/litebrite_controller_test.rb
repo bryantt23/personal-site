@@ -5,5 +5,4 @@ class LitebriteControllerTest < ActionController::TestCase
     get :litebrite
     assert_response :success
   end
-
 end
