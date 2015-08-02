@@ -11,4 +11,7 @@ class StaticPagesController < ApplicationController
   def projects
   end
   
+  def survey
+  end
+
 end
