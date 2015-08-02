@@ -10,8 +10,8 @@ class StaticPagesController < ApplicationController
 
   def projects
   end
-  
-  def survey
+
+  def stress
   end
 
 end

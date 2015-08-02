@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   root                  'static_pages#home'
   get 'resources'    => 'static_pages#resources'
   get 'carousel'    => 'static_pages#carousel'
-  get 'survey'    => 'static_pages#survey'
+  get 'stress'    => 'static_pages#stress'
   get 'projects'    => 'static_pages#projects'
   get 'litebrite'    => 'litebrite#litebrite'
 
