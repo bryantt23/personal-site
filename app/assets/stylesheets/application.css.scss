@@ -39,3 +39,21 @@
 .dropdown-menu .divider {background-color: #white;
   margin:0;
 }
+
+
+
+//code to change background color with button
+#button_container {
+  text-align: center;
+  margin: 100px auto;
+}
+
+#start_pause {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background:red;
+  font-size: 40pt;
+
+  /* width and height can be anything, as long as they're equal */
+}

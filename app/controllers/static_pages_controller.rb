@@ -14,4 +14,7 @@ class StaticPagesController < ApplicationController
   def stress
   end
 
+  def background_color
+  end
+
 end

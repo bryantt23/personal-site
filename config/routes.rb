@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get 'carousel'    => 'static_pages#carousel'
   get 'stress'    => 'static_pages#stress'
   get 'projects'    => 'static_pages#projects'
-  get 'litebrite'    => 'litebrite#litebrite'
+  get 'background_color'    => 'static_pages#background_color'
 
+  get 'litebrite'    => 'litebrite#litebrite'
+  
 end
