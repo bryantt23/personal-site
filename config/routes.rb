@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   devise_for :users
   # Example resource route (maps HTTP verbs to controller actions automatically):
 
-  scope() do
-    resources :entries, path: 'blog'
-  end
+  # scope() do
+  #   resources :entries, path: 'blog'
+  # end
 
+    resources :entries
 
   # http://guides.rubyonrails.org/routing.html#translated-paths
   scope() do
@@ -32,5 +33,6 @@ Rails.application.routes.draw do
   #
   # '/blog' => redirect_to "https://bryanttunbutr.wordpress.com/"
   get "/blog" => redirect("http://bryanttunbutr.wordpress.com")
+  # get '/blog', to: redirect('http://bryanttunbutr.wordpress.com')
 
 end
