@@ -2,7 +2,7 @@
   <p>You are <%=@age%> years old.
     Your initial contribution is <%=number_to_currency(@initial_contribution)%>
     and the annual interest rate is <%=@annual_interest_rate%>%. </p>
-  When you are 65 years old you will have: <%= number_to_currency(@result) %>
+  When you are 65 years old you will have: <b><%= number_to_currency(@result) %></b>
 </div>
-
+<br>
 <%= link_to "Try another calculation", calculations_index_path%>
