@@ -26,5 +26,6 @@ Rails.application.routes.draw do
   get 'background_color'    => 'static_pages#background_color'
 
   get 'litebrite'    => 'litebrite#litebrite'
-  
+
+  get "/entries_path" => redirect("https://bryanttunbutr.wordpress.com/")
 end
