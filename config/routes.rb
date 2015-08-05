@@ -27,5 +27,10 @@ Rails.application.routes.draw do
 
   get 'litebrite'    => 'litebrite#litebrite'
 
-  get "/blog" => redirect("https://bryanttunbutr.wordpress.com/")
+
+  # '/blog' :get=> redirect_to "https://bryanttunbutr.wordpress.com/"
+  #
+  # '/blog' => redirect_to "https://bryanttunbutr.wordpress.com/"
+  get "/blog" => redirect("http://bryanttunbutr.wordpress.com")
+
 end
