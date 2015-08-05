@@ -28,11 +28,16 @@ Rails.application.routes.draw do
 
   get 'litebrite'    => 'litebrite#litebrite'
 
-
-  # '/blog' :get=> redirect_to "https://bryanttunbutr.wordpress.com/"
-  #
-  # '/blog' => redirect_to "https://bryanttunbutr.wordpress.com/"
   get "/blog" => redirect("http://bryanttunbutr.wordpress.com")
-  # get '/blog', to: redirect('http://bryanttunbutr.wordpress.com')
+
+
+    get 'calculations/index'
+    # http://stackoverflow.com/questions/18368933/matching-and-routes-in-rails
+    #match is deprecated
+    post "/calculate" => "calculations#calculate"
+    resources :calculators
+
+
+
 
 end

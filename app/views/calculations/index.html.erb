@@ -1,0 +1,22 @@
+<!-- https://github.com/search?utf8=%E2%9C%93&q=calculator+form_tag+add&type=Code&ref=searchresults
+
+https://github.com/awinabi/rails_examples/blob/7bb4958950dcb9bfa71633e523606617f9c196c0/config/routes.rb
+
+https://github.com/awinabi/rails_examples/blob/7bb4958950dcb9bfa71633e523606617f9c196c0/app/views/calculations/index.html.erb
+
+https://github.com/awinabi/rails_examples/blob/7bb4958950dcb9bfa71633e523606617f9c196c0/app/models/calculation.rb
+
+https://github.com/awinabi/rails_examples/blob/7bb4958950dcb9bfa71633e523606617f9c196c0/app/controllers/calculations_controller.rb -->
+<% provide(:title, "Compound Interest Calculator") %>
+
+<h1>How much will your money be worth when you retire?</h1>
+
+<%= form_tag("/calculate", :method => "post") do %>
+
+  <%= text_field_tag(:age, nil, placeholder: "Enter your age")%> &nbsp;
+  <%= text_field_tag(:initial_contribution, nil, placeholder: "Enter initial contribution") %>
+  <%= text_field_tag(:annual_interest_rate, nil, placeholder: "Enter annual interest rate") %>
+<p>
+<%= submit_tag("Calculate") %>
+</p>
+<% end %>

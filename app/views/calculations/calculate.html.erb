@@ -1,0 +1,8 @@
+<div class="calc_result">
+  <p>You are <%=@age%> years old.
+    Your initial contribution is <%=number_to_currency(@initial_contribution)%>
+    and the annual interest rate is <%=@annual_interest_rate%>%. </p>
+  When you are 65 years old you will have: <%= number_to_currency(@result) %>
+</div>
+
+<%= link_to "Try another calculation", calculations_index_path%>
