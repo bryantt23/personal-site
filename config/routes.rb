@@ -27,5 +27,5 @@ Rails.application.routes.draw do
 
   get 'litebrite'    => 'litebrite#litebrite'
 
-  get "/entries_path" => redirect("https://bryanttunbutr.wordpress.com/")
+  get "/blog" => redirect("https://bryanttunbutr.wordpress.com/")
 end
