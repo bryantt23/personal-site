@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   #   resources :entries, path: 'blog'
   # end
 
-    resources :entries
+  resources :entries
 
   # http://guides.rubyonrails.org/routing.html#translated-paths
   scope() do
@@ -25,17 +25,18 @@ Rails.application.routes.draw do
   get 'stress'    => 'static_pages#stress'
   get 'projects'    => 'static_pages#projects'
   get 'background_color'    => 'static_pages#background_color'
+  get 'eye_see'    => 'static_pages#eye'
 
   get 'litebrite'    => 'litebrite#litebrite'
 
   get "/blog" => redirect("http://bryanttunbutr.wordpress.com")
 
 
-    get 'calculations/index'
-    # http://stackoverflow.com/questions/18368933/matching-and-routes-in-rails
-    #match is deprecated
-    post "/calculate" => "calculations#calculate"
-    resources :calculators
+  get 'calculations/index'
+  # http://stackoverflow.com/questions/18368933/matching-and-routes-in-rails
+  #match is deprecated
+  post "/calculate" => "calculations#calculate"
+  resources :calculators
 
 
 

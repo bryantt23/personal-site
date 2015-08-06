@@ -17,4 +17,7 @@ class StaticPagesController < ApplicationController
   def background_color
   end
 
+  def eye
+  end
+
 end
