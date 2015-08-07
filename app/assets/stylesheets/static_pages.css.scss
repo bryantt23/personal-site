@@ -292,18 +292,43 @@ div.hr hr {display:none;}
   text-align: center;
 }
 
+//spinning css code
+//http://stackoverflow.com/questions/10123700/how-to-make-a-picture-rotate-continuously
+// http://jsfiddle.net/Tw5pw/2/
+// #spinning{
+//   -moz-animation:1s rotateRight infinite linear;
+//   -webkit-animation:1s rotateRight infinite linear;
+// }
+//
+// @-moz-keyframes rotateRight{
+//   0%{ -moz-transform:rotate(0deg); -moz-transform-origin:50% 50%; }
+//   100%{ -moz-transform:rotate(360deg); }
+// }
+//
+// @-webkit-keyframes rotateRight{
+//   0%{ -webkit-transform:rotate(0deg); -webkit-transform-origin:50% 50%; }
+//   100%{ -webkit-transform:rotate(360deg); }
+// }
 
-#spinning{
-  -moz-animation:1s rotateRight infinite linear;
-  -webkit-animation:1s rotateRight infinite linear;
+// http://stackoverflow.com/questions/356809/best-way-to-center-a-div-on-a-page-vertically-and-horizontally
+#rotateContainer{
+  width: 64px;
+  height: 64px;
+
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
 }
 
-@-moz-keyframes rotateRight{
-  0%{ -moz-transform:rotate(0deg); -moz-transform-origin:50% 50%; }
-  100%{ -moz-transform:rotate(360deg); }
-}
 
-@-webkit-keyframes rotateRight{
-  0%{ -webkit-transform:rotate(0deg); -webkit-transform-origin:50% 50%; }
-  100%{ -webkit-transform:rotate(360deg); }
+#spin_me{
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
 }

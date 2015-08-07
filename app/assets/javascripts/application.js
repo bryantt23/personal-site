@@ -16,6 +16,7 @@
 //= require jquery_ujs
 //= require owl.carousel
 //= require bootstrap-sprockets
+//= require jQueryRotate
 //= require turbolinks
 
 // <script>
@@ -238,7 +239,7 @@ $(document).ready(function() {
 
 
 
-  //eye see you code    
+  //eye see you code
 
   ;// If you use this code, please link to this pen (cdpn.io/CBwhg). Thanks :)
 
@@ -325,8 +326,19 @@ $(document).ready(function() {
 
       var eye = new DrawEye("eye"+i.toString(), "pupil"+i.toString(), getRandomArbitrary(0,800), getRandomArbitrary(0,500), getRandomArbitrary(5,50))
     }
-
-
   });
+
+
+
+
+    //
+    var angle = 180;
+    setInterval(function(){
+          angle+=.5;
+         $("#rotateContainer").rotate(angle);
+    },50);
+
+
+
 
 });
