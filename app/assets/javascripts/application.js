@@ -338,13 +338,13 @@ $(document).ready(function() {
   //      $("#rotateContainer").rotate(angle);
   // },50);
 
-
+  // https://pixabay.com/en/vibrant-background-hypnotic-757820/
   var angle = 180;
   $("#spin_me").on("click", function(){
     var interval;
     if($(this).text() == "Start"){ // check button label
       $(this).html("<span class='ui-button-text'>Pause</span>");
-rotateContainer();
+      rotateContainer();
       // interval = setInterval(function(){
       //   angle+=5;
       //   $("#rotateContainer").rotate(angle);
@@ -359,36 +359,36 @@ rotateContainer();
 
 
 
-    function rotateContainer() {
-        angle+=5;
-        $("#rotateContainer").rotate(angle);
-      // https://www.codecademy.com/forum_questions/525e864c80ff338580001a53
-      timer = setTimeout(rotateContainer, 50);
-    }
+  function rotateContainer() {
+    angle+=3;
+    $("#rotateContainer").rotate(angle);
+    // https://www.codecademy.com/forum_questions/525e864c80ff338580001a53
+    timer = setTimeout(rotateContainer, 50);
+  }
 
 
-    // function nextBackground() {
-    //   $('body').each(function() {
-    //     $(this).css('background',randomColor());
-    //   });
-    //   // https://www.codecademy.com/forum_questions/525e864c80ff338580001a53
-    //   timer = setTimeout(nextBackground, 3000);
-    // }
-    //
-    // $("#start_pause").on("click", function(){
-    //   // Start button
-    //   if($(this).text() == "Start"){  // check button label
-    //     $(this).html("<span class='ui-button-text'>Pause</span>");
-    //     nextBackground();
-    //   }
-    //   // Pause button
-    //   else{
-    //     body.css('background',000000);
-    //     // body.css('background', backgrounds[0]);
-    //     $(this).html("<span class='ui-button-text'>Start</span>");
-    //     clearTimeout(timer);
-    //   }
-    // });
+  // function nextBackground() {
+  //   $('body').each(function() {
+  //     $(this).css('background',randomColor());
+  //   });
+  //   // https://www.codecademy.com/forum_questions/525e864c80ff338580001a53
+  //   timer = setTimeout(nextBackground, 3000);
+  // }
+  //
+  // $("#start_pause").on("click", function(){
+  //   // Start button
+  //   if($(this).text() == "Start"){  // check button label
+  //     $(this).html("<span class='ui-button-text'>Pause</span>");
+  //     nextBackground();
+  //   }
+  //   // Pause button
+  //   else{
+  //     body.css('background',000000);
+  //     // body.css('background', backgrounds[0]);
+  //     $(this).html("<span class='ui-button-text'>Start</span>");
+  //     clearTimeout(timer);
+  //   }
+  // });
 
 
 
