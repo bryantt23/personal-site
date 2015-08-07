@@ -329,8 +329,7 @@ $(document).ready(function() {
   });
 
 
-
-
+  // for spinning wheel
   //
   // var angle = 180;
   // setInterval(function(){
@@ -345,10 +344,6 @@ $(document).ready(function() {
     if($(this).text() == "Start"){ // check button label
       $(this).html("<span class='ui-button-text'>Pause</span>");
       rotateContainer();
-      // interval = setInterval(function(){
-      //   angle+=5;
-      //   $("#rotateContainer").rotate(angle);
-      // },50);
     }
     else {  // check button label
       $(this).html("<span class='ui-button-text'>Start</span>");
@@ -356,41 +351,11 @@ $(document).ready(function() {
     }
   });
 
-
-
-
   function rotateContainer() {
     angle+=3;
     $("#rotateContainer").rotate(angle);
     // https://www.codecademy.com/forum_questions/525e864c80ff338580001a53
     timer = setTimeout(rotateContainer, 50);
   }
-
-
-  // function nextBackground() {
-  //   $('body').each(function() {
-  //     $(this).css('background',randomColor());
-  //   });
-  //   // https://www.codecademy.com/forum_questions/525e864c80ff338580001a53
-  //   timer = setTimeout(nextBackground, 3000);
-  // }
-  //
-  // $("#start_pause").on("click", function(){
-  //   // Start button
-  //   if($(this).text() == "Start"){  // check button label
-  //     $(this).html("<span class='ui-button-text'>Pause</span>");
-  //     nextBackground();
-  //   }
-  //   // Pause button
-  //   else{
-  //     body.css('background',000000);
-  //     // body.css('background', backgrounds[0]);
-  //     $(this).html("<span class='ui-button-text'>Start</span>");
-  //     clearTimeout(timer);
-  //   }
-  // });
-
-
-
 
 });
