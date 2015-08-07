@@ -331,37 +331,39 @@ $(document).ready(function() {
 
 
 
-    //
-    // var angle = 180;
-    // setInterval(function(){
-    //       angle+=5;
-    //      $("#rotateContainer").rotate(angle);
-    // },50);
+  //
+  // var angle = 180;
+  // setInterval(function(){
+  //       angle+=5;
+  //      $("#rotateContainer").rotate(angle);
+  // },50);
 
 
-      $("#spin_me").on("click", function(){
+  $("#spin_me").on("click", function(){
+    if($(this).text() == "Start"){  // check button label
+      $(this).html("<span class='ui-button-text'>Pause</span>");
       var angle = 180;
       setInterval(function(){
-            angle+=5;
-           $("#rotateContainer").rotate(angle);
+        angle+=5;
+        $("#rotateContainer").rotate(angle);
       },50);
-
-        // // Start button
-        // if($(this).text() == "Start"){  // check button label
-        //   $(this).html("<span class='ui-button-text'>Pause</span>");
-        //   nextBackground();
-        // }
-        // // Pause button
-        // else{
-        //   body.css('background',000000);
-        //   // body.css('background', backgrounds[0]);
-        //   $(this).html("<span class='ui-button-text'>Start</span>");
-        //   clearTimeout(timer);
-        // }
-      });
+    }
+  });
 
 
 
+  // // Start button
+  // if($(this).text() == "Start"){  // check button label
+  //   $(this).html("<span class='ui-button-text'>Pause</span>");
+  //   nextBackground();
+  // }
+  // // Pause button
+  // else{
+  //   body.css('background',000000);
+  //   // body.css('background', backgrounds[0]);
+  //   $(this).html("<span class='ui-button-text'>Start</span>");
+  //   clearTimeout(timer);
+  // }
 
 
 });
