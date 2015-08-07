@@ -21,6 +21,9 @@ class Calculator < ActiveRecord::Base
     end
   end
 
+
+
+
 end
 
 

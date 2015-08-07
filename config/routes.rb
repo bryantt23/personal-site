@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
 
 
+  get 'calculators/calculate'
+
+  get 'calculators/create'
+
+  get 'calculators/index'
+
   devise_for :bloggers
   devise_for :users
   # Example resource route (maps HTTP verbs to controller actions automatically):
@@ -36,7 +42,9 @@ Rails.application.routes.draw do
   # http://stackoverflow.com/questions/18368933/matching-and-routes-in-rails
   #match is deprecated
   post "/calculate" => "calculations#calculate"
+
   resources :calculators
+  resources :ajax_calculations
 
 
 

@@ -1,0 +1,23 @@
+
+<h1> Calculator for 2 integers </h1>
+<h3>It can add, subtract, multiply, divide, and calculate exponents!</h3>
+
+
+<%= form_tag(calculators_path, :method => :post, :remote => true) do %>
+<%= text_field_tag(:a, nil, :onkeyup => "this.form.sub.click()") %>
+<%= select_tag(:op_id, options_for_select([[' + ', '1'], [' - ', '2'], [' x ', '3'],[' / ', '4'], [' ^ ', '5']]),  :onchange => "this.form.sub.click()") %>
+<%= text_field_tag(:b, nil, :onkeyup => "this.form.sub.click()") %> = <span id="sum"></span>
+
+<%= submit_tag "ok", :name => "sub" , :style => "display: none;" %>
+<% end %>
+
+
+
+
+  <!-- ajax post request -->
+
+  <!-- <%= form_tag calculators_path, :method => :post, :remote => true do %>
+#this clicks the ok button every time the key up action happens
+<%= text_field_tag :data, nil, :onkeyup => "this.form.sub.click()" %> = <span id="sum"></span>
+  <%= submit_tag "ok", :name => "sub" %>
+  <% end %> -->
