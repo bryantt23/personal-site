@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get 'projects'    => 'static_pages#projects'
   get 'background_color'    => 'static_pages#background_color'
   get 'eye_see'    => 'static_pages#eye'
+  get 'spinning_wheel'    => 'static_pages#spinning_wheel'
 
   get 'litebrite'    => 'litebrite#litebrite'
 
