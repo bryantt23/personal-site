@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get 'background_color'    => 'static_pages#background_color'
   get 'eye_see'    => 'static_pages#eye'
   get 'spinning_wheel'    => 'static_pages#spinning_wheel'
+  get 'tip_calculator'    => 'static_pages#tip_calculator'
 
   get 'litebrite'    => 'litebrite#litebrite'
 

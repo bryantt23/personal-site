@@ -21,7 +21,7 @@
 
 // <script>
 $(document).ready(function() {
-
+// owl carousel ********************************************************
   $("#jumb2").owlCarousel({
 
     items : 13, //10 items above 1000px browser width
@@ -49,13 +49,7 @@ $(document).ready(function() {
   }, 4500);
 
 
-
-
-
-
-
-  // lite brite code
-
+  // lite brite code ********************************************************
 
   // Produce initial 16 x 16 grid
   for(var i=1; i <= 16; i++) {
@@ -156,7 +150,7 @@ $(document).ready(function() {
 
 
 
-  // stress test code
+  // stress test code********************************************************
   function displayVals() {
     calcUsage();
   }
@@ -196,7 +190,7 @@ $(document).ready(function() {
   $cbs.click(calcUsage);
 
 
-  //code to change background color with button
+  //code to change background color with button********************************************************
 
   var safeColors = ['00','33','66','99','cc','ff'];
   var rand = function() {
@@ -239,7 +233,7 @@ $(document).ready(function() {
 
 
 
-  //eye see you code
+  //eye see you code********************************************************
 
   ;// If you use this code, please link to this pen (cdpn.io/CBwhg). Thanks :)
 
@@ -329,7 +323,7 @@ $(document).ready(function() {
   });
 
 
-  // for spinning wheel
+  // for spinning wheel ********************************************************
   //
   // var angle = 180;
   // setInterval(function(){
@@ -357,5 +351,39 @@ $(document).ready(function() {
     // https://www.codecademy.com/forum_questions/525e864c80ff338580001a53
     timer = setTimeout(rotateContainer, 50);
   }
+
+
+
+
+
+
+    // for tip calculator ********************************************************
+
+
+  $('button').click(function(){
+  var Total = $('.Total').val();
+  var Tip = $('.Tip').val();
+  // var NumberOfPeople = $('.NumberOfPeople').val();
+  var calculatedTip = ((Tip/100)*Total).toFixed(2);
+  var NumberOfPeople = 1;
+  var AdjTotal = (((Tip/100)*Total)+Total/1).toFixed(2);
+  var Result = (AdjTotal/NumberOfPeople).toFixed(2);
+  if(isNaN(AdjTotal) || Total<0 || Tip<0) {
+      $('.result').remove();
+      $('.error').remove();
+      $('.price').append('<p class="error">Please enter valid numbers into the above fields.</p>');
+  }
+  else {
+      $('.error').remove();
+      $('.result').remove();
+      $('.price').append('<p class="result">Your tip is $' + calculatedTip + ' and your total is $' + AdjTotal + ' '  + '.</p>');
+  }
+  });
+
+
+
+
+
+
 
 });

@@ -19,8 +19,11 @@ class StaticPagesController < ApplicationController
 
   def eye
   end
-  
+
   def spinning_wheel
+  end
+
+  def tip_calculator
   end
 
 end
