@@ -361,7 +361,7 @@ $(document).ready(function() {
   // for tip calculator ********************************************************
   // http://stackoverflow.com/questions/15480516/jquery-tip-calculator-formulas-with-variables-based-on-textarea-inputs
 
-  $('button').click(function(){
+  $('#tipButton').click(function(){
     var Total = $('.Total').val();
     var Tip = $('.Tip').val();
     // var NumberOfPeople = $('.NumberOfPeople').val();
