@@ -386,26 +386,42 @@ $(document).ready(function() {
 
 
   $(function(){
-    $( "#accordion" ).accordion();
+    $( "#accordion" ).accordion(
+      {
+        active: false,
+        collapsible: true
+      });
+
+    });
+
+    $("#mystery_music").on("click", function(){
+      if($(this).text() == "Show Answer"){ // check button label
+        // $(this).html("<span class='ui-button-text'>Hide Answer</span>");
+        $(this).html("Hide Answer");
+      }
+      else {  // check button label
+        // $(this).html("<span class='ui-button-text'>Show Answer</span>");
+        $(this).html("Show Answer");
+      }
+    });
+
+
+    // $("#accordion").on("click", function(){
+    //   $(this ).accordion();
+    // });
+
+    //  $(function() {
+    //    $( "#accordion" ).accordion();
+    //  });
+
+
+
+    // <script>
+    //  $(function() {
+    //    $( "#accordion" ).accordion();
+    //  });
+    //  </script>
+
+
+
   });
-
-
-  // $("#accordion").on("click", function(){
-  //   $(this ).accordion();
-  // });
-
-  //  $(function() {
-  //    $( "#accordion" ).accordion();
-  //  });
-
-
-
-  // <script>
-  //  $(function() {
-  //    $( "#accordion" ).accordion();
-  //  });
-  //  </script>
-
-
-
-});
