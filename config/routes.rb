@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+  get 'stickies/sticky'
+
   get 'calculators/calculate'
 
   get 'calculators/create'
@@ -35,6 +37,7 @@ Rails.application.routes.draw do
   get 'spinning_wheel'    => 'static_pages#spinning_wheel'
   get 'tip_calculator'    => 'static_pages#tip_calculator'
   get 'mystery_movie'    => 'static_pages#mystery_movie'
+
 
   get 'litebrite'    => 'litebrite#litebrite'
 

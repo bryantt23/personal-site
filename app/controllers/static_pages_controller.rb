@@ -29,5 +29,4 @@ class StaticPagesController < ApplicationController
   def mystery_movie
   end
 
-
 end
