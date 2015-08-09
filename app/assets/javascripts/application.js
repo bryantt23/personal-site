@@ -385,12 +385,26 @@ $(document).ready(function() {
 
 
 
+  $(function(){
+    $( "#accordion" ).accordion();
+  });
+
+
   // $("#accordion").on("click", function(){
-  //   $( "#accordion" ).accordion();
+  //   $(this ).accordion();
   // });
 
+  //  $(function() {
+  //    $( "#accordion" ).accordion();
+  //  });
 
 
+
+  // <script>
+  //  $(function() {
+  //    $( "#accordion" ).accordion();
+  //  });
+  //  </script>
 
 
 
