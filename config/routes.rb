@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   get 'eye_see'    => 'static_pages#eye'
   get 'spinning_wheel'    => 'static_pages#spinning_wheel'
   get 'tip_calculator'    => 'static_pages#tip_calculator'
-  get 'mystery_music'    => 'static_pages#mystery_music'
+  get 'mystery_movie'    => 'static_pages#mystery_movie'
 
   get 'litebrite'    => 'litebrite#litebrite'
 
