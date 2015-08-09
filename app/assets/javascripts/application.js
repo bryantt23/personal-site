@@ -383,6 +383,7 @@ $(document).ready(function() {
   });
 
 
+  // for mystery music ********************************************************
 
 
   $(function(){
@@ -405,6 +406,11 @@ $(document).ready(function() {
       }
     });
 
+
+    $(".audioButton").on("click", function() {
+      $(".audio-play")[0].currentTime = 0;
+      return $(".audio-play")[0].play();
+    });
 
     // $("#accordion").on("click", function(){
     //   $(this ).accordion();
