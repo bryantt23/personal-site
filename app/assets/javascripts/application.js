@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery-ui
 //= require owl.carousel
 //= require bootstrap-sprockets
 //= require jQueryRotate
@@ -380,6 +381,17 @@ $(document).ready(function() {
       $('.price').append('<p class="result">Your tip is $' + calculatedTip + ' and your total is $' + AdjTotal + ' '  + '.</p>');
     }
   });
+
+
+
+
+  // $("#accordion").on("click", function(){
+  //   $( "#accordion" ).accordion();
+  // });
+
+
+
+
 
 
 });

@@ -25,5 +25,9 @@ class StaticPagesController < ApplicationController
 
   def tip_calculator
   end
+  
+  def mystery_music
+  end
+
 
 end
