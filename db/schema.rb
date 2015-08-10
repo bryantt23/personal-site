@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150810083023) do
+ActiveRecord::Schema.define(version: 20150810092423) do
 
   create_table "ajax_calculations", force: :cascade do |t|
     t.string   "index"
@@ -86,10 +86,10 @@ ActiveRecord::Schema.define(version: 20150810083023) do
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "tasks", force: :cascade do |t|
-    t.string   "name"
-    t.boolean  "complete"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "description"
+    t.datetime "deadline"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
