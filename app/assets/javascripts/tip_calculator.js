@@ -21,5 +21,5 @@ $(document).ready(function() {
       $('.price').append('<p class="result">Your tip is $' + calculatedTip + ' and your total is $' + AdjTotal + ' '  + '.</p>');
     }
   });
-  
+
 });
