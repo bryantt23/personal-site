@@ -17,6 +17,10 @@ class TasksController < ApplicationController
     @task  = Task.create(task_params)
   end
 
+  def update
+    @task.update_attributes(task_params)
+  end
+
   def destroy
     @task.destroy
   end
@@ -28,7 +32,7 @@ class TasksController < ApplicationController
   def set_tasks
     @task = Task.find(params[:id])
   end
-  
+
   def all_tasks
     @tasks = Task.all
   end
