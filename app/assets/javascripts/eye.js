@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   //eye see you code********************************************************
 
-  ;// If you use this code, please link to this pen (cdpn.io/CBwhg). Thanks :)
+  // If you use this code, please link to this pen (cdpn.io/CBwhg). Thanks :)
 
   $(function(){
 
