@@ -29,4 +29,8 @@ class StaticPagesController < ApplicationController
   def mystery_movie
   end
 
+  def countdown
+  end
+
+
 end

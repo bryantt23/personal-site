@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get 'spinning_wheel'    => 'static_pages#spinning_wheel'
   get 'tip_calculator'    => 'static_pages#tip_calculator'
   get 'mystery_movie'    => 'static_pages#mystery_movie'
+  get 'countdown'    => 'static_pages#countdown'
 
 
   get 'litebrite'    => 'litebrite#litebrite'
