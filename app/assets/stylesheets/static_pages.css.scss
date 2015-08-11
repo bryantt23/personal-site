@@ -319,6 +319,7 @@ div.hr hr {display:none;}
 //make it rain
 #cloud {
   text-align: center;
+  margin-bottom: -100px;
 }
 i.fa.fa-cloud.fa-6 {
   font-size: 20em;
@@ -328,9 +329,12 @@ i.fa.fa-cloud.fa-6 {
     left:0px;
     position:absolute;
     z-index:200;
-    width:10px;
-    height:10px;
-    background:white;
+    // width:10px;
+    // height:10px;
+    // background:white;
+    color: green;
+    font-size: 50px;
+    font-weight: bolder;
 }
 body {background-color:grey;}
 #site {
