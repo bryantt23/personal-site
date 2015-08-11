@@ -32,5 +32,9 @@ class StaticPagesController < ApplicationController
   def countdown
   end
 
+  def rain
+  end
+
+
 
 end

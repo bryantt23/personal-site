@@ -311,5 +311,14 @@ div.hr hr {display:none;}
 
 //pomodoro timer
 #countdown_body{
-text-align: center;
+  text-align: center;
+}
+
+
+
+//make it rain
+#cloud {
+  width: 100px;
+  height: 100px;
+  background: #ccc;
 }
