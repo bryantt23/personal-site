@@ -325,22 +325,33 @@ i.fa.fa-cloud.fa-6 {
   font-size: 20em;
 }
 .snowflakes {
-    top:0px;
-    left:0px;
-    position:absolute;
-    z-index:200;
-    // width:10px;
-    // height:10px;
-    // background:white;
-    color: green;
-    font-size: 50px;
-    font-weight: bolder;
+  top:0px;
+  left:0px;
+  position:absolute;
+  z-index:200;
+  // width:10px;
+  // height:10px;
+  // background:white;
+  color: green;
+  font-size: 50px;
+  font-weight: bolder;
 }
 body {background-color:grey;}
 #site {
-    width:500px;
-    height:500px;
-    margin:0 auto;
-    position:relative;
-    overflow:hidden;
+  width:500px;
+  height:500px;
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+}
+
+.coins{
+  top:0px;
+  left:0px;
+  position:absolute;
+  z-index:200;
+  border-radius: 50%;
+  background-color: yellow;
+	width: 20px;
+	height: 20px;
 }

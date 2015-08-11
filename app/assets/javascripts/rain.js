@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
+// comment everything
+
   $("#cloud").on("click", function(){
     // http://stackoverflow.com/questions/9890998/jquery-repeat-animation-for-x-times
     // http://jsfiddle.net/urtju/1/
+    // http://jsfiddle.net/MzVFA/3/
     var speed = 700;
     var times = 3;
     var loop = setInterval(anim, 800);
@@ -20,17 +23,25 @@ $(document).ready(function() {
       console.log("hi");
 
       var $snowflakes = $(), qt = 20;
+            var $coins = $(), qt = 20;
 
       for (var i = 0; i < qt; ++i) {
+        var $coin = $('<div class="coins"></div>');
         var $snowflake = $('<div class="snowflakes">$</div>');
+        $coin.css({
+          'left': (Math.random() * $('#site').width()) + 'px',
+          'top': (- Math.random() * $('#site').height()) + 'px'
+        });
         $snowflake.css({
           'left': (Math.random() * $('#site').width()) + 'px',
           'top': (- Math.random() * $('#site').height()) + 'px'
         });
         // add this snowflake to the set of snowflakes
         $snowflakes = $snowflakes.add($snowflake);
+        $snowflakes = $snowflakes.add($coin);
       }
       $('#snowZone').prepend($snowflakes);
+      $('#snowZone').prepend($coins);
 
       $snowflakes.animate({
         top: "500px",
