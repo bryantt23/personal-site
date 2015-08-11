@@ -8,13 +8,23 @@ var restartTime;
 
     clearInterval(currentTime);
 
-    jQuery(function ($) {
-      var twentyFiveMinutes = 60 * 25,
-      // var fiveMinutes = 60 * 5,
-      display = $('#time');
-      startTimer(twentyFiveMinutes, display);
-      // startTimer(fiveMinutes, display);
-    });
+    if($(this).text() == "Start"){  // check button label
+      $(this).html("Reset");
+
+          jQuery(function ($) {
+            var twentyFiveMinutes = 60 * 25,
+            // var fiveMinutes = 60 * 5,
+            display = $('#time');
+            startTimer(twentyFiveMinutes, display);
+            // startTimer(fiveMinutes, display);
+          });
+    }
+    else{
+      $(this).html("<span class='ui-button-text'>Start</span>");
+      $("#time").html("25:00")
+    }
+
+
 
   });
 
