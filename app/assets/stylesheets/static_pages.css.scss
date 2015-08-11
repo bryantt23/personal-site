@@ -318,7 +318,25 @@ div.hr hr {display:none;}
 
 //make it rain
 #cloud {
-  width: 100px;
-  height: 100px;
-  background: #ccc;
+  text-align: center;
+}
+i.fa.fa-cloud.fa-6 {
+  font-size: 20em;
+}
+.snowflakes {
+    top:0px;
+    left:0px;
+    position:absolute;
+    z-index:200;
+    width:10px;
+    height:10px;
+    background:white;
+}
+body {background-color:grey;}
+#site {
+    width:500px;
+    height:500px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
 }
