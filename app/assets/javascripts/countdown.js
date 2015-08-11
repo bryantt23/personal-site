@@ -15,8 +15,8 @@ $(document).ready(function() {
         var twentyFiveMinutes = 60 * 25,
         // var fiveMinutes = 60 * 5,
         display = $('#time');
-        startTimer(3, display);
-        // startTimer(twentyFiveMinutes, display);
+        // startTimer(3, display);
+        startTimer(twentyFiveMinutes, display);
         // startTimer(fiveMinutes, display);
       });
     }
@@ -38,7 +38,7 @@ $(document).ready(function() {
     // console.log(currentTime);
     restartTime=timer2;
     clearInterval(currentTime);
-    console.log(timer2);
+    // console.log(timer2);
     if($("#start_timer").text() == "Reset"){  // check button label
       $("#stop_timer").hide();
       $("#resume_timer").show();
@@ -71,7 +71,7 @@ $(document).ready(function() {
 
 
 
-
+/*
   function resumeTimer(duration, display) {
     var timer = duration, minutes, seconds;
     currentTime = setInterval(function () {
@@ -87,11 +87,10 @@ $(document).ready(function() {
       // console.log(timer2);
       if (--timer < 0) {
         // timer = duration;
-        clearInterval(currentTime);
-        $("#time").html("25:00")
-        $("#start_timer").html("Start");
-
-
+        timerHitsZero()
+        // clearInterval(currentTime);
+        // $("#time").html("25:00")
+        // $("#start_timer").html("Start");
 
 
       }
@@ -99,7 +98,7 @@ $(document).ready(function() {
   }
 
 
-
+*/
 
 
   function startTimer(duration, display) {
@@ -117,11 +116,19 @@ $(document).ready(function() {
       // console.log(timer2);
       if (--timer < 0) {
         // timer = duration;
-        clearInterval(currentTime);
-        $("#time").html("25:00")
-        $("#start_timer").html("Start");
+        timerHitsZero()
+        // clearInterval(currentTime);
+        // $("#time").html("25:00")
+        // $("#start_timer").html("Start");
       }
     }, 1000);
+  }
+
+
+  function timerHitsZero() {
+    clearInterval(currentTime);
+    $("#time").html("25:00")
+    $("#start_timer").html("Start");
   }
 
 
