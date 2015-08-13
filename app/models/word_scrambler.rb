@@ -25,20 +25,37 @@ class WordScrambler < ActiveRecord::Base
   #
   # end
 
-  def anagrams(a, b)
-    return nil unless a.size == b.size
-    a.zip(b).map { |aw,bw| anagram?(aw,bw) ? 1 : 0 }
+  # a = [ 4, 5, 6 ]
+  # b = [ 7, 8, 9 ]
+  # [1,2,3].zip(a, b)      #=> [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+  # [1,2].zip(a,b)         #=> [[1, 4, 7], [2, 5, 8]]
+  # a.zip([1,2],[8])       #=> [[4,1,8], [5,2,nil], [6,nil,nil]]
+
+  def anagrams(guess, answer)
+    return nil unless (has_same_number_of_letters?(guess, answer))
+    guess.zip(answer).map do |aw,bw|
+      anagram?(aw,bw) ? 1 : 0
+    end
   end
-  
-# http://stackoverflow.com/questions/27027538/comparing-two-arrays-containing-strings-for-anagrams-in-ruby
+
+  # http://stackoverflow.com/questions/27027538/comparing-two-arrays-containing-strings-for-anagrams-in-ruby
   def are_they_anagrams?(aw, bw)
-    return false unless aw.size == bw.size
-    counts = aw.downcase.each_char.with_object(Hash.new(0)) { |c,h| h[c] += 1 }
+    # return false unless aw.size == bw.size
+    return false unless (has_same_number_of_letters?(aw, bw))
+    counts = aw.downcase.each_char.with_object(Hash.new(0)) do
+      |c,h| h[c] += 1
+    end
     bw.downcase.each_char do |c|
       return false unless counts[c] > 0
       counts[c] -= 1
     end
     true
+  end
+
+# https://lorenzod8n.wordpress.com/2008/01/24/scrambling-words-in-ruby/
+  def scramble_word(in_word)
+    out_word = in_word.split(//).sort_by { rand }.join("")
+    # out_word =~ /[A-Z]/ && out_word =~ /[a-z]/ ? out_word.downcase : out_word.downcase
   end
 
 

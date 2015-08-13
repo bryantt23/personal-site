@@ -42,13 +42,20 @@ class WordScramblerTest < ActiveSupport::TestCase
   #   assert_equal "Your guess has too few letters", @word.has_same_number_of_letters("hello", "hellohowareyou")
   # end
 
-    test "checks to see if the guess is an anagram of the answer and tells the user if there are wrong letters" do
-      assert_equal true, @word.are_they_anagrams?("hellohowareyou", "hellohowareyou")
-      assert_equal true, @word.are_they_anagrams?("howareyouhello", "hellohowareyou")
-      assert_equal true, @word.are_they_anagrams?("hello", "ohell")
-      assert_equal true, @word.are_they_anagrams?("yo", "ohell")
-      assert_equal true, @word.are_they_anagrams?("yoloo", "ohell")
-    end
+  test "checks to see if the guess is an anagram of the answer and tells the user if there are wrong letters" do
+    assert_equal true, @word.are_they_anagrams?("hellohowareyou", "hellohowareyou")
+    assert_equal true, @word.are_they_anagrams?("howareyouhello", "hellohowareyou")
+    assert_equal true, @word.are_they_anagrams?("hello", "ohell")
+    assert_equal false, @word.are_they_anagrams?("yo", "ohell")
+    assert_equal false, @word.are_they_anagrams?("yoloo", "ohell")
+  end
+
+  test "checks to see if the original word is an anagram of the scrambled word" do
+    assert_equal true, @word.are_they_anagrams?("hellohowareyou", @word.scramble_word("hellohowareyou"))
+    assert_equal true, @word.are_they_anagrams?("howareyouhello", @word.scramble_word("hellohowareyou"))
+    assert_equal true, @word.are_they_anagrams?("howareyouhello", @word.scramble_word("hellohowareyou"))
+    assert_equal true, @word.are_they_anagrams?("heyou", @word.scramble_word("heyou"))
+  end
 
   # test "checks to see if the guess is an anagram of the answer and tells the user if there are wrong letters" do
   #   assert_equal "The guess and answer are anagrams", @word.are_they_anagrams?("hellohowareyou", "hellohowareyou")
