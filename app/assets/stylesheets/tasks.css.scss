@@ -1,3 +1,84 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.postit {
+ text-align:center;
+ width: 275px;
+ margin: 25px;
+ min-height:175px;
+ max-height:175px;
+ padding-top:35px;
+ position:relative;
+ border:1px solid #E8E8E8;
+ border-top:60px solid #fdfd86;
+ font-family:'Reenie Beanie';
+ font-size:22px;
+ border-bottom-right-radius: 60px 5px;
+ display:inline-block;
+  background: #ffff88; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ffff88), color-stop(82%,#ffff88), color-stop(82%,#ffff88), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
+background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.postit:after {
+  content: "";
+ position:absolute;
+ z-index:-1;
+ right:-0px; bottom:20px;
+ width:200px;
+ height: 25px;
+ background: rgba(0, 0, 0, 0.2);
+ box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
+-moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+-webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+     -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+        transform: matrix(-1, -0.1, 0, 1, 0, 0);
+}
+
+.postit:description {
+position:absolute;
+  margin-top: 0px;
+
+}
+
+#wide-button{
+    display:block;
+    text-align:center;
+    #yellow-button {
+       border-top: 1px solid #000000;
+       background: #9fa326;
+       background: -webkit-gradient(linear, left top, left bottom, from(#fffb00), to(#9fa326));
+       background: -webkit-linear-gradient(top, #fffb00, #9fa326);
+       background: -moz-linear-gradient(top, #fffb00, #9fa326);
+       background: -ms-linear-gradient(top, #fffb00, #9fa326);
+       background: -o-linear-gradient(top, #fffb00, #9fa326);
+       padding: 10px 20px;
+       -webkit-border-radius: 7px;
+       -moz-border-radius: 7px;
+       border-radius: 7px;
+       -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+       -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+       box-shadow: rgba(0,0,0,1) 0 1px 0;
+       text-shadow: rgba(0,0,0,.4) 0 1px 0;
+       color: #000000;
+       font-size: 24px;
+       font-family: Helvetica, Arial, Sans-Serif;
+       text-decoration: none;
+       vertical-align: middle;
+       }
+    .button:hover {
+       border-top-color: #e016d3;
+       background: #e016d3;
+       color: #ffffff;
+       }
+    .button:active {
+       border-top-color: #1b435e;
+       background: #1b435e;
+       }}
