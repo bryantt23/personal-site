@@ -60,6 +60,21 @@ class WordScrambler < ActiveRecord::Base
 
   def are_they_the_same_word?(guess, answer)
     return guess.gsub(/\s+/, "").downcase==answer.downcase
+  end
+
+  # http://stackoverflow.com/questions/9464065/how-to-sort-a-strings-characters-alphabetically
+  def answer_in_alpha_order(answer)
+    answer.chars.sort.join
+  end
+
+  def add_wrong_answer(guess, answer)
+    if (!are_they_the_same_word?(guess, answer))
+      # http://stackoverflow.com/questions/14004325/add-element-to-an-array-if-its-not-there-already
+      my_array = Array.new 
+      # my_array=[]
+      my_array.push(guess) unless my_array.include?(guess)
+
+    end
 
   end
 

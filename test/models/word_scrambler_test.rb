@@ -6,31 +6,6 @@ class WordScramblerTest < ActiveSupport::TestCase
     @word = WordScrambler.new
   end
 
-
-  #
-  # get it to display the random word scrambled
-  # maybe run some sort of anagram check
-  # show anagram in alphabetical order
-  #
-  # if the choice is wrong, make the wrong answers no longer hidden and append it, maybe i can compare to the array of wrong items so i don't list it twice, or display a message that it is incorrect by a pop up/alert
-  #
-  # if it is an exact match, send a congrats message
-  # Match
-  # match
-  # MaTCH
-  # m   at ch
-  # mat != match
-  # ugh might need regular expressions :(
-  # ignore whitespace
-  # check it turns to lower case  (but its built in i think)
-  #   check if it is an anagram
-  #
-  # next create a test for are these words anagrams to test my scrambling function
-  #
-  # maybe create a test for you already guessed that word, i.e. word is already in array
-  #
-  # include tests for too many letters, too few letters, or letters are not in the answer by using the anagram test, but only make these tests pass if i have time
-
   test "checks to see if the guess has the same number of letters as the answer" do
     assert_equal false, @word.has_same_number_of_letters?("hello", "hell")
     assert_equal true, @word.has_same_number_of_letters?("hellohowareyou", "hellohowareyou")
@@ -78,6 +53,32 @@ class WordScramblerTest < ActiveSupport::TestCase
     assert_equal true, @word.are_they_the_same_word?("HOW ARE YOU HELLO", "howareyouhello")
     assert_equal false, @word.are_they_the_same_word?("how", "oh")
   end
+
+  test "checks to see if the answer's anagram is shown in alphabetical order" do
+    assert_equal "ehllo", @word.answer_in_alpha_order("hello")
+    assert_equal "aabb", @word.answer_in_alpha_order("baba")
+    assert_equal "eel", @word.answer_in_alpha_order("eel")
+    assert_equal "a", @word.answer_in_alpha_order("a")
+    assert_equal "ott", @word.answer_in_alpha_order("tot")
+  end
+
+
+  test "add wrong answer to array if it is empty" do
+    assert_equal ["yolo"], @word.add_wrong_answer("yolo", "hey")
+  end
+
+  #
+  # test "add wrong answer to array if it is not there" do
+  #   @word.add_wrong_answer("yolo", "hey")
+  #     # assert_equal ["yolo"], @word.add_wrong_answer("yolo", "hey")
+  #     @word.my_array=["yolo"]
+  #   assert_equal ["yolo", "booyah"], @word.add_wrong_answer("booyah", "hey")
+  # end
+  #
+  # test "do NOT add wrong answer to array if it is already there" do
+  #   assert_equal ["yolo", "booyah"], @word.add_wrong_answer("yolo", "hey")
+  # end
+
 
   # test "checks to see if the guess is an anagram of the answer and tells the user if there are wrong letters" do
   #   assert_equal "The guess and answer are anagrams", @word.are_they_anagrams?("hellohowareyou", "hellohowareyou")
