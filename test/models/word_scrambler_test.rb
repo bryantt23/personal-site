@@ -57,6 +57,28 @@ class WordScramblerTest < ActiveSupport::TestCase
     assert_equal true, @word.are_they_anagrams?("heyou", @word.scramble_word("heyou"))
   end
 
+  test "checks to see if the guess is the same as the answer" do
+    assert_equal true, @word.are_they_the_same_word?("hellohowareYOU", "hellohowareYOU")
+    assert_equal false, @word.are_they_the_same_word?("howareyou", "hellohowareYOU")
+    assert_equal false, @word.are_they_the_same_word?("how", "oh")
+  end
+
+  test "checks to see if the guess is the same as the answer even if the case is different" do
+    assert_equal true, @word.are_they_the_same_word?("hellohowareYOU", "hellohowareYOU")
+    assert_equal true, @word.are_they_the_same_word?("HOWareyouhello", "HOWAREYOUHELLO")
+    assert_equal true, @word.are_they_the_same_word?("howareyouhello", "HOWAREYOUHELLO")
+    assert_equal true, @word.are_they_the_same_word?("HOWAREYOUHELLO", "howareyouhello")
+    assert_equal false, @word.are_they_the_same_word?("how", @word.scramble_word("oh"))
+  end
+
+  test "checks to see if the guess is the same as the answer even if there is whitespace" do
+    assert_equal true, @word.are_they_the_same_word?("hello    howareYOU", "hellohowareyou")
+    assert_equal true, @word.are_they_the_same_word?("HOWare     youhello", "HOWAREYOUHELLO")
+    assert_equal true, @word.are_they_the_same_word?("howareyouhello     ", "HOWAREYOUHELLO")
+    assert_equal true, @word.are_they_the_same_word?("HOW ARE YOU HELLO", "howareyouhello")
+    assert_equal false, @word.are_they_the_same_word?("how", "oh")
+  end
+
   # test "checks to see if the guess is an anagram of the answer and tells the user if there are wrong letters" do
   #   assert_equal "The guess and answer are anagrams", @word.are_they_anagrams?("hellohowareyou", "hellohowareyou")
   #   assert_equal "The guess and answer are anagrams", @word.are_they_anagrams?("howareyouhello", "hellohowareyou")

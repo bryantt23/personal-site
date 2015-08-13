@@ -52,11 +52,15 @@ class WordScrambler < ActiveRecord::Base
     true
   end
 
-# https://lorenzod8n.wordpress.com/2008/01/24/scrambling-words-in-ruby/
+  # https://lorenzod8n.wordpress.com/2008/01/24/scrambling-words-in-ruby/
   def scramble_word(in_word)
     out_word = in_word.split(//).sort_by { rand }.join("")
     # out_word =~ /[A-Z]/ && out_word =~ /[a-z]/ ? out_word.downcase : out_word.downcase
   end
 
+  def are_they_the_same_word?(guess, answer)
+    return guess.gsub(/\s+/, "").downcase==answer.downcase
+
+  end
 
 end
