@@ -32,8 +32,8 @@ class WordScramblerTest < ActiveSupport::TestCase
   # include tests for too many letters, too few letters, or letters are not in the answer by using the anagram test, but only make these tests pass if i have time
 
   test "checks to see if the guess has the same number of letters as the answer" do
-    assert_equal false, @word.has_same_number_of_letters("hello", "hell")
-    assert_equal true, @word.has_same_number_of_letters("hellohowareyou", "hellohowareyou")
+    assert_equal false, @word.has_same_number_of_letters?("hello", "hell")
+    assert_equal true, @word.has_same_number_of_letters?("hellohowareyou", "hellohowareyou")
   end
 
   # test "checks to see if the guess has the same, more, or fewer letters than the answer and tells the user" do
@@ -42,11 +42,18 @@ class WordScramblerTest < ActiveSupport::TestCase
   #   assert_equal "Your guess has too few letters", @word.has_same_number_of_letters("hello", "hellohowareyou")
   # end
 
-  test "checks to see if the guess is an anagram of the answer and tells the user if there are wrong letters" do
-    assert_equal "The guess and answer are anagrams", @word.has_same_number_of_letters("hellohowareyou", "hellohowareyou")
-    assert_equal "The guess and answer are anagrams", @word.has_same_number_of_letters("howareyouhello", "hellohowareyou")
-    assert_equal "The letters in the guess are not the same
-    as the letters in the answer", @word.has_same_number_of_letters("hello", "ohell")
-  end
+    test "checks to see if the guess is an anagram of the answer and tells the user if there are wrong letters" do
+      assert_equal true, @word.are_they_anagrams?("hellohowareyou", "hellohowareyou")
+      assert_equal true, @word.are_they_anagrams?("howareyouhello", "hellohowareyou")
+      assert_equal true, @word.are_they_anagrams?("hello", "ohell")
+      assert_equal true, @word.are_they_anagrams?("yo", "ohell")
+      assert_equal true, @word.are_they_anagrams?("yoloo", "ohell")
+    end
+
+  # test "checks to see if the guess is an anagram of the answer and tells the user if there are wrong letters" do
+  #   assert_equal "The guess and answer are anagrams", @word.are_they_anagrams?("hellohowareyou", "hellohowareyou")
+  #   assert_equal "The guess and answer are anagrams", @word.are_they_anagrams?("howareyouhello", "hellohowareyou")
+  #   assert_equal "The guess and answer are NOT anagrams", @word.are_they_anagrams?("hello", "ohell")
+  # end
 
 end
