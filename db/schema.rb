@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150810095327) do
+ActiveRecord::Schema.define(version: 20150813093931) do
 
   create_table "ajax_calculations", force: :cascade do |t|
     t.string   "index"
@@ -87,7 +87,6 @@ ActiveRecord::Schema.define(version: 20150810095327) do
 
   create_table "tasks", force: :cascade do |t|
     t.string   "description"
-    t.date     "deadline"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
