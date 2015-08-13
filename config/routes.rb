@@ -54,7 +54,7 @@ Rails.application.routes.draw do
   resources :calculators
   resources :ajax_calculations
   resources :tasks
-
+  resources :word_scramblers
 
 
 

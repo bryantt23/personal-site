@@ -70,12 +70,23 @@ class WordScrambler < ActiveRecord::Base
   def add_wrong_answer(guess, answer)
     if (!are_they_the_same_word?(guess, answer))
       # http://stackoverflow.com/questions/14004325/add-element-to-an-array-if-its-not-there-already
-      my_array = Array.new 
+      my_array = Array.new
       # my_array=[]
       my_array.push(guess) unless my_array.include?(guess)
-
     end
+  end
 
+  def get_word
+    # http://stackoverflow.com/questions/3482149/how-do-i-pick-randomly-from-an-array
+    myArray = ["stuff", "widget", "ruby", "goodies", "java", "emerald", "etc" ]
+    myArray.sample(1)
+    # return "get word"
+  end
+
+
+  def say_hi
+    # "hi"
+    # 5
   end
 
 end

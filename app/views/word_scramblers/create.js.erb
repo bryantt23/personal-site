@@ -1,0 +1,10 @@
+// these work but only for numbers
+// document.getElementById("new-word").innerHTML = <%= @newword %>
+// $('#new-word').append(<%= @newword %>);
+// $('#new-word').html(<%= @newword %>);
+
+
+// http://stackoverflow.com/questions/25245010/how-to-render-string-of-text-in-js-erb-files
+// $('#new-word').html("<%= "hello" %>");
+
+$('#new-word').html("<%= @newword %>");
