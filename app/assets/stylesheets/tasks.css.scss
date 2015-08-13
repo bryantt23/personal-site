@@ -11,7 +11,7 @@
  padding-top:35px;
  position:relative;
  border:1px solid #E8E8E8;
- border-top:60px solid #fdfd86;
+ border-top:10px solid #fdfd86;
  font-family:'Reenie Beanie';
  font-size:22px;
  border-bottom-right-radius: 60px 5px;
@@ -24,6 +24,9 @@ background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffff
 background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
 background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+    word-wrap: break-word;
 }
 
 .postit:after {
@@ -42,9 +45,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', end
         transform: matrix(-1, -0.1, 0, 1, 0, 0);
 }
 
-.postit:description {
-position:absolute;
+.task-description {
   margin-top: 0px;
+    vertical-align: text-top;
+    margin-left: 5px;
 
 }
 
