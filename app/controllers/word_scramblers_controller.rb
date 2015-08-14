@@ -29,6 +29,11 @@ class WordScramblersController < ApplicationController
   #   end
   end
 
+  def check_if_a_match
+    word.are_they_the_same_word?(@guess , @newword)
+
+  end
+
 end
 #   scramble = WordScrambler.new
 #   @new_word = scramble.get_word

@@ -8,4 +8,7 @@
 // $('#new-word').html("<%= "hello" %>");
 
 $('#new-word').html("the new word is: " + "<%= @newword %>");
-$('#scrambled-new-word').html("the scrambled new word is :" + "<%= @scrambled_new_word %>");
+$('#scrambled-new-word').html("the scrambled new word is: " + "<%= @scrambled_new_word %>");
+
+$('#guess-form').html("<%= j (render 'form') %>");
+$('#guess-form').slideDown(350);

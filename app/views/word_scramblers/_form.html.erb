@@ -1,0 +1,16 @@
+<h2>The scrambled word is <%= @scrambled_new_word%></h2>
+
+
+
+
+<%= form_tag(@new_word, :action => 'check_if_a_match', :method => :get, :remote => true) do %>
+<%= text_field_tag(@guess, nil) %>
+<br>
+<%= submit_tag "Guess", :name => "check_if_a_match"  %>
+<!--
+<br>
+<span id="new-word"></span>
+<br>
+<span id="scrambled-new-word"></span> -->
+
+<% end %>

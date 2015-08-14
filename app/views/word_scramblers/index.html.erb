@@ -11,16 +11,22 @@
 
 <%= submit_tag "ok", :name => "sub" , :style => "display: none;" %>
 <% end %> -->
-<!--
-<span id="new-word"></span> -->
-<%= form_tag(word_scramblers_path, :method => :post, :remote => true) do %>
-<!-- <%= text_field_tag(:a, nil, :onkeyup => "this.form.sub.click()") %>
-<%= select_tag(:op_id, options_for_select([[' + ', '1'], [' - ', '2'], [' x ', '3'],[' / ', '4'], [' ^ ', '5']]),  :onchange => "this.form.sub.click()") %> -->
-<!--
-<%= text_field_tag(:b, nil, :onkeyup => "this.form.sub.click()") %> = <span id="new-word"></span> -->
 
-<%= submit_tag "ok", :name => "sub"  %><span id="new-word"></span>
+
+<%= form_tag(word_scramblers_path, :method => :post, :remote => true) do %>
+<!-- <%= text_field_tag(:a, nil) %> -->
+<br>
+<%= submit_tag "Get the Scrambled Word", :name => "sub"  %>
+
+<br>
+<span id="new-word"></span>
 <br>
 <span id="scrambled-new-word"></span>
 
 <% end %>
+
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-2" id="guess-form" style="display:none;"></div>
+</div>
