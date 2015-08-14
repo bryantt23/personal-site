@@ -2,35 +2,39 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <link href='http://fonts.googleapis.com/css?family=Reenie Beanie' rel='stylesheet' type='text/css'>
+
+
 </head>
 
 <body>
 
   <% if current_page?(root_path) %>
-    <%= render 'layouts/home_header' %>
+  <%= render 'layouts/home_header' %>
   <% elsif current_page?(resources_path) %>
-    <%= render 'layouts/header' %>
+  <%= render 'layouts/header' %>
   <% else %>
-    <%= render 'layouts/plain_header' %>
+  <%= render 'layouts/plain_header' %>
   <% end %>
 
 
-    <% if notice %>
-    <div id="notice_wrapper">
-      <p class="notice"><%= notice %></p>
-    </div>
-    <% elsif alert %>
-    <div id="notice_wrapper">
-      <p class="alert"><%= alert %></p>
-    </div>
-    <% end %>
+  <% if notice %>
+  <div id="notice_wrapper">
+    <p class="notice"><%= notice %></p>
+  </div>
+  <% elsif alert %>
+  <div id="notice_wrapper">
+    <p class="alert"><%= alert %></p>
+  </div>
+  <% end %>
 
 
 
