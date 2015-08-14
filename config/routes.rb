@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   get 'mystery_movie'    => 'static_pages#mystery_movie'
   get 'countdown'    => 'static_pages#countdown'
   get 'rain'    => 'static_pages#rain'
+  get 'cats'    => 'static_pages#cats'
 
 
   get 'litebrite'    => 'litebrite#litebrite'
