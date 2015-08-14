@@ -11,6 +11,8 @@ class WordScramblersController < ApplicationController
     # @newword = word.say_hi
     @newword = word.get_word
 
+    @scrambled_new_word = word.scramble_word("#{@newword}")
+
   #   case op
   #   when '1'
   #     @result = calc.add

@@ -78,8 +78,10 @@ class WordScrambler < ActiveRecord::Base
 
   def get_word
     # http://stackoverflow.com/questions/3482149/how-do-i-pick-randomly-from-an-array
-    myArray = ["stuff", "widget", "ruby", "goodies", "java", "emerald", "etc" ]
-    myArray.sample(1)
+    # myArray = ["stuff", "widget", "ruby", "goodies", "java", "emerald", "etc" ]
+
+  myArray = ["control", "power", "uranium", "weapons", "human", "slaves", "dictatorship", "oppressor", "tycoon", "tyrant", "sovereign", "exterminate", "terminate", "vanquish", "raze", "demolish", "institutionalize", "annihilate", "decimate", "eradicate", "obliterate", "slaughter", "belize", "squash"]
+    myArray.sample()
     # return "get word"
   end
 

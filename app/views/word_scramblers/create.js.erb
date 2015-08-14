@@ -7,4 +7,5 @@
 // http://stackoverflow.com/questions/25245010/how-to-render-string-of-text-in-js-erb-files
 // $('#new-word').html("<%= "hello" %>");
 
-$('#new-word').html("<%= @newword %>");
+$('#new-word').html("the new word is: " + "<%= @newword %>");
+$('#scrambled-new-word').html("the scrambled new word is :" + "<%= @scrambled_new_word %>");
