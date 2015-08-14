@@ -1,42 +1,31 @@
 class WordScramblersController < ApplicationController
 
+  # def new
+  #   set_current_game WordScrambler.new
+  #   redirect_to word_scramblers_path
+  # end
+  
+  def index
+    @word = WordScrambler.new
+    # redirect_to game_path
+  end
+
 
   def create
-    # op = params[:op_id]
-    # a = params[:a].to_f
-    # b = params[:b].to_f
-    # calc = AjaxCalculation.new(a, b)
-    word = WordScrambler.new
-    #
-    # @newword = word.say_hi
-    @newword = word.get_word
-
-    @scrambled_new_word = word.scramble_word("#{@newword}")
-
-  #   case op
-  #   when '1'
-  #     @result = calc.add
-  #   when '2'
-  #     @result = calc.subtract
-  #   when '3'
-  #     @result = calc.multiply
-  #   when '4'
-  #     @result = calc.divide
-  #   when '5'
-  #     @result = calc.exponent
-  #   else
-  #     @result = calc.add
-  #   end
-  end
-
-  def check_if_a_match
-    word.are_they_the_same_word?(@guess , @newword)
 
   end
+
+
+  # def create
+  #   word = WordScrambler.new
+  #   #
+  #   # @newword = word.say_hi
+  #   @newword = word.get_word
+  #   @scrambled_new_word = word.scramble_word("#{@newword}")
+  # end
+  #
+  # def check_if_a_match
+  #   word.are_they_the_same_word?(@guess , @newword)
+  # end
 
 end
-#   scramble = WordScrambler.new
-#   @new_word = scramble.get_word
-#
-# end
-# end

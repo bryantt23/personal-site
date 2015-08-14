@@ -1,16 +1,21 @@
 
 <h1> Word Scramble </h1>
 <h3></h3>
+the Scrambled Word
+<%= @word.scramble_word() %>
+The word
+<%= @word.word %>
 
-<!--
 
-<%= form_tag(word_scramblers_path, :method => :post, :remote => true) do %>
-<%= text_field_tag(:a, nil, :onkeyup => "this.form.sub.click()") %>
-<%= select_tag(:op_id, options_for_select([[' + ', '1'], [' - ', '2'], [' x ', '3'],[' / ', '4'], [' ^ ', '5']]),  :onchange => "this.form.sub.click()") %>
-<%= text_field_tag(:b, nil, :onkeyup => "this.form.sub.click()") %> = <span id="sum"></span>
+        <div class='input-area'>
+          <input id='letter-input' type='text' />
+        </div>
 
-<%= submit_tag "ok", :name => "sub" , :style => "display: none;" %>
-<% end %> -->
+<%= form_tag( method: "get") do %>
+  <%= label_tag(:guess, "Search for:") %>
+  <%= text_field_tag(:guess) %>
+  <%= submit_tag("Search") %>
+<% end %>
 
 
 <%= form_tag(word_scramblers_path, :method => :post, :remote => true) do %>

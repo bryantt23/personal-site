@@ -1,5 +1,14 @@
 class WordScrambler < ActiveRecord::Base
 
+  attr_accessor :guess
+  attr_accessor :word
+  attr_accessor :scrambled
+  #
+  def initialize
+    # @word = get_word
+    # word = WordScrambler.new
+  end
+
 
   # def has_same_number_of_letters(guess, answer)
   #   if(guess.length == answer.length)
@@ -53,7 +62,10 @@ class WordScrambler < ActiveRecord::Base
   end
 
   # https://lorenzod8n.wordpress.com/2008/01/24/scrambling-words-in-ruby/
-  def scramble_word(in_word)
+  # def scramble_word
+  def scramble_word
+    in_word = get_word
+    @scrambled = in_word
     out_word = in_word.split(//).sort_by { rand }.join("")
     # out_word =~ /[A-Z]/ && out_word =~ /[a-z]/ ? out_word.downcase : out_word.downcase
   end
@@ -80,8 +92,8 @@ class WordScrambler < ActiveRecord::Base
     # http://stackoverflow.com/questions/3482149/how-do-i-pick-randomly-from-an-array
     # myArray = ["stuff", "widget", "ruby", "goodies", "java", "emerald", "etc" ]
 
-  myArray = ["control", "power", "uranium", "weapons", "human", "slaves", "dictatorship", "oppressor", "tycoon", "tyrant", "sovereign", "exterminate", "terminate", "vanquish", "raze", "demolish", "institutionalize", "annihilate", "decimate", "eradicate", "obliterate", "slaughter", "belize", "squash"]
-    myArray.sample()
+    myArray = ["control", "power", "uranium", "weapons", "human", "slaves", "dictatorship", "oppressor", "tycoon", "tyrant", "sovereign", "exterminate", "terminate", "vanquish", "raze", "demolish", "institutionalize", "annihilate", "decimate", "eradicate", "obliterate", "slaughter", "belize", "squash"]
+    @word = myArray.sample()
     # return "get word"
   end
 
