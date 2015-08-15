@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get 'countdown'    => 'static_pages#countdown'
   get 'rain'    => 'static_pages#rain'
   get 'cats'    => 'static_pages#cats'
+  get 'weather'    => 'static_pages#weather'
 
 
   get 'litebrite'    => 'litebrite#litebrite'

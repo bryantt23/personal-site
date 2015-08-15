@@ -38,6 +38,9 @@ class StaticPagesController < ApplicationController
   def cats
   end
 
+  def weather
+  end
+
 
 
 end
