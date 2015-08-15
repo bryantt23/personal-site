@@ -2,9 +2,12 @@
   clear: both;
 }
 
-// #grid {
+.grid {
 //   width: 900px;
-// }
+margin-top: 100px;
+margin-bottom: 100px; 
+z-index: 0;
+}
 
 .grid-element {
   width: 250px;
@@ -15,14 +18,6 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
-#overlay {
-  // position: absolute; top: 0; left: 0;
-  width: 250px;
-  height: 250px;
-  //  width: 100%; height: 100%;
-  background: black; opacity: 0; z-index: 99;
-}
-
 .clicked {
   height: 100%;
   width: 100%;
