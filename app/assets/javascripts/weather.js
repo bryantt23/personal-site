@@ -4,8 +4,8 @@ $(document).ready(function() {
 
     $('#weatherButton').click(function(){
       var blah = $('#cname').val();
-      console.log(blah);
-      $.getJSON("http://api.openweathermap.org/data/2.5/weather?APPID=" + API_WEATHER_KEY +"&q="+blah, getCurrentWeather);
+      $.getJSON("http://api.openweathermap.org/data/2.5/weather?APPID=" + API_WEATHER_KEY +"&q="+blah
+      +"&units=imperial ", getCurrentWeather);
     });
 
 
@@ -32,6 +32,7 @@ $(document).ready(function() {
     cityWeather.description;
     cityWeather.main;
 
+
     var today = new Date();
     var timeNow = today.toLocaleTimeString().split(" ")[0];
     var dateNow = today.getDate() + "/" + today.getMonth()+1 + "/" + today.getFullYear();
@@ -48,6 +49,7 @@ $(document).ready(function() {
 
     // -- Funciones --------------------------------------------------------------
 
+/*
     function onLoad() {
       // Eventos
       $(formAddNuevaCiudad).hide();
@@ -61,11 +63,11 @@ $(document).ready(function() {
       $(savedCities).on('click', loadSavedCities);
 
       // Detecta la posición e inicia la aplicación
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(getCoords, errorFound);
-      } else {
-        alert("Tu navegador no soporta GeoLocation");
-      }
+      // if (navigator.geolocation) {
+      //   navigator.geolocation.getCurrentPosition(getCoords, errorFound);
+      // } else {
+      //   alert("Tu navegador no soporta GeoLocation");
+      // }
     };
 
     function errorFound(error) {
@@ -77,18 +79,22 @@ $(document).ready(function() {
       // 3: Timeout
     };
 
-    function getCoords(position) {
-      var lat = position.coords.latitude;
-      var lon = position.coords.longitude;
-      $.getJSON(API_WEATHER_URL + "lat=" + lat + "&lon=" + lon, getCurrentWeather);
-    }
-
+    // function getCoords(position) {
+    //   var lat = position.coords.latitude;
+    //   var lon = position.coords.longitude;
+    //   $.getJSON(API_WEATHER_URL + "lat=" + lat + "&lon=" + lon, getCurrentWeather);
+    // }
+*/
     function getCurrentWeather(data) {
+
       cityWeather.zone        = data.name;
       cityWeather.icon        = IMG_WEATHER + data.weather[0].icon + ".png";
-      cityWeather.temp        = data.main.temp - 273.15;
-      cityWeather.temp_max    = data.main.temp_max - 273.15;
-      cityWeather.temp_min    = data.main.temp_min - 273.15;
+      cityWeather.temp        = data.main.temp;
+      cityWeather.temp_max    = data.main.temp_max;
+      cityWeather.temp_min    = data.main.temp_min;
+      // cityWeather.temp        = data.main.temp - 273.15;
+      // cityWeather.temp_max    = data.main.temp_max - 273.15;
+      // cityWeather.temp_min    = data.main.temp_min - 273.15;
       cityWeather.sunrise     = data.sys.sunrise;
       cityWeather.sunset      = data.sys.sunset;
       cityWeather.description = data.weather[0].description;
@@ -115,19 +121,28 @@ $(document).ready(function() {
       }
 
       // Pinta los datos
-      clone.querySelector("[data-time]").innerHTML            = timeToShow;
+      // clone.querySelector("[data-time]").innerHTML            = timeToShow;
       clone.querySelector("[data-city]").innerHTML            = city.zone;
       clone.querySelector("[data-icon]").src                  = city.icon;
-      clone.querySelector("[data-temp='max']").innerHTML      = city.temp_max.toFixed(1);
-      clone.querySelector("[data-temp='min']").innerHTML      = city.temp_min.toFixed(1);
-      clone.querySelector("[data-temp='current']").innerHTML  = city.temp.toFixed(1);
+      clone.querySelector("[data-temp='max']").innerHTML      = "Max temp: " + city.temp_max.toFixed(1);
+      clone.querySelector("[data-temp='min']").innerHTML      = "Min temp: " + city.temp_min.toFixed(1);
+      clone.querySelector("[data-temp='current']").innerHTML  = "Current temp: " + city.temp.toFixed(1);
 
       $(loader).hide();
       $(formAddNuevaCiudad).show();
       // $($body).append(clone);
       $("#weather-info").append(clone);
+
+        $('#weatherButton').focus();
+
+        // animate scrolling to bottom of the page
+        $("html, body").animate({ scrollTop: $(document).height() }, 500);
+
+        // jump directly to the bottom of the page
+        //$("html, body").scrollTop($(document).height());
     }
 
+/*
     function addNewCity(e) {
       e.preventDefault();
       $.getJSON(API_WEATHER_URL + "q=" + $(nombreNuevaCiudad).val(), getWeatherNewCity);
@@ -199,10 +214,10 @@ $(document).ready(function() {
         localStorage.setItem('cities', JSON.stringify(cities) );
       });
     }
-
+*/
     // -- Inicia la aplicación ---------------------------------------------------
 
-    onLoad();
+    // onLoad();
 
   })();
 });
