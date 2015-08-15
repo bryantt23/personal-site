@@ -2,11 +2,11 @@ $(document).ready(function() {
 
   (function() {
 
-        $('#weatherButton').click(function(){
-          var blah = $('#cname').val();
-          console.log(blah);
-          $.getJSON("http://api.openweathermap.org/data/2.5/weather?APPID=" + API_WEATHER_KEY +"&q="+blah, getCurrentWeather);
-        });
+    $('#weatherButton').click(function(){
+      var blah = $('#cname').val();
+      console.log(blah);
+      $.getJSON("http://api.openweathermap.org/data/2.5/weather?APPID=" + API_WEATHER_KEY +"&q="+blah, getCurrentWeather);
+    });
 
 
     // -- Constantes -------------------------------------------------------------
@@ -95,6 +95,7 @@ $(document).ready(function() {
       cityWeather.main        = data.weather[0].main;
 
       renderTemplate(cityWeather, null);
+      // $("#weather-info").append(cityWeather);
     }
 
     function activateTemplate(id) {
@@ -123,7 +124,8 @@ $(document).ready(function() {
 
       $(loader).hide();
       $(formAddNuevaCiudad).show();
-      $($body).append(clone);
+      // $($body).append(clone);
+      $("#weather-info").append(clone);
     }
 
     function addNewCity(e) {
