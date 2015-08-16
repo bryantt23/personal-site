@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   get 'rain'    => 'static_pages#rain'
   get 'cats'    => 'static_pages#cats'
   get 'weather'    => 'static_pages#weather'
+  get 'rotating_pics'    => 'static_pages#rotating_pics'
 
 
   get 'litebrite'    => 'litebrite#litebrite'

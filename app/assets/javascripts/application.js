@@ -19,5 +19,6 @@
 //= require bootstrap-sprockets
 //= require jQueryRotate
 //= require rangeslider
+//= require jquery.reel
 //= require turbolinks
 //= require_tree .
