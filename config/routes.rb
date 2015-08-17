@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get 'weather'    => 'static_pages#weather'
   get 'rotating_pics'    => 'static_pages#rotating_pics'
   get 'scrambled_words'    => 'static_pages#scrambled_words'
+  get 'pros_cons_list'    => 'static_pages#pros_cons_list'
 
   get 'litebrite'    => 'litebrite#litebrite'
 

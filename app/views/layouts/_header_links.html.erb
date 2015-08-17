@@ -10,12 +10,11 @@
         <li><%= link_to "Blog",   "https://bryanttunbutr.wordpress.com/" %></li>
 
         <li>
-          <%= link_to(raw("Projects" +("<span class= 'caret'></span>")), "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}) %>
+                    <li><%= link_to "Projects",  projects_path %></li>
+
+          <!-- <%= link_to(raw("Projects" +("<span class= 'caret'></span>")), "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}) %>
 
 
-          <!-- <li class="dropdown"> <a (<%= link_to "Projects", projects_path %>) class="dropdown-toggle" data-toggle="dropdown">Projects <span class="caret"></span></a> -->
-
-          <!-- <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Activity <span class="caret"></span></a> -->
 
           <ul class="dropdown-menu" role="menu">
 
@@ -26,7 +25,7 @@
             <li><%= link_to "Carousel Pictures",  carousel_path %></li>
             <li><%= link_to "Contact Form",   new_contact_form_path %></li>
             </ul>
-          </li>
+          </li> -->
 
         </li>
 
