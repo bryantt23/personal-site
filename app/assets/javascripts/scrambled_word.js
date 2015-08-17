@@ -7,11 +7,15 @@ $(document).ready(function() {
 
 
     // listen for guessButton click
-    $('#getAnswer').click(function(){
+    $('#getAnswerButton').click(function(){
 
       //  alert('helo');
-      $("#theAnswer").text("Here is the answer " + answer);
-
+      $("#theAnswer").show();
+      $("#theAnswer").text("The actual word is: " + answer);
+      $("#enterGuessForm").hide();
+      $("#checkButton").hide();
+      $("#getAnswerButton").hide();
+      $("#guessResult").hide();
     });
 
 
@@ -33,6 +37,16 @@ $(document).ready(function() {
       //****************************** this changes the variable using this
       // *******************************************************
       this.answer = getWord();
+      $("#enterGuessForm").show();
+      $("#checkButton").show();
+      $("#getAnswerButton").show();
+      $(this).html("Get a Different Scrambled Word");
+      $("#theAnswer").hide();
+      $("#guessed-word").val('');
+            // $('#guessed-word').val() = "";
+            // $("#guessed-word").text("");
+
+
 
     });
 
@@ -43,6 +57,8 @@ $(document).ready(function() {
       // take the value entered in the city_name textbox
       var guessEntered = $('#guessed-word').val();
 
+      $("#guessResult").show();
+
       areTheyTheSameWord(guessEntered);
 
     });
@@ -52,10 +68,14 @@ $(document).ready(function() {
       // console.log(window['answer'].text);
       // console.log(answer);
       // http://stackoverflow.com/questions/5963182/how-to-remove-spaces-from-a-string-using-javascript
-      if(answer===guessEntered.toLowerCase().replace(/\s/g, '')){
+
+      guessEntered = guessEntered.toLowerCase().replace(/\s/g, '');
+
+      if(answer===guessEntered){
         // console.log('same');
         // alert('same');
         $("#guessResult").text("Your guess is correct!");
+        $("#getAnswerButton").hide();
       }
       else {
         // console.log('not same');
