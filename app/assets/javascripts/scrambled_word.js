@@ -5,6 +5,17 @@ $(document).ready(function() {
     var answer;
 
 
+
+    // listen for guessButton click
+    $('#getAnswer').click(function(){
+
+      //  alert('helo');
+      $("#theAnswer").text("Here is the answer " + answer);
+
+    });
+
+
+
     // listen for guessButton click
     $('#guessButton').click(function(){
 
@@ -62,6 +73,8 @@ $(document).ready(function() {
           if(guessEntered.split('').sort().join('')==answer.split('').sort().join('')){
             // if they are anagrams, say you are close, just move the letters around
             $("#guessResult").append("You have the correct letters. Keep rearranging the letters to get the correct answer.");
+
+
           }
           else{
             // if they are not anagrams, say you have letters that are not in the answer
@@ -80,9 +93,6 @@ $(document).ready(function() {
 
       // http://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
       answer = myArray[Math.floor(Math.random()*myArray.length)];
-
-      //  alert('helo');
-      $("#theAnswer").text("Here is the answer " + answer);
 
       // http://stackoverflow.com/questions/3943772/how-do-i-shuffle-the-characters-in-a-string-in-javascript
       var shuffled = answer.split('').sort(function(){return 0.5-Math.random()}).join('');

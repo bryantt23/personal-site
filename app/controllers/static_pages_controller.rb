@@ -35,6 +35,9 @@ class StaticPagesController < ApplicationController
   def rain
   end
 
+    def scrambled_words
+    end
+
 
 
 end

@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   get 'mystery_movie'    => 'static_pages#mystery_movie'
   get 'countdown'    => 'static_pages#countdown'
   get 'rain'    => 'static_pages#rain'
+  get 'scrambled_words'    => 'static_pages#scrambled_words'
 
 
   get 'litebrite'    => 'litebrite#litebrite'
@@ -54,7 +55,6 @@ Rails.application.routes.draw do
   resources :calculators
   resources :ajax_calculations
   resources :tasks
-  resources :word_scramblers
 
 
 
