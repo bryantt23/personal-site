@@ -96,54 +96,53 @@ $(document).ready(function() {
     };
 
     function getWord(){
-      myArray = ["technology", "computer", "camera", "graphic design", "digital", "media", "technician", "photography", "troubleshoot", "pixels", "application", "download",
+      myArray = ["technology", "computer", "camera", "design", "digital", "media", "technician", "photography",
+      "troubleshoot", "pixels", "application", "download",
       "geography", "cat", "yesterday", "java", "truck", "opportunity",
-                "fish", "token", "transportation", "bottom", "apple", "cake",
-                "remote", "boots", "terminology", "arm", "cranberry", "tool",
-                "caterpillar", "spoon", "watermelon", "laptop", "toe", "toad",
-                "fundamental", "capitol", "garbage", "anticipate", "pesky", "control", "power", "uranium", "weapons", "human", "dictatorship", "oppressor", "tycoon", "tyrant", "sovereign", "exterminate", "terminate", "vanquish", "raze", 
-                "demolish", "institutionalize", "annihilate", "decimate", "eradicate", "obliterate", "slaughter", "belize", "squash",
-                "alabama",	"alaska", "arizona", "arkansas",
-                            "california", "colorado", "connecticut", "delaware",
-                            "florida", "georgia", "hawaii", "idaho",
-                            "illinois",	"indiana", "iowa", "kansas",
-                            "kentucky",	"louisiana", "maine", "maryland",
-                            "massachusetts", "michigan", "minnesota", "mississippi",
-                            "missouri",	"montana", "nebraska", "nevada",
-                            "new hampshire", "new jersey", "new mexico", "new york",
-                            "north carolina", "north dakota", "ohio", "oklahoma",
-                            "oregon", "pennsylvania", "rhode island", "south carolina",
-                            "south dakota", "tennessee", "texas", "utah",
-                            "vermont",	"virginia", "washington", "west virginia",
-                            "wisconsin", "wyoming"
-              ];
+      "fish", "token", "transportation", "bottom", "apple", "cake",
+      "remote", "boots", "terminology", "arm", "cranberry", "tool",
+      "caterpillar", "spoon", "watermelon", "laptop", "toe", "toad",
+      "fundamental", "capitol", "garbage", "anticipate", "pesky", "control", "power", "uranium",
+      "weapons", "human", "dictatorship", "oppressor", "tycoon", "tyrant", "sovereign", "exterminate", "terminate", "vanquish", "raze",
+      "demolish", "institutionalize", "annihilate", "decimate", "eradicate", "obliterate", "slaughter", "belize", "squash",
+      "alabama",	"alaska", "arizona", "arkansas",
+      "california", "colorado", "connecticut", "delaware",
+      "florida", "georgia", "hawaii", "idaho",
+      "illinois",	"indiana", "iowa", "kansas",
+      "kentucky",	"louisiana", "maine", "maryland",
+      "massachusetts", "michigan", "minnesota", "mississippi",
+      "missouri",	"montana", "nebraska", "nevada", "ohio", "oklahoma",
+      "oregon", "pennsylvania", "tennessee", "texas", "utah",
+      "vermont",	"virginia", "washington", 
+      "wisconsin", "wyoming"
+    ];
 
-      // http://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
-      answer = myArray[Math.floor(Math.random()*myArray.length)];
+    // http://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
+    answer = myArray[Math.floor(Math.random()*myArray.length)];
 
-      // http://stackoverflow.com/questions/3943772/how-do-i-shuffle-the-characters-in-a-string-in-javascript
-      var shuffled = answer.split('').sort(function(){return 0.5-Math.random()}).join('');
-      $("#scrambled-word").text("Here is the scrambled word: " + shuffled);
-    }
+    // http://stackoverflow.com/questions/3943772/how-do-i-shuffle-the-characters-in-a-string-in-javascript
+    var shuffled = answer.split('').sort(function(){return 0.5-Math.random()}).join('');
+    $("#scrambled-word").text("Here is the scrambled word: " + shuffled);
+  }
 
-    // // http://stackoverflow.com/questions/16856864/overriding-global-variable
-    // (function getWord(){
-    //   myArray = ["control", "power", "uranium", "weapons", "human", "slaves", "dictatorship", "oppressor", "tycoon", "tyrant", "sovereign", "exterminate", "terminate", "vanquish", "raze", "demolish", "institutionalize", "annihilate", "decimate", "eradicate", "obliterate", "slaughter", "belize", "squash"];
-    //
-    //   // http://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
-    //   answer = myArray[Math.floor(Math.random()*myArray.length)];
-    //
-    //   //  alert('helo');
-    //   $("#theAnswer").text("Here is the answer " +answer);
-    // })();
+  // // http://stackoverflow.com/questions/16856864/overriding-global-variable
+  // (function getWord(){
+  //   myArray = ["control", "power", "uranium", "weapons", "human", "slaves", "dictatorship", "oppressor", "tycoon", "tyrant", "sovereign", "exterminate", "terminate", "vanquish", "raze", "demolish", "institutionalize", "annihilate", "decimate", "eradicate", "obliterate", "slaughter", "belize", "squash"];
+  //
+  //   // http://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
+  //   answer = myArray[Math.floor(Math.random()*myArray.length)];
+  //
+  //   //  alert('helo');
+  //   $("#theAnswer").text("Here is the answer " +answer);
+  // })();
 
-    // http://stackoverflow.com/questions/1841916/how-to-avoid-global-variables-in-javascript
-    // Expose to global
-    // answer = getWord();
-    // window['answer'] = answer;
-  })();
+  // http://stackoverflow.com/questions/1841916/how-to-avoid-global-variables-in-javascript
+  // Expose to global
+  // answer = getWord();
+  // window['answer'] = answer;
+})();
 
-  // http://www.mkyong.com/javascript/javascript-call-funtion-after-page-load/
-  //call after page loaded
-  // window.onload=getWord;
+// http://www.mkyong.com/javascript/javascript-call-funtion-after-page-load/
+//call after page loaded
+// window.onload=getWord;
 });
