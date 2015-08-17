@@ -66,6 +66,11 @@ $(document).ready(function() {
 
       //  alert('helo');
       $("#theAnswer").text("Here is the answer " + answer);
+
+      // http://stackoverflow.com/questions/3943772/how-do-i-shuffle-the-characters-in-a-string-in-javascript
+      var shuffled = answer.split('').sort(function(){return 0.5-Math.random()}).join('');
+      $("#scrambled-word").text("Here is the scrambled word: " + shuffled);
+
     }
 
 
