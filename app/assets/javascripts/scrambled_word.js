@@ -42,6 +42,7 @@ $(document).ready(function() {
       $("#getAnswerButton").show();
       $(this).html("Get a Different Scrambled Word");
       $("#theAnswer").hide();
+      $("#guessResult").hide();
       $("#guessed-word").val('');
             // $('#guessed-word').val() = "";
             // $("#guessed-word").text("");
@@ -76,6 +77,7 @@ $(document).ready(function() {
         // alert('same');
         $("#guessResult").text("Your guess is correct!");
         $("#getAnswerButton").hide();
+        $("#checkButton").hide();
       }
       else {
         // console.log('not same');
