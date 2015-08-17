@@ -40,6 +40,10 @@ class StaticPagesController < ApplicationController
 
   def weather
   end
+  
+  def scrambled_words
+  end
+
 
 
 

@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   get 'cats'    => 'static_pages#cats'
   get 'weather'    => 'static_pages#weather'
   get 'rotating_pics'    => 'static_pages#rotating_pics'
-
+  get 'scrambled_words'    => 'static_pages#scrambled_words'
 
   get 'litebrite'    => 'litebrite#litebrite'
 
@@ -57,7 +57,6 @@ Rails.application.routes.draw do
   resources :calculators
   resources :ajax_calculations
   resources :tasks
-
 
 
 
