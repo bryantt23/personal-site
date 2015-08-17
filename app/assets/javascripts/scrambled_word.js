@@ -105,16 +105,9 @@ $(document).ready(function() {
       "fundamental", "capitol", "garbage", "anticipate", "pesky", "control", "power", "uranium",
       "weapons", "human", "dictatorship", "oppressor", "tycoon", "tyrant", "sovereign", "exterminate", "terminate", "vanquish", "raze",
       "demolish", "institutionalize", "annihilate", "decimate", "eradicate", "obliterate", "slaughter", "belize", "squash",
-      "alabama",	"alaska", "arizona", "arkansas",
-      "california", "colorado", "connecticut", "delaware",
-      "florida", "georgia", "hawaii", "idaho",
-      "illinois",	"indiana", "iowa", "kansas",
-      "kentucky",	"louisiana", "maine", "maryland",
-      "massachusetts", "michigan", "minnesota", "mississippi",
-      "missouri",	"montana", "nebraska", "nevada", "ohio", "oklahoma",
-      "oregon", "pennsylvania", "tennessee", "texas", "utah",
-      "vermont",	"virginia", "washington", 
-      "wisconsin", "wyoming"
+
+      "california", "iowa", "mississippi",
+      "vegas", "ohio", "texas", "wolverine", "macdaddy", "batman"
     ];
 
     // http://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
