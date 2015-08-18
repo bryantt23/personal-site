@@ -253,7 +253,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+  // border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
     color: $gray;
@@ -373,4 +373,18 @@ margin-right: auto;
 
 .getScrambledWordButton{
   background-color: red;
+}
+
+// pros_cons
+#wrap {
+   width:600px;
+   margin-bottom: 100px;
+}
+#left_col {
+   float:left;
+   width:300px;
+}
+#right_col {
+   float:right;
+   width:300px;
 }
