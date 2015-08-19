@@ -5,21 +5,30 @@ $(document).ready(function() {
   "You put the SPARC in my workstation.","You're so pretty, I wouldn't even need to use an Instagram filter if I took your photo.","Isn't your e-mail address beautifulgirl@mydreams.com?","I'd switch to emacs for you.","What's a nice girl like you doing in a chatroom like this?","I think you could be an integral part of my project life cycle.","WebMD says your love is contagious.","Where's the 'like' button for that smile?","You totally spiked my traffic.","You are the Apple of my i-Mac.","If you were an ISP I'd dial you all day long.","If you were an ebay auction, I'd totally 'buy it now'.","I must be using Apple maps, because I keep getting lost in your eyes.","Your homepage or mine?","You auto-complete me.","I didn't mean to ogle you, but I'd sure like to Google you.","What's the difference between a crush and a Facebook account? [what?] I'm not rapidly developing a Facebook account on you.","I need to hop over to Facebook for a second to change my status to smitten.","What do you say we play a game of \"Words With More Than Friends?\"","Roses are #ff0000, violets are #0000ff, all my base are belong to you.","I googled your name earlier... I clicked on 'I'm Feeling Lucky.'","If we were connected on Linkedin, I'd endorse you all night long.","Girl, you are hotter than the bottom of my laptop.","I'd ask if you come here often, but I already stalk you on FourSquare."
 ];
 
-  var lastImage;
-  var randomImage;
-  
+var lastImage;
+var randomImage;
+var lastLine;
+var randomLine;
+
 // http://stackoverflow.com/questions/18642485/ruby-on-rails-displaying-images-at-random
 $("#buyDrinkButton").on("click", function(){
 
+  while(lastLine===randomLine){
+    randomLine = Math.floor(Math.random() * lines.length);
+  }
 
   while(randomImage===lastImage){
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 9);
     randomImage = "images/liquor/" + random + ".jpg";
   }
+
   console.log("cl");
 
+    $("#randomLine").text("Thank you for the drink. Here is your compliment: " + lines[randomLine]);
+  // $("#liquorContainer").append(randomLine);
   document.randimg.src = randomImage;
   lastImage = randomImage;
+  lastLine = randomLine;
 });
 
 
