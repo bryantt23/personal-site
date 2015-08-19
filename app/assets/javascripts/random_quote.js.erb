@@ -13,6 +13,7 @@ var randomLine;
 // http://stackoverflow.com/questions/18642485/ruby-on-rails-displaying-images-at-random
 $("#buyDrinkButton").on("click", function(){
 
+  // http://codereview.stackexchange.com/questions/62018/prevent-repetitive-random-numbers
   while(lastLine===randomLine){
     randomLine = Math.floor(Math.random() * lines.length);
   }
@@ -24,7 +25,13 @@ $("#buyDrinkButton").on("click", function(){
 
   console.log("cl");
 
-    $("#randomLine").text("Thank you for the drink. Here is your compliment: " + lines[randomLine]);
+  $("#thankYou").show();
+  $("#compliment").show();
+
+  // $("#randomLine").text("Here is your compliment:" +"\n" +'\n'+ lines[randomLine]);
+
+  $("#randomLine").text(lines[randomLine]);
+  
   // $("#liquorContainer").append(randomLine);
   document.randimg.src = randomImage;
   lastImage = randomImage;
