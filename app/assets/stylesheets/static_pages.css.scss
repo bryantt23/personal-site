@@ -253,7 +253,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+  // border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
     color: $gray;
@@ -352,8 +352,8 @@ i.fa.fa-cloud.fa-6 {
   z-index:200;
   border-radius: 50%;
   background-color: yellow;
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 //moving pics
@@ -362,15 +362,51 @@ i.fa.fa-cloud.fa-6 {
 }
 
 .reel{
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // word scramble
 #enterGuessForm{
-    display: none;
+  display: none;
 }
 
 .getScrambledWordButton{
   background-color: red;
+}
+
+// pros_cons
+#wrap {
+  width:600px;
+  margin-bottom: 100px;
+}
+#left_col {
+  float:left;
+  width:300px;
+}
+#right_col {
+  float:right;
+  width:300px;
+}
+
+#situation_text{
+  width: 474px;
+  // margin: 0 auto;
+  //  float:left;
+  //  width:200px;
+}
+
+#pros_buttons{
+  float:left;
+  width:600px;
+}
+
+.pros_cons_list{
+  a, a:active, a:visited {
+    color: red;
+  }
+}
+
+#pros_header{
+  float:left;
 }

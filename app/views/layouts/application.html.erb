@@ -16,32 +16,42 @@
 </head>
 
 <body>
-
-  <% if current_page?(root_path) %>
-  <%= render 'layouts/home_header' %>
-  <% elsif current_page?(resources_path) %>
-  <%= render 'layouts/header' %>
-  <% else %>
-  <%= render 'layouts/plain_header' %>
-  <% end %>
-
-
-  <% if notice %>
-  <div id="notice_wrapper">
-    <p class="notice"><%= notice %></p>
-  </div>
-  <% elsif alert %>
-  <div id="notice_wrapper">
-    <p class="alert"><%= alert %></p>
-  </div>
-  <% end %>
+  <div id="holder">
+    <header>
+      <% if current_page?(root_path) %>
+      <%= render 'layouts/home_header' %>
+      <% elsif current_page?(resources_path) %>
+      <%= render 'layouts/header' %>
+      <% else %>
+      <%= render 'layouts/plain_header' %>
+      <% end %>
+    </header>
+    <div id="body">
 
 
+      <% if notice %>
+      <div id="notice_wrapper">
+        <p class="notice"><%= notice %></p>
+      </div>
+      <% elsif alert %>
+      <div id="notice_wrapper">
+        <p class="alert"><%= alert %></p>
+      </div>
+      <% end %>
+
+      <div class="container">
+        <%= yield %>
+      </div>
 
 
-  <div class="container">
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    </div>
+
+    <footer>
+      <div class="container">
+        <%= render 'layouts/footer' %>
+      </div>
+
+    </footer>
   </div>
 </body>
 </html>

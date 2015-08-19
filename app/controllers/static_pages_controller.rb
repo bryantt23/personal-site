@@ -44,7 +44,7 @@ class StaticPagesController < ApplicationController
   def scrambled_words
   end
 
-  def pros_cons_list
+  def pros_cons
   end
 
 
