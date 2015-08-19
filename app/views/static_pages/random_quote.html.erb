@@ -1,21 +1,24 @@
 <!--
 <%= image_tag "liquor/0.jpg" %> -->
 
-<h1>Buy me a Drink and I'll give you a compliment</h1>
+<h1>Buy me a Drink and I'll give you a Compliment...</h1>
 
 <div id="drink">
 
-<div id="thankYou">Thank you for the:
-</div>
-<div id="liquorContainer">
-<!-- <img src="images/liquor/0.jpg" name="randimg" border=0> -->
-<img name="randimg" border=0>
-</div>
+  <div id="thankYou"><p>Thank you for the:</p>
+  </div>
+  <div id="liquorContainer">
+    <!-- <img src="images/liquor/0.jpg" name="randimg" border=0> -->
+    <img name="randimg" border=0>
+  </div>
 
-<div id="compliment">Here is your compliment:
-</div>
-<div id="randomLine">
-</div>
-<%= button_tag "Buy me a drink", :class => "btn btn-primary", :type => "button", :id => "buyDrinkButton", :size => "166x66" %>
+  <div id="compliment"><p>Here is your compliment:</p>
+  </div>
+  <p>
+    <div id="randomLine">
+    </div>
+  </p>
+
+  <%= button_tag "Buy me a drink", :class => "btn btn-primary", :type => "button", :id => "buyDrinkButton", :size => "166x66" %>
 
 </div>
