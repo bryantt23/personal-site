@@ -29,7 +29,6 @@ $(function () {
     $("#addFood").val('');
     $('#foods').empty();
     $('#foods2').empty();
-    
   });
 
 

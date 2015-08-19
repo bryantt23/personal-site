@@ -16,7 +16,7 @@
       <input type="submit" value="Add Pros" onClick="addToFood();">
     </div>
     <!-- The list of food is displayed in the following div -->
-    <div id="foods"></div>
+    <div class="pros_cons_list"><div id="foods"></div>  </div>
     <br>
 
   </div>
@@ -29,14 +29,13 @@
       <input type="submit" value="Add Cons" onClick="addToFood2();">
     </div>
     <!-- The list of food is displayed in the following div -->
-    <div id="foods2"></div>
+    <div class="pros_cons_list"><div id="foods2"></div>  </div>
 
   </div>
 
-              <div id="pros_buttons">
-                <%= button_tag "Clear Everything", :class => "btn btn-primary", :type => "button", :id => "clearListButton", :size => "166x66" %>
-                <%= button_tag "Copy to Clipboard", :class => "btn btn-primary", :type => "button", :id => "copyButton", :size => "166x66" %>
-              </div>
+  <div id="pros_buttons">
+    <%= button_tag "Clear Everything", :class => "btn btn-primary", :type => "button", :id => "clearListButton", :size => "166x66" %>
+  </div>
 
 
 </div>
