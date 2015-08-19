@@ -17,7 +17,14 @@ $(function () {
   var foodList2 = [];
 
   $("#button2").on('click', 'input[type=submit]', function () {
-    $('#foods2').append('<div><a href="#" class="item">X</a> ' + $('#addFood2').val() + '</div>');
+    var input2 = $('#addFood2').val();
+    // console.log(input2);
+    if(input2==null || input2 == "") {
+      alert("Con must be filled out");
+    }
+    else {
+      $('#foods2').append('<div><a href="#" class="item">X</a> ' + $('#addFood2').val() + '</div>');
+    }
   });
   $(document).on('click', '.item', function () {
     $(this).parent().remove();
