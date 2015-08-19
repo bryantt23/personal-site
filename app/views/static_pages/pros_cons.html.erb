@@ -1,30 +1,42 @@
+
+
 <div id="wrap">
-    <div id="left_col">
-<!-- we add to our foodList from the value of the following input -->
-<input type="text" value="Pros" id="addFood" />
-<!-- we call addToFood(); through the following button -->
-<div id="button1">
-<input type="submit" value="Add Pros" onClick="addToFood();">
-</div>
-    <!-- The list of food is displayed in the following div -->
-<div id="foods"></div>
-<br>
 
+  <div id="situation">
+    <input type="text" id="situation" placeholder="Write the Situation Here"/>
+  </div>
+  <br>
 
-
-
-
+  <div id="left_col">
+    <!-- we add to our foodList from the value of the following input -->
+    <!-- http://www.w3schools.com/tags/att_textarea_placeholder.asp -->
+    <input type="text" id="addFood" placeholder="Write the Pros Here"/>
+    <!-- we call addToFood(); through the following button -->
+    <div id="button1">
+      <input type="submit" value="Add Pros" onClick="addToFood();">
     </div>
-    <div id="right_col">
-<!-- we add to our foodList from the value of the following input -->
-<input type="text" value="Cons" id="addFood2" />
-<!-- we call addToFood(); through the following button -->
+    <!-- The list of food is displayed in the following div -->
+    <div id="foods"></div>
+    <br>
+
+  </div>
+  <div id="right_col">
+    <!-- we add to our foodList from the value of the following input -->
+    <input type="text" id="addFood2" placeholder="Write the Cons Here"/>
+    <!-- we call addToFood(); through the following button -->
 
     <div id="button2">
-<input type="submit" value="Add Cons" onClick="addToFood2();">
+      <input type="submit" value="Add Cons" onClick="addToFood2();">
     </div>
-<!-- The list of food is displayed in the following div -->
-<div id="foods2"></div>
+    <!-- The list of food is displayed in the following div -->
+    <div id="foods2"></div>
 
-    </div>
+  </div>
+
+              <div id="pros_buttons">
+                <%= button_tag "Clear Everything", :class => "btn btn-primary", :type => "button", :id => "clearListButton", :size => "166x66" %>
+                <%= button_tag "Copy to Clipboard", :class => "btn btn-primary", :type => "button", :id => "copyButton", :size => "166x66" %>
+              </div>
+
+
 </div>

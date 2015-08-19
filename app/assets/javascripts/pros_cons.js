@@ -2,7 +2,13 @@ var foodList = [];
 
 $(function () {
     $("#button1").on('click', 'input[type=submit]', function () {
+    var input = $('#addFood').val();
+      if(input==null || input == "") {
+        alert("Pro must be filled out");
+      }
+      else {
         $('#foods').append('<div><a href="#" class="item">X</a> ' + $('#addFood').val() + '</div>');
+      }
     });
     $(document).on('click', '.item', function () {
         $(this).parent().remove();
