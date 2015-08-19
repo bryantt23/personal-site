@@ -1,0 +1,15 @@
+$(document).ready(function() {
+
+  // http://stackoverflow.com/questions/18642485/ruby-on-rails-displaying-images-at-random
+  $("#buyDrinkButton").on("click", function(){
+    var random = Math.floor(Math.random() * 9);
+    var randomImage = "images/liquor/" + random + ".jpg";
+    // $("#liquorContainer").append(img src="randomImage");
+    console.log(randomImage);
+
+        document.randimg.src = randomImage;
+  });
+
+
+
+});

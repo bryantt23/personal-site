@@ -44,6 +44,10 @@ Rails.application.routes.draw do
   get 'rotating_pics'    => 'static_pages#rotating_pics'
   get 'scrambled_words'    => 'static_pages#scrambled_words'
   get 'pros_cons'    => 'static_pages#pros_cons'
+  get 'random_quote'    => 'static_pages#random_quote'
+
+
+
 
   get 'litebrite'    => 'litebrite#litebrite'
 

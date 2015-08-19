@@ -47,5 +47,9 @@ class StaticPagesController < ApplicationController
   def pros_cons
   end
 
+  def random_quote
+  end
+
+
 
 end
