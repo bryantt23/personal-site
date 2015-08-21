@@ -49,6 +49,10 @@ class StaticPagesController < ApplicationController
 
   def random_quote
   end
+  
+  def recipe
+  end
+
 
 
 

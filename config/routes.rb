@@ -45,6 +45,7 @@ Rails.application.routes.draw do
   get 'scrambled_words'    => 'static_pages#scrambled_words'
   get 'pros_cons'    => 'static_pages#pros_cons'
   get 'random_quote'    => 'static_pages#random_quote'
+  get 'recipe'    => 'static_pages#recipe'
 
 
 
