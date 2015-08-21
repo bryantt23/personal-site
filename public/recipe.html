@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Test</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+
+
+    var url = 'https://api.edamam.com/search';
+
+    var data = {
+      _app_id: '21035d97',
+      _app_key: 'fd726687e4cfbcb844326f030aa3ed95',
+      q: "fish"
+    }
+
+    $('#recipeButton').click(function(){
+      // var blah = $('#cname').val();
+      console.log("blah");
+      $.ajax({
+
+        url: url,
+        dataType: 'jsonp',
+        data: data,
+
+                // what to do when the API responds with some data
+                success: function()  {
+                   console.log("success");
+                    // at this point we can call the callback function
+                    // callbackFunction(responseJSON);
+                }
+
+        // success: function(_res){
+        //   console.log("success");
+        //
+        //   // _callback.call(this, _res);
+        // }
+      })
+    });
+
+
+
+    /*
+    $.ajax({
+    url: "http://query.yahooapis.com/v1/public/yql",
+
+    // The name of the callback parameter, as specified by the YQL service
+    jsonp: "callback",
+
+    // Tell jQuery we're expecting JSONP
+    dataType: "jsonp",
+
+    // Tell YQL what we want and that we want JSON
+    data: {
+    q: "select title,abstract,url from search.news where query=\"cat\"",
+    format: "json"
+    },
+
+    // Work with the response
+    success: function( response ) {
+    console.log( response ); // server response
+    }
+    });
+
+    /*
+
+    var YOUR_APP_ID="21035d97";
+    var YOUR_APP_KEY="fd726687e4cfbcb844326f030aa3ed95";
+
+    // "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}"
+
+
+    $('#recipeButton').click(function(){
+    // var blah = $('#cname').val();
+    console.log("blah");
+    // 'https://api.edamam.com/search?q='+search+'&app_id=21035d97&app_key=fd726687e4cfbcb844326f030aa3ed95';
+    $.getJSON("https://api.edamam.com/search?q=chicken&app_id=21035d97&app_key=fd726687e4cfbcb844326f030aa3ed95");
+
+    // $.getJSON("https://api.edamam.com/search?q=" + "chicken" + '&app_id=21035d97&app_key=fd726687e4cfbcb844326f030aa3ed95')
+    // $http.jsonp("https://api.edamam.com/search?q=chicken&app_id=21035d97&app_key=fd726687e4cfbcb844326f030aa3ed95");
+
+    // $.getJSON("https://api.edamam.com/search?q=chicken&app_id=" + YOUR_APP_ID +"&app_key=" + YOUR_APP_KEY);
+
+
+    // $.getJSON("https://api.edamam.com/search?q=chicken&app_id=" + YOUR_APP_ID +"&app_key=" + YOUR_APP_KEY);
+
+    // $.getJSON("http://api.openweathermap.org/data/2.5/weather?APPID=" + API_WEATHER_KEY +"&q="+blah, getCurrentWeather);
+    });
+
+
+    */
+
+
+    /*
+    $.ajax({
+
+    url "https://api.edamam.com/search?q=fish&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}"
+
+    url: 'https://api.edamam.com/search?q=fish&app_id=a9e44233&app_key=4e60143490cec408c5aaf35215ab8ef6',
+    type: 'GET',
+    crossDomain: true,
+    dataType: "jsonp",
+    success: function(response){
+    var results = response['hits'];
+    for( var i = 0; i < results.length; i++){
+    var ingr = results[i].recipe.ingredients;
+    for( var j = 0;  j < ingr.length; j++ ){
+    $("#msg").append("<p>" + ingr[j].food.label + "</p>");
+    }
+    $("#msg").append("-----------------------------------------------------------------");
+    }
+    },
+    error: function (xhr, status) {
+    alert("error querying edamam database");
+    }
+    });
+    */
+
+
+  });
+
+  /*$.get('https://api.edamam.com/search?q=chicken&app_id=a9e44233&app_key=4e60143490cec408c5aaf35215ab8ef6', function(data) {
+  /*console.log(data);
+
+  for(var i = 0; i < init_meal.length; i++){
+  username = init_meal[i].username;
+  ingredient = init_meal[i].ingredient;
+  amount = init_meal[i].amount;
+  listIngredient();
+  }*/
+  </script>
+</head>
+<body>
+  <div id ="msg"> </div>
+  <button id="recipeButton">Calculate</button>
+</body>
+</html>
