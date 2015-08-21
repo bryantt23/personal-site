@@ -96,14 +96,14 @@ $(document).ready(function(){
     // console.log(responseJSON);
 
     // this clears out any pre-existing data
-    $("#showRecipes").html("");
+    $("#showRecipes").html("<h3>Top Recipes</h3>");
 
     var hitsArray = responseJSON.hits;
     var counter = 0;
     // var total = hitsArray.length;
     var total = 3;
 
-    while(counter < total) {
+    while(counter < total ) {
 
       // found in jsonp file i.e. https://api.edamam.com/search?q=chicken&app_id=21035d97&app_key=fd726687e4cfbcb844326f030aa3ed95
       var hit = hitsArray[counter];
