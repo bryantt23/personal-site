@@ -11,9 +11,21 @@
     console.log("main.js up and running");
 
 
+    // http://stackoverflow.com/questions/18160342/jquery-how-to-trigger-click-event-on-pressing-enter-key
+    //press enter on text area..
+   $('#ingredient_name').keypress(function (e) {
+   var key = e.which;
+   if(key == 13)  // the enter key code
+    {
+      $('#searchForRecipesButton').click();
+      return false;
+    }
+  });
+
+
     // use jQuery to select the button
     // "listen" for when the button is clicked
-    $("#searchForRecipes").click(function(){
+    $("#searchForRecipesButton").click(function(){
 
       // create a variable
       // select the input using jQuery
@@ -37,7 +49,7 @@
 
       console.log(responseJSON);
 
-           $("#showRecipes").html("");
+      $("#showRecipes").html("");
 
       var hitsArray = responseJSON.hits;
       var counter = 0;
@@ -135,7 +147,7 @@
 
   <!-- http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_form_submit -->
   Enter your ingredient: <input type="text" id="ingredient_name"><br><br>
-  <button id="searchForRecipes">searchForRecipes</button>
+  <button id="searchForRecipesButton">searchForRecipes</button>
   <div id="showRecipes"></div>
 </body>
 </html>
