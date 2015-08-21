@@ -115,7 +115,8 @@ $(document).ready(function(){
       var li = getRecipeListItem(recipe);
 
       // append the list item to our HTML
-      $("ul").append(li);
+      // $("ul").append(li);
+      $("#showRecipes").append(li);
 
       // increment the counter
       // to avoid infinite loops
@@ -140,6 +141,8 @@ $(document).ready(function(){
 
     return li
   }
+
+
 
 
 })
