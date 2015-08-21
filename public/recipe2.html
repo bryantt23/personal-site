@@ -19,7 +19,10 @@
       // select the input using jQuery
       // use the val() function to get the input value
       // var searchInput = $('input[type="text"]').val();
-      var searchInput = "tuna";
+      // var searchInput = "tuna";
+      var searchInput = $('#ingredient_name').val();
+
+
       console.log(searchInput);
 
       // use this function to search for recipes on the Edamam API
@@ -33,6 +36,8 @@
     function displayRecipes(responseJSON) {
 
       console.log(responseJSON);
+
+           $("#showRecipes").html("");
 
       var hitsArray = responseJSON.hits;
       var counter = 0;
@@ -115,7 +120,7 @@
       var li = "<li>"
       + "<img src=" + recipe.image + ">"
       + "<h3>" + recipe.label + "</h3>"
-      + "<p>This recipe is <b>" + recipe.level + "</b> and will take you " + recipe.totalTime + " minutes to prepare.</p>"
+      + "<p>This recipe is <b>" + recipe.label + "</b> and has " +  Math.floor( recipe.calories  ) + " calories.</p>"
       + "<a href=" + recipe.url + " target=_blank>Let's make this recipe</a>"
       + "</li>"
 
@@ -126,6 +131,10 @@
 </head>
 <body>
   <div id ="msg"> </div>
+  <p>Search for recipes</p>
+
+  <!-- http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_form_submit -->
+  Enter your ingredient: <input type="text" id="ingredient_name"><br><br>
   <button id="searchForRecipes">searchForRecipes</button>
   <div id="showRecipes"></div>
 </body>
