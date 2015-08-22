@@ -16,3 +16,5 @@ describe("Hello", function() {
 		expect(hello("Fred")).toEqual("Hello, Fred!");
 	});
 });
+
+});
