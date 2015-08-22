@@ -74,7 +74,7 @@ $(document).ready(function() {
 
   });
 
-
+// http://stackoverflow.com/questions/25521598/jquery-datepicker-count-difference-between-two-dates-wont-work
   function checkDateDifference() {
     // $("#daysDifference").text("yolo");
     // console.log("yolo");
@@ -83,7 +83,8 @@ $(document).ready(function() {
     var days   = (end - start)/1000/60/60/24;
 
     if(start!=null && end!=null){
-        console.log(days);
+        // console.log(days);
+        $("#daysDifference").text(days);
     }
 
   }
