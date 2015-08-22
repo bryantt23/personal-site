@@ -1,6 +1,4 @@
 $(document).ready(function(){
-  console.log("main.js up and running");
-
 
   // http://stackoverflow.com/questions/18160342/jquery-how-to-trigger-click-event-on-pressing-enter-key
   //press enter in text area..

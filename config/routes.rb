@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   get 'pros_cons'    => 'static_pages#pros_cons'
   get 'random_quote'    => 'static_pages#random_quote'
   get 'recipe'    => 'static_pages#recipe'
+  get 'days_from'    => 'static_pages#days_from'
 
 
 
