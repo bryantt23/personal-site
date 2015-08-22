@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   get 'stickies/sticky'
 
   get 'calculators/calculate'
