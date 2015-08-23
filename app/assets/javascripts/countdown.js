@@ -71,34 +71,34 @@ $(document).ready(function() {
 
 
 
-/*
+  /*
   function resumeTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    currentTime = setInterval(function () {
-      timer2=timer;
-      minutes = parseInt(timer / 60, 10)
-      seconds = parseInt(timer % 60, 10);
+  var timer = duration, minutes, seconds;
+  currentTime = setInterval(function () {
+  timer2=timer;
+  minutes = parseInt(timer / 60, 10)
+  seconds = parseInt(timer % 60, 10);
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
 
-      display.text(minutes + ":" + seconds);
+  display.text(minutes + ":" + seconds);
 
-      // console.log(timer2);
-      if (--timer < 0) {
-        // timer = duration;
-        timerHitsZero()
-        // clearInterval(currentTime);
-        // $("#time").html("25:00")
-        // $("#start_timer").html("Start");
+  // console.log(timer2);
+  if (--timer < 0) {
+  // timer = duration;
+  timerHitsZero()
+  // clearInterval(currentTime);
+  // $("#time").html("25:00")
+  // $("#start_timer").html("Start");
 
 
-      }
-    }, 1000);
+  }
+  }, 1000);
   }
 
 
-*/
+  */
 
 
   function startTimer(duration, display) {
