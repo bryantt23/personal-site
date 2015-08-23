@@ -95,27 +95,35 @@ $(document).ready(function() {
 
 
 
-
   $('#txtDate').datepicker();
+  // $('#follow_Date').datepicker();
+  // http://stackoverflow.com/questions/2323285/dynamically-disable-jquery-datepicker-icon
+  $("#follow_Date").datepicker("disable")
 
-  // $('#txtDate').datepicker();
-  $('#follow_Date').datepicker();
+
+  // var daysToAdd;
 
 
-
+  // http://jsfiddle.net/taditdash/8FHwL/
   $("#getFutureDate").on("click", function(){
+    getdate();
+  });
 
-  // function getdate() {
-    // $('#follow_Date').datepicker();
-
-
+  function getdate() {
 
     var tt = document.getElementById('txtDate').value;
 
     var date = new Date(tt);
     var newdate = new Date(date);
 
-    newdate.setDate(newdate.getDate() + 3);
+    // http://www.w3schools.com/jsref/jsref_parseint.asp
+    daysToAdd = document.getElementById('numofdays').value;
+    daysToAdd = parseInt(daysToAdd);
+    // var daysToAdd = $("#numofdays").value;
+    console.log(daysToAdd);
+
+    newdate.setDate(newdate.getDate() + daysToAdd);
+    // newdate.setDate(newdate.getDate() + 33);
 
     var dd = newdate.getDate();
     var mm = newdate.getMonth() + 1;
@@ -123,7 +131,7 @@ $(document).ready(function() {
 
     var someFormattedDate = mm + '/' + dd + '/' + y;
     document.getElementById('follow_Date').value = someFormattedDate;
-  });
+  }
 
 
 
