@@ -1,27 +1,41 @@
 
-<p>Date: <input type="text" id="dt1"></p>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Difference Between Two Dates</a></li>
+    <li><a href="#tabs-2">Find Future Date</a></li>
+  </ul>
+  <div id="tabs-1">
 
 
-<p>Date: <input type="text" id="dt2"></p>
-
-Difference in days
-<div id="daysDifference"></div>
+    <p>Date: <input type="text" id="dt1"></p>
 
 
+    <p>Date: <input type="text" id="dt2"></p>
+
+    Difference in days
+    <div id="daysDifference"></div>
+
+  </div>
+  <div id="tabs-2">
 
 
-<h2>Select a Date in first TextBox. Then click the Button to see how 3 days is added to this Date and shown in "Follow Date" TextBox.</h2>
+    <h2>Select a Date in first text box.
+      Enter a number of days and press enter
+      to add this number of days to the first Date.</h2>
 
-<p>Date:
-    <input id="txtDate" type="text" />
-</p>
-<p>
-    <input id="getFutureDate" type="button" value="Fill Follow Date" />
-    <!-- <input type="button" onclick="getdate()" value="Fill Follow Date" /> -->
-</p>
+    <p>Date:
+        <input id="txtDate" type="text" />
+    </p>
 
-<p>Number of Days to Add: <input type="text" id="numofdays"></p>
+    <p>Number of Days to Add: <input type="text" id="numofdays"></p>
 
-<p>Follow Date:
-    <input id="follow_Date" type="text" />
-</p>
+    <p>
+        <input id="getFutureDate" type="button" value="Fill Follow Date" />
+        <!-- <input type="button" onclick="getdate()" value="Fill Follow Date" /> -->
+    </p>
+
+    <p>Follow Date:
+        <input id="follow_Date" type="text" />
+    </p>
+  </div>
+</div>

@@ -135,10 +135,24 @@ $(document).ready(function() {
 
 
 
+    // http://stackoverflow.com/questions/18160342/jquery-how-to-trigger-click-event-on-pressing-enter-key
+    //press enter in text area..
+    $('#numofdays').keypress(function (e) {
+      var key = e.which;
+      if(key == 13)  // the enter key code
+      {
+        $('#getFutureDate').click();
+        return false;
+      }
+    });
 
 
 
 
+
+      $(function() {
+        $( "#tabs" ).tabs();
+      });
 
 
 
