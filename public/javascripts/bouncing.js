@@ -2,7 +2,7 @@ window.onload = function(){
 
   // global variables
   var ctx;
-  var gravity = 4;
+  var gravity = 0;
   var forceFactor = 0.3;
   var mouseDown = false;
   var balls = new Array();
@@ -20,7 +20,9 @@ window.onload = function(){
     mousePos["downY"],
     (evt.pageX - mousePos["downX"]) * forceFactor,
     (evt.pageY - mousePos["downY"]) * forceFactor,
-    5+(Math.random()*10), 0.9, random_color()));
+    5+(Math.random()*50),
+    0.9,
+    random_color()));
   }
   function onMouseMove(evt){
     mousePos['currentX'] = evt.pageX;
@@ -148,12 +150,3 @@ window.onload = function(){
 
 
 };
-
-// $(document).ready(ready);
-// $(document).on('page:load', ready);
-
-// window.onload = function(){
-
-
-// }
-// });
