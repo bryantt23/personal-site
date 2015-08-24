@@ -48,6 +48,7 @@ Rails.application.routes.draw do
   get 'random_quote'    => 'static_pages#random_quote'
   get 'recipe'    => 'static_pages#recipe'
   get 'days_from'    => 'static_pages#days_from'
+  get 'bouncing'    => 'static_pages#bouncing'
 
 
 

@@ -56,6 +56,10 @@ class StaticPagesController < ApplicationController
   def days_from
   end
 
+  def bouncing
+  end
+
+
 
 
 
