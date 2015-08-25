@@ -1,30 +1,31 @@
 <h1>Meditation Timer</h1>
 
+<div id="meditation">
 
-<div id="countdown_body">
-  <h3>Can you find the Now?<br>
-     Start the timer and find out...</h3>
+  <div id="countdown_body">
+    <h4>Can you find the Now?<br>
+      Start the timer and find out...</h4>
 
-    How many minutes do you want to meditate? <input type="text" id="meditation_time"><br><br>
-    How often would you like hear bells (in minutes)? <input type="text" id="interval_time"><br><br>
+      How many minutes do you want to meditate? <input type="text" id="meditation_time"><br><br>
+      How often would you like hear bells (in minutes)? <input type="text" id="interval_time"><br><br>
 
 
-    <div id="button_start_timer">
+      <div id="status"></div>
 
-      <%= button_tag "Start", :class => "btn btn-primary", :type => "button", :id => "start_meditation", :size => "166x66" %>
-      <!--
-      <%= button_tag "Resume", :class => "btn btn-primary", :type => "button", :id => "resume_timer", :size => "166x66" %>
-      <%= button_tag "Resume", :class => "btn btn-primary", :type => "button", :id => "reset_timer", :size => "166x66" %> -->
+      <h1><span id="time"></span> </h1>
 
-      <%= button_tag "Stop", :class => "btn btn-primary", :type => "button", :id => "stop_meditation", :size => "166x66" %>
-      <%= button_tag "Resume", :class => "btn btn-primary", :type => "button", :id => "resume_meditation", :size => "166x66", :style => "display: none;" %>
-
-      <!--
-      <%= button_tag "Stop", :class => "btn btn-primary", :type => "button", :id => "stop_resume_timer", :size => "166x66" %> -->
-
+      <div id="button_start_timer">
+        <%= button_tag "Start", :class => "btn btn-primary", :type => "button", :id => "start_meditation", :size => "166x66" %>
+        <%= button_tag "Stop", :class => "btn btn-primary", :type => "button", :id => "stop_meditation", :size => "166x66" %>
+        <%= button_tag "Resume", :class => "btn btn-primary", :type => "button", :id => "resume_meditation", :size => "166x66", :style => "display: none;" %>
+      </div>
 
     </div>
-    <!-- <h3><span id="time">25:00</span> </h3> -->
-    <h3><span id="time"></span> </h3>
-
   </div>
+
+  <style>
+  body {
+    background: url('images/clouds.jpg') no-repeat center center fixed;
+    color: black;
+  }
+  </style>

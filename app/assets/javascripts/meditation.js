@@ -23,20 +23,19 @@ $(document).ready(function() {
 
         startTime = $("#meditation_time").val();
         intervalTime = $("#interval_time").val();
-        console.log(startTime);
 
         // startTime = 6;
 
         if(isNaN(startTime) || startTime=="" || isNaN(intervalTime) || intervalTime=="") {
-          console.log("enter valid number"); //change this to append error message
-          // $('#meditation_time').text="zzz";
+          // http://stackoverflow.com/questions/960736/appending-an-error-message-want-to-clear-the-div-first
+          $('#status').html("Please enter a valid number");
           $('#meditation_time').append('<p class="error">Please enter valid numbers into the above fields.</p>');
         }
         else {
           $("#start_meditation").html("Reset");
 
-            // convert to minutes
-            startTime*=60;
+          // convert to minutes
+          startTime*=60;
 
           startTimer(startTime, display);
           // startTimer(twentyFiveMinutes, display);
@@ -45,6 +44,7 @@ $(document).ready(function() {
 
           $("#meditation_time").prop('disabled', true);
           $("#interval_time").prop('disabled', true);
+          $('#status').html("");
 
         }
 
@@ -112,7 +112,6 @@ $(document).ready(function() {
 
       display.text(minutes + ":" + seconds);
 
-      // console.log(timer2);
       if (--timer < 0) {
         // timer = duration;
         timerHitsZero()
@@ -129,7 +128,8 @@ $(document).ready(function() {
     clearInterval(intervalBell);
     // $("#time").html("25:00")
     $("#time").html("Good job :)")
-    $("#start_meditation").html("Start");
+    // $("#start_meditation").html("Start");
+      $("#start_meditation").html("Reset");
 
     // http://stackoverflow.com/questions/9419263/playing-audio-with-javascript
     var audio = new Audio('MeditationBell_30.mp3');
@@ -143,7 +143,6 @@ $(document).ready(function() {
   function startIntervalTimer(intervalTime) {
     // multiply by 1000 for 1 second, 60 for 1 minute
     intervalTime *= 1000;
-    console.log(intervalTime);
 
     intervalBell = setInterval(function() {
       var audio2 = new Audio('preview.mp3');
