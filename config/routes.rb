@@ -49,6 +49,7 @@ Rails.application.routes.draw do
   get 'recipe'    => 'static_pages#recipe'
   get 'days_from'    => 'static_pages#days_from'
   get 'meditation'    => 'static_pages#meditation'
+  get 'closure'    => 'static_pages#closure'
 
 
 
