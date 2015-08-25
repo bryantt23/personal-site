@@ -72,6 +72,7 @@ $(document).ready(function() {
       restartTime=timer2;
       display = $('#time');
       startTimer(restartTime, display);
+      startIntervalTimer(intervalTime);
       // startTimer(fiveMinutes, display);
     });
     if($("#start_meditation").text() == "Reset"){  // check button label
@@ -122,11 +123,15 @@ $(document).ready(function() {
 
 
   function startIntervalTimer(intervalTime) {
+    // multiply by 1000 for 1 second, 60 for 1 minute
     intervalTime *= 1000;
+    console.log(intervalTime);
 
     intervalBell = setInterval(function() {
-      var audio2 = new Audio('preview.mp3');
+    var audio2 = new Audio('preview.mp3');
       // audio2.play();
       audio2.play(); }, intervalTime);
     }
+
+
   });
