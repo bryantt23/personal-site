@@ -22,22 +22,24 @@ $(document).ready(function() {
         display = $('#time');
 
         startTime = $("#meditation_time").val();
+        intervalTime = $("#interval_time").val();
         console.log(startTime);
 
         // startTime = 6;
 
-        if(isNaN(startTime) || startTime=="") {
-          $(this).html("Reset");
-
+        if(isNaN(startTime) || startTime=="" || isNaN(intervalTime) || intervalTime=="") {
           console.log("enter valid number"); //change this to append error message
           // $('#meditation_time').text="zzz";
           $('#meditation_time').append('<p class="error">Please enter valid numbers into the above fields.</p>');
         }
         else {
+          $("#start_meditation").html("Reset");
+
           startTimer(startTime, display);
           // startTimer(twentyFiveMinutes, display);
-          startplaying();
+          startIntervalTimer(intervalTime);
         }
+
       });
     }
     else{
@@ -49,14 +51,10 @@ $(document).ready(function() {
     }
   });
 
-
   $("#stop_meditation").on("click", function(){
-
-    // timer = currentTime;
-    // console.log(currentTime);
     restartTime=timer2;
     clearInterval(currentTime);
-    // console.log(timer2);
+    clearInterval(intervalBell);
     if($("#start_meditation").text() == "Reset"){  // check button label
       $("#stop_meditation").hide();
       $("#resume_meditation").show();
@@ -121,10 +119,14 @@ $(document).ready(function() {
 
 
 
-  function startplaying() {
+
+
+  function startIntervalTimer(intervalTime) {
+    intervalTime *= 1000;
+
     intervalBell = setInterval(function() {
       var audio2 = new Audio('preview.mp3');
       // audio2.play();
-      audio2.play(); }, 4000);
+      audio2.play(); }, intervalTime);
     }
   });
