@@ -35,9 +35,17 @@ $(document).ready(function() {
         else {
           $("#start_meditation").html("Reset");
 
+            // convert to minutes
+            startTime*=60;
+
           startTimer(startTime, display);
           // startTimer(twentyFiveMinutes, display);
+          intervalTime*=60;
           startIntervalTimer(intervalTime);
+
+          $("#meditation_time").prop('disabled', true);
+          $("#interval_time").prop('disabled', true);
+
         }
 
       });
@@ -45,9 +53,18 @@ $(document).ready(function() {
     else{
       $(this).html("<span class='ui-button-text'>Start</span>");
       // $("#time").html("25:00");
-      $("#time").html(startTime);
+      $("#time").html("");
       $("#resume_meditation").hide();
       $("#stop_meditation").show();
+
+      $("#meditation_time").val("");
+      $("#interval_time").val("");
+
+      clearInterval(currentTime);
+      clearInterval(intervalBell);
+
+      $("#meditation_time").prop('disabled', false);
+      $("#interval_time").prop('disabled', false);
     }
   });
 
@@ -110,7 +127,8 @@ $(document).ready(function() {
   function timerHitsZero() {
     clearInterval(currentTime);
     clearInterval(intervalBell);
-    $("#time").html("25:00")
+    // $("#time").html("25:00")
+    $("#time").html("Good job :)")
     $("#start_meditation").html("Start");
 
     // http://stackoverflow.com/questions/9419263/playing-audio-with-javascript
@@ -128,7 +146,7 @@ $(document).ready(function() {
     console.log(intervalTime);
 
     intervalBell = setInterval(function() {
-    var audio2 = new Audio('preview.mp3');
+      var audio2 = new Audio('preview.mp3');
       // audio2.play();
       audio2.play(); }, intervalTime);
     }
