@@ -32,10 +32,8 @@
     <p id="closureDouble">1</p>
 
 
-    <!-- <%= text_field_tag(:a, nil) %> -->
-    <!-- <%= select_tag(:op_id, options_for_select([[' + ', '1'], [' - ', '2']])) %> -->
-    <!-- <%= text_field_tag(:b, nil) %> -->
-    <!-- <%= button_tag "Calculate with Closure!", :class => "btn btn-primary", :type => "button", :id => "calculate_closure", :size => "166x66" %> -->
+    <p>This calculator has an outer function which receives an operator as a parameter
+      and has an inner function (which does the calculation) that receives two operands as parameters.
 
     <input type="text" id="firstNum" />
     <select id="fallDown">
@@ -43,4 +41,7 @@
       <option value="+" id="add">+</option>
       <option value="-" id="less">-</option>
       <input type="text" id="secondNum" />
+      <br>
       <%= button_tag "Calculate with Closure!", :class => "btn btn-primary", :type => "button", :id => "calculate_closure", :size => "166x66" %>
+
+      <p id="calculator_answer"></p>

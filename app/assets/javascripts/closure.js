@@ -73,8 +73,7 @@ $(document).ready(function() {
   };
 
   var add = totalFn('+');
-  console.log(add(44));
-
+  // console.log(add(44));
 
 
   var totalFn2 = function(operator){
@@ -93,7 +92,7 @@ $(document).ready(function() {
     var subtract = totalFn2('-');
 
   };
-/*
+  /*
   var add = totalFn2('+');
   var subtract = totalFn2('-');
 
@@ -104,12 +103,15 @@ $(document).ready(function() {
   console.log(subtract(140,320)); //returns -180
   */
 
-    $("#calculate_closure").on("click", function(){
-    // console.log($("#fallDown").val());
-      var calc = totalFn2($("#fallDown").val());
-      console.log(calc($('#firstNum').val(),$('#secondNum').val())); //returns 54
+  $("#calculate_closure").on("click", function(){
+    var calc = totalFn2($("#fallDown").val());
+    // console.log(calc($('#firstNum').val(),$('#secondNum').val())); //returns 54
+    // var answer= calc($('#firstNum').val(),$('#secondNum').val()); //returns 54
 
-    });
+    // $('#calculator_answer').val() = answer;
+
+    document.getElementById("calculator_answer").innerHTML = calc($('#firstNum').val(),$('#secondNum').val());
+  });
 
 
 
