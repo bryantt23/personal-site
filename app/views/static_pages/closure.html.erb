@@ -1,18 +1,46 @@
+<h1>Fun with Closures</h1>
 
 
-<p>Counting with a global variable.</p>
+<p>This counter uses a global variable to keep track of the current number.</p>
+<p>It appears to work well. Try it and see...</p>
 
 <%= button_tag "Count!", :class => "btn btn-primary", :type => "button", :id => "count", :size => "166x66" %>
 
-This will change the global variable
-<%= button_tag "Change Count!", :class => "btn btn-primary", :type => "button", :id => "change_count", :size => "166x66" %>
-
-<%= button_tag "Count with Closure!", :class => "btn btn-primary", :type => "button", :id => "count_closure", :size => "166x66" %>
-
-<%= button_tag "Double with Closure!", :class => "btn btn-primary", :type => "button", :id => "double_closure", :size => "166x66" %>
-
 <p id="demo">0</p>
 
-<p id="closureAdd">0</p>
+<p>There is a problem with using a global variable however.
+  The problem is that any script on the page can change the global count variable.</p>
+  <p>See what happens when the wrong script affects the counter...</p>
 
-<p id="closureDouble">1</p>
+  <%= button_tag "Change Count!", :class => "btn btn-primary", :type => "button", :id => "change_count", :size => "166x66" %>
+
+  <p>Since JavaScript does not include private properties closures must be used.</p>
+  <p>A closure is when there is a function within a function.
+    The inner function has access to the outer function's variables.
+    However there are no other functions have access to these variables.</p>
+
+    <p>This counter uses a closure which simulates a private variable</p>
+
+    <%= button_tag "Count with Closure!", :class => "btn btn-primary", :type => "button", :id => "count_closure", :size => "166x66" %>
+
+    <p id="closureAdd">0</p>
+
+    <p>This doubling counter also uses a closure which simulates a private variable</p>
+
+    <%= button_tag "Double with Closure!", :class => "btn btn-primary", :type => "button", :id => "double_closure", :size => "166x66" %>
+
+    <p id="closureDouble">1</p>
+
+
+    <!-- <%= text_field_tag(:a, nil) %> -->
+    <!-- <%= select_tag(:op_id, options_for_select([[' + ', '1'], [' - ', '2']])) %> -->
+    <!-- <%= text_field_tag(:b, nil) %> -->
+    <!-- <%= button_tag "Calculate with Closure!", :class => "btn btn-primary", :type => "button", :id => "calculate_closure", :size => "166x66" %> -->
+
+    <input type="text" id="firstNum" />
+    <select id="fallDown">
+      <option>Choose</option>
+      <option value="+" id="add">+</option>
+      <option value="-" id="less">-</option>
+      <input type="text" id="secondNum" />
+      <%= button_tag "Calculate with Closure!", :class => "btn btn-primary", :type => "button", :id => "calculate_closure", :size => "166x66" %>
