@@ -29,9 +29,9 @@ $(document).ready(function() {
 
 
   var addWithClosure = (function () {
-    var counter = 0;
+    var counterClosure = 0;
     return function () {
-      return counter += 1;
+      return counterClosure += 1;
     }
   })();
 
@@ -47,33 +47,6 @@ $(document).ready(function() {
       return doubleCounter *= 2;
     }
   })();
-
-
-
-  var totalFn = function(operator){
-    var total = 0;
-
-    return function(number){
-      if(operator === '+'){
-        total += number;
-      }else if(operator === '-'){
-        total -= number;
-      }
-      return total;
-    };
-
-    var add = totalFn('+');
-    var subtract = totalFn('-');
-
-    add(10); //returns 10
-    add(44); //returns 54
-
-    subtract(40); //returns -40
-    subtract(140); //returns -180
-  };
-
-  var add = totalFn('+');
-  // console.log(add(44));
 
 
   var totalFn2 = function(operator){
@@ -92,16 +65,6 @@ $(document).ready(function() {
     var subtract = totalFn2('-');
 
   };
-  /*
-  var add = totalFn2('+');
-  var subtract = totalFn2('-');
-
-  console.log(add(10,10)); //returns 20
-  console.log(add(44,10)); //returns 54
-
-  console.log(subtract(0,40)); //returns -40
-  console.log(subtract(140,320)); //returns -180
-  */
 
   $("#calculate_closure").on("click", function(){
     var calc = totalFn2($("#fallDown").val());
