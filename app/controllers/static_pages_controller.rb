@@ -59,6 +59,13 @@ class StaticPagesController < ApplicationController
   def meditation
   end
 
+  def clock
+  end
+
+
+
+
+
 
 
 
