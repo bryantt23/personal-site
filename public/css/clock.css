@@ -19,7 +19,7 @@
 
 .clock {
   width: 800px;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 30px;
   border: 1px solid #333;
   /*color: #fff;*/
@@ -30,7 +30,9 @@
   font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
   font-size: 36px;
   text-align: center;
-  text-shadow: 0 0 5px #00c6ff;
+  /*text-shadow: 0 0 5px #00c6ff;*/
+  /*text-shadow: 0 0 10px red;*/
+  color: #FFD700;
 }
 
 ul {
