@@ -22,7 +22,8 @@
   margin: 0 auto;
   padding: 30px;
   border: 1px solid #333;
-  color: #fff;
+  /*color: #fff;*/
+  background-color: black;
 }
 
 #Date {
@@ -46,6 +47,7 @@ ul li {
   text-align: center;
   font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
   text-shadow: 0 0 5px #00c6ff;
+  color: #FFD700;
 }
 
 #point {
