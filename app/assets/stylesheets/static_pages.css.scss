@@ -433,13 +433,13 @@ i.fa.fa-cloud.fa-6 {
 
 // recipes
 .no-bullets {
-    list-style-type: none;
-    img{
-      height: 2 50px;
-    }
+  list-style-type: none;
+  img{
+    height: 2 50px;
+  }
 }
 
-
+// projects carousel
 
 #jumb3 .pic{
   margin: 3px;
@@ -454,4 +454,8 @@ i.fa.fa-cloud.fa-6 {
   // height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+#project-carousel{
+  text-align: center;
 }
