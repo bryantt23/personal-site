@@ -2,7 +2,7 @@ $(document).ready(function() {
   // owl carousel ********************************************************
   $("#jumb3").owlCarousel({
 
-    items : 2, //10 items above 1000px browser width
+    items : 10, //10 items above 1000px browser width
 
     autoPlay: 8000,
     navigation : true, // Show next and prev buttons
