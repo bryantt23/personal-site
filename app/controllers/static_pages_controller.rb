@@ -59,6 +59,11 @@ class StaticPagesController < ApplicationController
   def meditation
   end
 
+  def projects_carousel
+  end
+
+
+
 
 
 
