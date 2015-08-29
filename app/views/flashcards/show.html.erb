@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @flashcard.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @flashcard.answer %>
+</p>
+
+<%= link_to 'Edit', edit_flashcard_path(@flashcard) %> |
+<%= link_to 'Show All Cards', flashcards_path %>

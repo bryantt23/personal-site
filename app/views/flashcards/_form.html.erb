@@ -1,0 +1,12 @@
+<%= simple_form_for(@flashcard) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :question %>
+    <%= f.input :answer %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
