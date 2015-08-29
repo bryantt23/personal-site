@@ -30,45 +30,41 @@ class FlashcardsController < ApplicationController
       if @flashcard.save
         format.html { flash[:notice] = 'Flashcard was successfully created.'
           redirect_to action: "index"  }
-        format.json { render :show, status: :created, location: @flashcard }
+          format.json { render :show, status: :created, location: @flashcard }
 
-
-        # format.html { redirect_to @flashcard, notice: 'Flashcard was successfully created.' }
-        # format.json { render :show, status: :created, location: @flashcard }
-        # format.html { redirect_to @flashcard, notice: 'Flashcard was successfully created.' }
-        # format.json { render :show, status: :created, location: @flashcard }
-      else
-        format.html { render :new }
-        format.json { render json: @flashcard.errors, status: :unprocessable_entity }
+        else
+          format.html { render :new }
+          format.json { render json: @flashcard.errors, status: :unprocessable_entity }
+        end
       end
     end
-  end
 
-  # PATCH/PUT /flashcards/1
-  # PATCH/PUT /flashcards/1.json
-  def update
-    respond_to do |format|
-      if @flashcard.update(flashcard_params)
-        format.html { redirect_to @flashcard, notice: 'Flashcard was successfully updated.' }
-        format.json { render :show, status: :ok, location: @flashcard }
-      else
-        format.html { render :edit }
-        format.json { render json: @flashcard.errors, status: :unprocessable_entity }
+    # PATCH/PUT /flashcards/1
+    # PATCH/PUT /flashcards/1.json
+    def update
+      respond_to do |format|
+        if @flashcard.update(flashcard_params)
+          format.html { flash[:notice] = 'Flashcard was successfully updated.'
+            redirect_to action: "index"  }
+            format.json { render :show, status: :ok, location: @flashcard }
+        else
+          format.html { render :edit }
+          format.json { render json: @flashcard.errors, status: :unprocessable_entity }
+        end
       end
     end
-  end
 
-  # DELETE /flashcards/1
-  # DELETE /flashcards/1.json
-  def destroy
-    @flashcard.destroy
-    respond_to do |format|
-      format.html { redirect_to flashcards_url, notice: 'Flashcard was successfully destroyed.' }
-      format.json { head :no_content }
+    # DELETE /flashcards/1
+    # DELETE /flashcards/1.json
+    def destroy
+      @flashcard.destroy
+      respond_to do |format|
+        format.html { redirect_to flashcards_url, notice: 'Flashcard was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
-  end
 
-  private
+    private
     # Use callbacks to share common setup or constraints between actions.
     def set_flashcard
       @flashcard = Flashcard.find(params[:id])
@@ -78,4 +74,4 @@ class FlashcardsController < ApplicationController
     def flashcard_params
       params.require(:flashcard).permit(:question, :answer)
     end
-end
+  end

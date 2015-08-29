@@ -1,3 +1,10 @@
 // Place all the styles related to the flashcards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.accordion-expand-holder {
+    margin:10px 0;
+}
+.accordion-expand-holder .open, .accordion-expand-holder .close {
+    margin:0 10px 0 0;
+}

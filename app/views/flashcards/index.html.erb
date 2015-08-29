@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Flashcards</h1>
+<h1>Flashcards</h1>
 
 <table>
   <thead>
@@ -19,12 +19,12 @@
       <td>
         <div class="accordion-flashcard">
           <h3>Answer</h3>
-          <div>
+          <div class="accordion-answers">
             <%= flashcard.answer %>
           </div>
         </div>
       </td>
-      <td><%= button_to "Edit", edit_flashcard_path(flashcard) , :class => "button" %></td>
+      <td><%= button_to "Edit", edit_flashcard_path(flashcard), :method => :get %></td>
       <td><%= button_to "Delete", flashcard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
@@ -33,4 +33,10 @@
 
 <br>
 
-<%= button_to 'New Flashcard', new_flashcard_path %>
+<div class="accordion-expand-holder">
+  <button type="button" class="open">Show All Answers</button>
+  <button type="button" class="close">Hide All Answers</button>
+</div>
+
+<!-- <button class="button" id="showAllAnswers">Show All Answers</button> -->
+<%= button_to "New Flashcard", new_flashcard_path, :class => "button", :method => :get  %>
