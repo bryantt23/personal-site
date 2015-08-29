@@ -28,8 +28,15 @@ class FlashcardsController < ApplicationController
 
     respond_to do |format|
       if @flashcard.save
-        format.html { redirect_to @flashcard, notice: 'Flashcard was successfully created.' }
+        format.html { flash[:notice] = 'Flashcard was successfully created.'
+          redirect_to action: "index"  }
         format.json { render :show, status: :created, location: @flashcard }
+
+
+        # format.html { redirect_to @flashcard, notice: 'Flashcard was successfully created.' }
+        # format.json { render :show, status: :created, location: @flashcard }
+        # format.html { redirect_to @flashcard, notice: 'Flashcard was successfully created.' }
+        # format.json { render :show, status: :created, location: @flashcard }
       else
         format.html { render :new }
         format.json { render json: @flashcard.errors, status: :unprocessable_entity }

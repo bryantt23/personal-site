@@ -13,17 +13,24 @@
 
   <tbody>
     <% @flashcards.each do |flashcard| %>
-      <tr>
-        <td><%= flashcard.question %></td>
-        <!-- <td><%= flashcard.answer %></td> -->
-        <td><%= link_to 'Answer', flashcard %></td>
-        <td><%= link_to 'Edit', edit_flashcard_path(flashcard) %></td>
-        <td><%= link_to 'Delete', flashcard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= flashcard.question %></td>
+
+      <td>
+        <div class="accordion-flashcard">
+          <h3>Answer</h3>
+          <div>
+            <%= flashcard.answer %>
+          </div>
+        </div>
+      </td>
+      <td><%= button_to "Edit", edit_flashcard_path(flashcard) , :class => "button" %></td>
+      <td><%= button_to "Delete", flashcard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Flashcard', new_flashcard_path %>
+<%= button_to 'New Flashcard', new_flashcard_path %>
