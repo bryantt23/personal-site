@@ -53,6 +53,7 @@ Rails.application.routes.draw do
   get 'meditation'    => 'static_pages#meditation'
   get 'closure'    => 'static_pages#closure'
   get 'projects_carousel'    => 'static_pages#projects_carousel'
+  get 'survey'    => 'static_pages#survey'
 
 
 

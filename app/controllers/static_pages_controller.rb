@@ -62,6 +62,10 @@ class StaticPagesController < ApplicationController
   def projects_carousel
   end
 
+  def survey
+  end
+
+
 
 
 
