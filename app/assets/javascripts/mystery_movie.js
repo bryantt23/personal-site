@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 
   $(function(){
-    $( "#accordion" ).accordion(
+    $( "#accordion-mystery" ).accordion(
       {
         active: 0, heightStyle: "content",
         collapsible: true
