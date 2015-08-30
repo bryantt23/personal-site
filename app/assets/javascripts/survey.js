@@ -1,35 +1,19 @@
 $(document).ready(function() {
 
-  /*
+  var names = ["Do you love computers?","Are you fascinated by logic, thinking, analysis?",
+  "Do you enjoy coding in your free time?","Do like to learn, build, and share?",
+  "Does programming just feel right to you?","Are you self-taught and/or classroom instructed?",
+  "Do you have projects, do you have a portfolio to display your work?","Do you have previous experience such as an internship or job?" ,
+  "Are you a Unicorn who can develop and design?","Have you contributed to Open Source and built your own Startup while also doing Freelance while leading teams of developers?" ,
+  "Do you have 20 years of experience with Windows 2000?","Are you 22 years old with 30 years of experience?",
+  "Have you mastered HTML5, HTML6, and HTML7-10?","Have you fallen in love with Siri yet" ]
 
-  // I am a convenience method for creating a Friend node
-  // with the given name (returned as a jQuery object).
-  function createFriendNode( name ){
-  // Create the friend node.
-  return(
-  $( "<li>" + name + "</li>" )
-  );
-  }
-  // Create an array of friends.
-  var buffer = [];
-  buffer.push( createFriendNode( "Joanna" ) );
-  buffer.push( createFriendNode( "Lisa" ) );
-  buffer.push( createFriendNode( "Tricia" ) );
-  buffer.push( createFriendNode( "Kim" ) );
-  // Append the friends to the DOM.
-  $( "ul.friends" ).append( buffer );
-
-
-  var element = $('ul:first');
-
-  */
-  var names = ["Joanna","Lisa","Tricia","Kim" ]
 
   for(var i=0; i < names.length; i++){
     // $( "ul.friends" ).append('<li>' + names[i] + '</li>');
     // $( "ul.friends" ).append('<li>' + names[i] + '</li>');
 
-    $( "ul.friends" ).append('<input type="checkbox" name="myCheckbox" />' +names[i] +' <br />');
+    $( "ul.questions" ).append('<label><input type="checkbox" name="myCheckbox" />' +names[i] +'</label> <br />');
     // $( "ul.friends" ).append("<input type="checkbox" />" + names[i] + "<br />");
 
   }
@@ -37,44 +21,50 @@ $(document).ready(function() {
 
 
 
-    // stress test code********************************************************
-    function displayVals() {
-      calcUsage();
+  // stress test code********************************************************
+  function displayVals() {
+    calcUsage();
+  }
+
+  // variable for  checkboxes
+  var $myCheckbox = $('input[name="myCheckbox"]');
+
+  function calcUsage() {
+    var NUMBER_OF_QUESTIONS=14;
+    var total = 0;
+    var percent;
+
+    // for each checkbox
+    $myCheckbox.each(function() {
+
+      // if this checkbox is checked
+      if (this.checked)
+
+      // parse the value and add it to the total
+      total += 1;
+      percent = Math.floor((total/NUMBER_OF_QUESTIONS) * 100);
+    });
+
+    //display message to user based on total
+    //display in the div named usertotal
+    if(percent>99){
+      $("#usertotal").html(percent +"%. <br>You are a liar... I mean, you are supremely confident and a code ninja!");
     }
-
-    // variable for  checkboxes
-    var $myCheckbox = $('input[name="myCheckbox"]');
-
-    function calcUsage() {
-      var total = 0;
-
-      // for each checkbox
-      $myCheckbox.each(function() {
-
-        // if this checkbox is checked
-        if (this.checked)
-
-        // parse the value and add it to the total
-        total += 1;
-      });
-
-      //display message to user based on total
-      //display in the div named usertotal
-      if(total>299){
-        $("#usertotal").text(total + ". At risk of illness.");
-      }
-      else if (total>149){
-        $("#usertotal").text(total +". Risk of illness is moderate.");
-      }
-      else{
-        $("#usertotal").text(total +". Only have a slight risk of illness.");
-      }
+    else if (percent>74){
+      $("#usertotal").html(percent +"%. <br>You need to be even more confident still. Mark every answer as Yes, meaning \"Yes I can and will learn anything and everything that it takes!\"");
     }
+    else if (percent>49){
+      $("#usertotal").html(percent +"%. <br>You need to be even more confident. Mark more answers as Yes, meaning \"Yes I can and will learn this and anything I want!\"");
+    }
+    else{
+      $("#usertotal").html(percent +"%. <br>You need much more confidence. Mark more answers as Yes, meaning \"Yes I can and will learn this!\"");
+    }
+  }
 
-    $("select").change(displayVals);
-    displayVals();
+  $("select").change(displayVals);
+  displayVals();
 
-    $myCheckbox.click(calcUsage);
+  $myCheckbox.click(calcUsage);
 
 
 
