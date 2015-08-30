@@ -54,6 +54,7 @@ Rails.application.routes.draw do
   get 'closure'    => 'static_pages#closure'
   get 'projects_carousel'    => 'static_pages#projects_carousel'
   get 'survey'    => 'static_pages#survey'
+  get 'canvas'    => 'static_pages#canvas'
 
 
 
