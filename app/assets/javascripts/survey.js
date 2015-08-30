@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-  var names = ["Do you love computers?","Are you fascinated by logic, thinking, analysis?",
+  var names = ["Do you love computers?","Are you fascinated by logic, thinking, and analysis?",
   "Do you enjoy coding in your free time?","Do like to learn, build, and share?",
   "Does programming just feel right to you?","Are you self-taught and/or classroom instructed?",
   "Do you have projects, do you have a portfolio to display your work?","Do you have previous experience such as an internship or job?" ,
-  "Are you a Unicorn who can develop and design?","Have you contributed to Open Source and built your own Startup while also doing Freelance while leading teams of developers?" ,
+  "Are you a Unicorn who can develop and design?","Have you contributed to Open Source and built your own Startup while also doing Freelance while Leading teams of developers?" ,
   "Do you have 20 years of experience with Windows 2000?","Are you 22 years old with 30 years of experience?",
-  "Have you mastered HTML5, HTML6, and HTML7-10?","Have you fallen in love with Siri yet" ]
+  "Have you mastered HTML5, HTML6, and HTML7-10?","Have you fallen in love with Siri yet?" ]
 
 
   for(var i=0; i < names.length; i++){
@@ -47,19 +47,33 @@ $(document).ready(function() {
 
     //display message to user based on total
     //display in the div named usertotal
-    if(percent>99){
-      $("#usertotal").html(percent +"%. <br>You are a liar... I mean, you are supremely confident and a code ninja!");
+    if(percent>75){
+      $("#usertotal").html(percent +"%. <br>You are supremely confident and a code ninja!");
+      lastQuestion();
     }
-    else if (percent>74){
-      $("#usertotal").html(percent +"%. <br>You need to be even more confident still. Mark every answer as Yes, meaning \"Yes I can and will learn anything and everything that it takes!\"");
+    else if (percent>50){
+      $("#usertotal").html(percent +"%. <br>You need to be even more confident still... <br>Mark even more answers as Yes, meaning \"Yes I can and will learn anything and everything that it takes!\"");
     }
-    else if (percent>49){
-      $("#usertotal").html(percent +"%. <br>You need to be even more confident. Mark more answers as Yes, meaning \"Yes I can and will learn this and anything I want!\"");
+    else if (percent>25){
+      $("#usertotal").html(percent +"%. <br>You need to be even more confident... <br>Mark more answers as Yes, meaning \"Yes I can and yes I will learn this!\"");
     }
     else{
-      $("#usertotal").html(percent +"%. <br>You need much more confidence. Mark more answers as Yes, meaning \"Yes I can and will learn this!\"");
+      $("#usertotal").html(percent +"%. <br>You need to be much more confident... <br>Mark more answers as Yes, meaning \"Yes I am learning this :)\"");
     }
   }
+
+
+
+  function lastQuestion() {
+      var x= "You are HIRED! :)";
+      if (confirm("One last question: Will you keep learning and building until you get your dream job?") == true) {
+          // x = "You got the Job!";
+      } else {
+        lastQuestion();
+      }
+      document.getElementById("job").innerHTML = x;
+  }
+
 
   $("select").change(displayVals);
   displayVals();
