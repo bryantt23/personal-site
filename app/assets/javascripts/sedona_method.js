@@ -4,16 +4,19 @@ $(document).ready(function() {
   // http://www.w3.org/wiki/JavaScript_best_practices#Avoid_globals
   (function() {
 
-    var num = 1;
+    // var num = 1;
+    var num = 0;
+    question(num);
+
 
     // http://stackoverflow.com/questions/18642485/ruby-on-rails-displaying-images-at-random
     $(".sedonaButtons").on("click", function(){
 
       // question(num);
-      if(num<4){
-        question(num);
-        num++;
-      }
+      // if(num<4){
+      num++;
+      question(num);
+      // }
       // else{
       //   num=0
       // }
@@ -77,8 +80,8 @@ $(document).ready(function() {
     });
 
     $("#sedonaYesToWouldYouLetItGoButton").on("click", function(){
-    $("#sedonaYesToWouldYouLetItGoButton").hide();
-    $("#sedonaNoToWouldYouLetItGoButton").hide();
+      $("#sedonaYesToWouldYouLetItGoButton").hide();
+      $("#sedonaNoToWouldYouLetItGoButton").hide();
       lastQuestion();
     });
 
@@ -96,7 +99,6 @@ $(document).ready(function() {
       num=0;
       question(num);
     });
-
 
 
 
