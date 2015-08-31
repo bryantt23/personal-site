@@ -9,13 +9,14 @@ $(document).ready(function() {
     // http://stackoverflow.com/questions/18642485/ruby-on-rails-displaying-images-at-random
     $(".sedonaButtons").on("click", function(){
 
-      question(num);
+      // question(num);
       if(num<4){
+        question(num);
         num++;
       }
-      else{
-        num=0
-      }
+      // else{
+      //   num=0
+      // }
 
     });
 
@@ -35,21 +36,67 @@ $(document).ready(function() {
       else if (num==2){
         $("#sedona_questions").html("Could I let this feeling go? Yes or no are both acceptable answers.");
       }
-      else if (num==3){
-        $("#sedona_questions").html("Would I let this feeling go?");
-      }
-      else{
-        $("#sedona_questions").html("When? This is an invitation to just let it go NOW. ");
-        $("#sedonaYesButton").hide();
+      else {
         $("#sedonaNoButton").hide();
-        $("#sedonaNowButton").show();
+        $("#sedonaYesButton").hide();
+        $("#sedonaYesToWouldYouLetItGoButton").show();
+        $("#sedonaNoToWouldYouLetItGoButton").show();
+        $("#sedona_questions").html("Would I let this feeling go? Yes or no are both acceptable answers.");
+
+        // $("#sedonaNoToWouldYouLetItGoButton").on("click", function(){
+        //   $("#sedona_questions").html("Would I rather have this feeling, or would I rather be free?");
+        //   $("#sedonaFreeButton").show();
+        // });
+
       }
+      // else{
+      //   $("#sedona_questions").html("When? This is an invitation to just let it go NOW. ");
+      //   $("#sedonaFreeButton").hide();
+      //   $("#sedonaYesButton").hide();
+      //   $("#sedonaNoToWouldYouLetItGoButton").hide();
+      //   $("#sedonaNowButton").show();
+      // }
     }
     // <%= button_tag "Next", :class => "btn btn-primary", :type => "button", :id => "sedonaButton", :size => "166x66" %>
     // <%= button_tag "Yes", :class => "btn btn-primary", :type => "button", :id => "sedonaYesButton", :size => "166x66" , :style => "display: none;" %>
     // <%= button_tag "No", :class => "btn btn-primary", :type => "button", :id => "sedonaNoButton", :size => "166x66" , :style => "display: none;" %>
     // <%= button_tag "Now", :class => "btn btn-primary", :type => "button", :id => "sedonaNowButton", :size => "166x66", :style => "display: none;" %>
     // <%= button_tag "I would rather be free", :class => "btn btn-primary", :type => "sedonaFreeButton", :id => "sedonaButton", :size => "166x66", :style => "display: none;" %>
+
+
+    // http://stackoverflow.com/questions/18642485/ruby-on-rails-displaying-images-at-random
+    $("#sedonaNoToWouldYouLetItGoButton").on("click", function(){
+      $("#sedona_questions").html("Would I rather have this feeling, or would I rather be free?");
+      $("#sedonaYesToWouldYouLetItGoButton").hide();
+      $("#sedonaNoToWouldYouLetItGoButton").hide();
+      $("#sedonaFreeButton").show();
+    });
+
+    $("#sedonaFreeButton").on("click", function(){
+      lastQuestion();
+    });
+
+    $("#sedonaYesToWouldYouLetItGoButton").on("click", function(){
+    $("#sedonaYesToWouldYouLetItGoButton").hide();
+    $("#sedonaNoToWouldYouLetItGoButton").hide();
+      lastQuestion();
+    });
+
+    function lastQuestion(){
+      $("#sedona_questions").html("When? This is an invitation to just let it go NOW. ");
+      $("#sedonaFreeButton").hide();
+      // $("#sedonaYesToWouldYouLetItGoButton").hide();
+      // $("#sedonaNoToWouldYouLetItGoButton").hide();
+      $("#sedonaNowButton").show();
+    }
+
+
+    $("#sedonaNowButton").on("click", function(){
+      $("#sedonaNowButton").hide();
+      num=0;
+      question(num);
+    });
+
 
 
 
