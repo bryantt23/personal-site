@@ -24,22 +24,22 @@ $(document).ready(function() {
         $("#sedonaYesButton").show();
         $("#sedonaNoButton").show();
 
-        $("#sedona_questions").html("Could I welcome this feeling? Yes or no are both acceptable answers.");
+        $("#sedona_questions").html("Could you welcome this feeling? Yes or no are both acceptable answers.");
       }
       else if (num==2){
-        $("#sedona_questions").html("Could I let this feeling go? Yes or no are both acceptable answers.");
+        $("#sedona_questions").html("Could you let this feeling go? Yes or no are both acceptable answers.");
       }
       else {
         $("#sedonaNoButton").hide();
         $("#sedonaYesButton").hide();
         $("#sedonaYesToWouldYouLetItGoButton").show();
         $("#sedonaNoToWouldYouLetItGoButton").show();
-        $("#sedona_questions").html("Would I let this feeling go? Yes or no are both acceptable answers.");
+        $("#sedona_questions").html("Would you let this feeling go? Yes or no are both acceptable answers.");
       }
     }
 
     $("#sedonaNoToWouldYouLetItGoButton").on("click", function(){
-      $("#sedona_questions").html("Would I rather have this feeling, or would I rather be free?");
+      $("#sedona_questions").html("Would you rather have this feeling, or would you rather be free?");
       $("#sedonaYesToWouldYouLetItGoButton").hide();
       $("#sedonaNoToWouldYouLetItGoButton").hide();
       $("#sedonaFreeButton").show();
