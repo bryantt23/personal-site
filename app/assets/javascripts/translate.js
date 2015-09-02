@@ -7,7 +7,6 @@ $(document).ready(function() {
 
 
 
-  /*
   // http://stackoverflow.com/questions/18160342/jquery-how-to-trigger-click-event-on-pressing-enter-key
   //press enter in text area..
   $('#word_input').keypress(function (e) {
@@ -18,7 +17,6 @@ $(document).ready(function() {
   return false;
   }
   });
-  */
 
 
   // use jQuery to select the button
