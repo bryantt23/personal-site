@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 
   var WEBSITE_ADDRESS = "https://translate.yandex.net/api/v1.5/tr.json/translate?";
-  var API_TRANSLATION_KEY = "key=trnsl.1.1.20150223T123008Z.b011910a62c9313a.b80623ee865a31ba17519a2073b6708b1d1226b3";
+  var API_TRANSLATION_KEY = "key=trnsl.1.1.20150902T112010Z.1a6212e8e1655fac.d63ceaa7e8dccecc55a98d2a7649e75bfac330cc";
 
 
 
@@ -37,15 +37,33 @@ $(document).ready(function() {
 
     // http://openweathermap.org/current
     // it has to be similar to http://api.openweathermap.org/data/2.5/find?q=London
+    var language_start = $( "#language_start" ).val();
+    var language_end = $( "#language_end" ).val();
 
-    $.getJSON(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=en-es&"+searchInput);
+        $.getJSON(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=" + language_start + "-" + language_end +"&text="+searchInput, getTranslationFromAPI);
 
-    $("#showTranslation").append(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=en-es&"+"text="+searchInput);
+    // $.getJSON(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=en-en&"+"text="+searchInput, getTranslationFromAPI);
+
+    // this creates an accurate site for the JSON info
+    // $("#showTranslation").append(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=en-es&"+"text="+searchInput);
 
 
   });
 
 
+
+  function getTranslationFromAPI(data) {
+    var translation = {};
+    translation.translated;
+
+    // get info from json that was stored above
+
+    translation.translated       = data.text;
+
+    // this is how the info gets displayed
+    $("#showTranslation").html(translation.translated);
+
+  }
 
 
 
