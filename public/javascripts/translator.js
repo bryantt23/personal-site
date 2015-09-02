@@ -7,22 +7,25 @@ $(document).ready(function() {
 
 
 
-
+/*
   // http://stackoverflow.com/questions/18160342/jquery-how-to-trigger-click-event-on-pressing-enter-key
   //press enter in text area..
-  $('#ingredient_name').keypress(function (e) {
+  $('#word_input').keypress(function (e) {
     var key = e.which;
     if(key == 13)  // the enter key code
     {
-      $('#searchForRecipesButton').click();
+      $('#searchForTranslationButton').click();
       return false;
     }
   });
+*/
+
 
   // use jQuery to select the button
   // "listen" for when the button is clicked
   $("#searchForTranslationButton").click(function(){
 
+/*
     // create a variable
     // select the input using jQuery
     // use the val() function to get the input value
@@ -40,15 +43,33 @@ $(document).ready(function() {
     var language_start = $( "#language_start" ).val();
     var language_end = $( "#language_end" ).val();
 
-        $.getJSON(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=" + language_start + "-" + language_end +"&text="+searchInput, getTranslationFromAPI);
+    $.getJSON(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=" + language_start + "-" + language_end +"&text="+searchInput, getTranslationFromAPI);
+*/
 
-    // $.getJSON(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=en-en&"+"text="+searchInput, getTranslationFromAPI);
-
-    // this creates an accurate site for the JSON info
-    // $("#showTranslation").append(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=en-es&"+"text="+searchInput);
-
-
+getJSONData();
   });
+
+  function getJSONData(){
+      // create a variable
+      // select the input using jQuery
+      // use the val() function to get the input value
+      var searchInput = $('#word_input').val();
+
+
+      // use this function to search for recipes on the Edamam API
+      // pass in the value that the user has typed in
+      // once we get something back from the API, run the displayRecipes function
+      // alert(searchInput);
+      // getTranslationFromAPI(searchInput, displayTranslations);
+
+      // http://openweathermap.org/current
+      // it has to be similar to http://api.openweathermap.org/data/2.5/find?q=London
+      var language_start = $( "#language_start" ).val();
+      var language_end = $( "#language_end" ).val();
+
+      $.getJSON(WEBSITE_ADDRESS + API_TRANSLATION_KEY +"&lang=" + language_start + "-" + language_end +"&text="+searchInput, getTranslationFromAPI);
+
+  }
 
 
 
@@ -65,6 +86,13 @@ $(document).ready(function() {
 
   }
 
+  $('#language_start').change(function(){
+  getJSONData();
+  })
+
+  $('#language_end').change(function(){
+  getJSONData();
+  })
 
 
 
