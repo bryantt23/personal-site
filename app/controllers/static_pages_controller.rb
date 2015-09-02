@@ -68,6 +68,9 @@ class StaticPagesController < ApplicationController
   def sedona_method
   end
 
+  def translate
+  end
+
 
 
 

@@ -24,7 +24,7 @@ $(document).ready(function() {
   // use jQuery to select the button
   // "listen" for when the button is clicked
   $("#searchForTranslationButton").click(function(){
-    
+
     /*
     // create a variable
     // select the input using jQuery
