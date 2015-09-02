@@ -1,6 +1,8 @@
 
 function draw(){
   var ctx = document.getElementById("my_canvas").getContext("2d");
+  // ctx.fillStyle = color || hex || rgba() || gradient || pattern
+
   console.log(ctx.canvas.id+" "+ctx.canvas.width+" "+ctx.canvas.height)
 
   ctx.fillStyle = "magenta";
