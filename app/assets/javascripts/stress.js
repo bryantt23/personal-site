@@ -3,14 +3,14 @@ $(document).ready(function() {
 
 
   // stress test code********************************************************
-  function displayVals() {
-    calcUsage();
+  function displayStressVals() {
+    calcStress();
   }
 
   // variable for  checkboxes
   var $cbs = $('input[name="ch1"]');
 
-  function calcUsage() {
+  function calcStress() {
     var total = 0;
 
     // for each checkbox
@@ -26,20 +26,20 @@ $(document).ready(function() {
     //display message to user based on total
     //display in the div named usertotal
     if(total>299){
-      $("#usertotal").text(total + ". At risk of illness.");
+      $("#userStresstotal").text(total + ". At risk of illness.");
     }
     else if (total>149){
-      $("#usertotal").text(total +". Risk of illness is moderate.");
+      $("#userStresstotal").text(total +". Risk of illness is moderate.");
     }
     else{
-      $("#usertotal").text(total +". Only have a slight risk of illness.");
+      $("#userStresstotal").text(total +". Only have a slight risk of illness.");
     }
   }
 
-  $("select").change(displayVals);
-  displayVals();
+  $("select").change(displayStressVals);
+  displayStressVals();
 
-  $cbs.click(calcUsage);
+  $cbs.click(calcStress);
 
 
 
