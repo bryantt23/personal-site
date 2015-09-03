@@ -71,9 +71,12 @@ class StaticPagesController < ApplicationController
   def translate
   end
 
+  def translate
+  end
+
   def canvas
   end
-  
+
 
 
 
