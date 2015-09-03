@@ -65,6 +65,12 @@ class StaticPagesController < ApplicationController
   def survey
   end
 
+  def sedona_method
+  end
+
+  def translate
+  end
+
   def canvas
   end
 

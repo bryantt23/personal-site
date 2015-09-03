@@ -54,6 +54,8 @@ Rails.application.routes.draw do
   get 'closure'    => 'static_pages#closure'
   get 'projects_carousel'    => 'static_pages#projects_carousel'
   get 'survey'    => 'static_pages#survey'
+  get 'sedona_method'    => 'static_pages#sedona_method'
+  get 'translate'    => 'static_pages#translate'
   get 'canvas'    => 'static_pages#canvas'
 
 
