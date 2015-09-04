@@ -1,0 +1,14 @@
+<%= simple_form_for(@pet) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.label :pet_pic %><br>
+    <%= f.file_field :pet_pic %><br>
+  </div>
+
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

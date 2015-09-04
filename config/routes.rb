@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+  resources :pets
+
   resources :flashcards
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
