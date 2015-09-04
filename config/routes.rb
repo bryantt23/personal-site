@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
 
 
-  resources :pets
+  resources :pets do
+    member do
+      post 'upvote'
+    end
+  end
 
   resources :flashcards
 

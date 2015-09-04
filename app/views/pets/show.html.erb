@@ -6,5 +6,7 @@
   <%= image_tag @pet.pet_pic.url(:medium) %>
 </p>
 
+
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
-<%= link_to 'Back', pets_path %>
+<%= link_to 'Delete',  pet_path(@pet), method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Index', pets_path %>

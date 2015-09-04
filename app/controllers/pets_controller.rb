@@ -56,19 +56,27 @@ class PetsController < ApplicationController
   def destroy
     @pet.destroy
     respond_to do |format|
-      format.html { redirect_to pets_url, notice: 'Pet was successfully destroyed.' }
+      format.html { redirect_to pets_url, notice: 'Pet was successfully deleted.' }
       format.json { head :no_content }
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pet
-      @pet = Pet.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def pet_params
-      params.require(:pet).permit(:name, :pet_pic)
-    end
+  def upvote
+    @pet = Pet.find(params[:id])
+    @pet.votes.create
+    redirect_to(pets_path)
+  end
+
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_pet
+    @pet = Pet.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def pet_params
+    params.require(:pet).permit(:name, :pet_pic)
+  end
 end
