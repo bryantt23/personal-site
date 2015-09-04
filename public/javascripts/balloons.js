@@ -90,7 +90,10 @@ var balImages = ['http://www.maplecityrubber.com/wp-content/themes/maple_city/im
         x += dx;
         y += dy;
 
-        var img = new Image();
+// http://stackoverflow.com/questions/16924543/canvas-drawimage-type-error-on-chrome
+        var img = document.createElement('img');
+        // var img = new Image();
+
         img.src = bal.src;
 
         ctx.drawImage(img, x, y, imageX, imageY);
