@@ -1,0 +1,3 @@
+// $('#ajaxed').text('<%=pluralize(@pet.votes.count, "vote")%>');
+// $('#ajaxed').text('<%=pluralize(@pet.votes.count, "vote")%>');
+$("#ajaxed_<%= @pet.id %>").text('<%=pluralize(@pet.votes.count, "like")%>');
