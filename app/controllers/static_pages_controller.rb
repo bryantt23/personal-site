@@ -74,6 +74,9 @@ class StaticPagesController < ApplicationController
   def canvas
   end
 
+  def reflection
+  end
+
 
 
 

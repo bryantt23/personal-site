@@ -63,6 +63,7 @@ Rails.application.routes.draw do
   get 'sedona_method'    => 'static_pages#sedona_method'
   get 'translate'    => 'static_pages#translate'
   get 'canvas'    => 'static_pages#canvas'
+  get 'reflection'    => 'static_pages#reflection'
 
 
 
