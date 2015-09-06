@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+#header {
+    /*position: absolute;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+}
+
+#links_container {
+  font-size: 36px;
+    font-weight: 600;
+	text-align: right;
+	padding: 10px 20px;
+}
+
+#links_container a {
+	text-decoration: none;
+	color: #ffa800;
+	margin-left: 10px;
+}
+
+#links_container a:visited {
+	color: blue;
+}
+
+#links_container a:hover {
+	color: #112090;
+}
