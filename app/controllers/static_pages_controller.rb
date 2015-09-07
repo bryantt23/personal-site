@@ -80,6 +80,4 @@ class StaticPagesController < ApplicationController
 
 
 
-
-
 end

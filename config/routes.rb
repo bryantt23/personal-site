@@ -66,8 +66,6 @@ Rails.application.routes.draw do
   get 'reflection'    => 'static_pages#reflection'
 
 
-
-
   get 'litebrite'    => 'litebrite#litebrite'
 
   get "/blog" => redirect("http://bryanttunbutr.wordpress.com")
