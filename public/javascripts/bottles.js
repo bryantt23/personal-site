@@ -4,7 +4,9 @@ $(document).ready(function() {
 
 
   $(".slider").on("change", function(){
-    document.getElementById("range").innerHTML=this.value
+    document.getElementById("range").innerHTML=this.value;
+    var numOfBeers = this.value;
+    bottlesOfBeer(numOfBeers);
   });
 
 
@@ -19,10 +21,20 @@ $(document).ready(function() {
   //   bottlesOfBeer(newValue);
   // }
 
-  // function bottlesOfBeer(newValue){
-  //
-  //   $("#beer_lyrics").innerHTML(newValue +"beerr. <br>You need beerr much more confident... <br>beerr ");
-  //
-  // }
+  function bottlesOfBeer(numOfBeers){
+    var lyrics="";
+    // console.log("yolo");
+    while(numOfBeers>0){
+      lyrics += numOfBeers + " bottles of beer on the wall, " + numOfBeers + " bottles of beer.<br>" + 
+      "Take one down, pass it around, " + --numOfBeers + " bottles of beer on the wall...<br>";
+    }
+    lyrics += "No more bottles of beer on the wall, no more bottles of beer.<br>" +
+    "Go to the store and buy some more, 99 bottles of beer on the wall...";
+
+
+
+    $("#beerLyrics").html(lyrics);
+
+  }
 
 });
