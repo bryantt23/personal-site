@@ -4,6 +4,10 @@ $(document).ready(function() {
 
   createGrid(8,8);
 
+    function calculateSizes(rowsInput){
+      return 480/rowsInput;
+      }
+
   function createGrid(rowsInput, columnsInput){
 
     var rows = rowsInput;
@@ -33,7 +37,15 @@ $(document).ready(function() {
       $(this).css("background-color", "pink");
     });
 
-        // $(".row").height(100);
+    var size = calculateSizes(rowsInput);
+
+console.log(size);
+
+    $(".row-etch").height(size);
+    // $(".row-etch").width(size);
+    $(".square-etch").height(size);
+    $(".square-etch").width(size);
+
   }
 
 
