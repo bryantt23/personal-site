@@ -20,8 +20,6 @@ $(document).ready(function() {
       class: 'square-etch'
     });
 
-
-
     //add columns to the the temp row object
     for (var i = 0; i < columns; i++) {
       $row.append($square.clone());
@@ -31,10 +29,19 @@ $(document).ready(function() {
       $("#etch_sketch_wrapper").append($row.clone());
     }
 
+    // $(".square-etch").hover(function(){
+    //   $(this).css("background-color", "yellow");
+    // },
+    // function(){
+    //   $(this).css("background-color", "pink");
+    // });
+
+
     $(".square-etch").hover(function(){
-      $(this).css("background-color", "yellow");
-    }, function(){
-      $(this).css("background-color", "pink");
+      $(this).css("background-color", getRandomColor());
+    // },
+    // function(){
+    //   $(this).css("background-color", "pink");
     });
 
     var size = calculateSizes(rowsInput);
@@ -42,7 +49,6 @@ $(document).ready(function() {
     console.log(size);
 
     $(".row-etch").height(size);
-    // $(".row-etch").width(size);
     $(".square-etch").height(size);
     $(".square-etch").width(size);
 
@@ -54,23 +60,21 @@ $(document).ready(function() {
     var gridSize = prompt("How many squares wide would you like the grid to be?");
 
     while(gridSize > 21 || gridSize == null){
-        gridSize = prompt("How many squares wide would you like the grid to be?");
+      gridSize = prompt("How many squares wide would you like the grid to be?");
     }
 
-      $("#etch_sketch_wrapper").empty();
-      createGrid(gridSize,gridSize);
-
-    // if (gridSize < 21 && gridSize != null) {
-    //   $("#etch_sketch_wrapper").empty();
-    //   createGrid(gridSize,gridSize);
-    // }
-    // else{
-    //   gridSize = prompt("How many squares wide would you like the grid to be?");
-    // }
-
+    $("#etch_sketch_wrapper").empty();
+    createGrid(gridSize,gridSize);
   });
 
-
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
 
 });
