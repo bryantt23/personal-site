@@ -29,19 +29,8 @@ $(document).ready(function() {
       $("#etch_sketch_wrapper").append($row.clone());
     }
 
-    // $(".square-etch").hover(function(){
-    //   $(this).css("background-color", "yellow");
-    // },
-    // function(){
-    //   $(this).css("background-color", "pink");
-    // });
-
-
     $(".square-etch").hover(function(){
       $(this).css("background-color", getRandomColor());
-    // },
-    // function(){
-    //   $(this).css("background-color", "pink");
     });
 
     var size = calculateSizes(rowsInput);
