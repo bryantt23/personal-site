@@ -4,9 +4,9 @@ $(document).ready(function() {
 
   createGrid(8,8);
 
-    function calculateSizes(rowsInput){
-      return 480/rowsInput;
-      }
+  function calculateSizes(rowsInput){
+    return 480/rowsInput;
+  }
 
   function createGrid(rowsInput, columnsInput){
 
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     var size = calculateSizes(rowsInput);
 
-console.log(size);
+    console.log(size);
 
     $(".row-etch").height(size);
     // $(".row-etch").width(size);
@@ -53,10 +53,20 @@ console.log(size);
   $("#clear_grid_button").on("click", function(){
     var gridSize = prompt("How many squares wide would you like the grid to be?");
 
-    if (gridSize != null) {
+    while(gridSize > 21 || gridSize == null){
+        gridSize = prompt("How many squares wide would you like the grid to be?");
+    }
+
       $("#etch_sketch_wrapper").empty();
       createGrid(gridSize,gridSize);
-    }
+
+    // if (gridSize < 21 && gridSize != null) {
+    //   $("#etch_sketch_wrapper").empty();
+    //   createGrid(gridSize,gridSize);
+    // }
+    // else{
+    //   gridSize = prompt("How many squares wide would you like the grid to be?");
+    // }
 
   });
 
