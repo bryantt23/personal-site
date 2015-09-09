@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   get 'translate'    => 'static_pages#translate'
   get 'canvas'    => 'static_pages#canvas'
   get 'reflection'    => 'static_pages#reflection'
+  get 'etch_a_sketch'    => 'static_pages#etch_a_sketch'
 
 
   get 'litebrite'    => 'litebrite#litebrite'

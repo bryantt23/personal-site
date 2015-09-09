@@ -77,7 +77,8 @@ class StaticPagesController < ApplicationController
   def reflection
   end
 
-
+  def etch_a_sketch
+  end
 
 
 end
