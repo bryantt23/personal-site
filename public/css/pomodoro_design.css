@@ -35,3 +35,13 @@ html, body {
 .footer, .push {
   height: 4em;
 }
+
+#clock{
+  font-size: 100px;
+  line-height: 100%;
+}
+.timer {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
