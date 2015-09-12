@@ -8,6 +8,13 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 </head>
+
+<style>
+body{
+  padding-top: 40px;
+}
+</style>
+
 <body>
 
 
@@ -26,10 +33,9 @@
 
       </div><!-- Navbar Header-->
       <div class="collapse navbar-collapse" id="navbar-collapse">
-
-        <!-- <a href="" class="btn btn-warning navbar-btn navbar-right">Download Now</a> -->
+        <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp" class="btn btn btn-info navbar-btn navbar-right">Bootstrap Button</a>
         <ul class="nav navbar-nav">
-          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="#quotes">Quotes</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Bryant's Projects</a></li>
@@ -39,22 +45,57 @@
     </div><!-- End Container-->
   </nav><!-- End navbar -->
 
-    	<!-- jumbotron-->
-    	<div class="jumbotron">
-    		<div class="container text-center">
-    			<h1>Bootstrap Site</h1>
-    			<p>Learn how to build this <a href="https://www.youtube.com/watch?v=e6VYRVRoC40">here<a/> </p>
+  <!-- jumbotron-->
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>Bootstrap Site</h1>
+      <p>Learn how to build this <a href="https://www.youtube.com/watch?v=e6VYRVRoC40">here<a/> </p>
 
-    			<div class="btn-group">
-    				<a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp" class="btn btn-lg btn-info">Bootstrap</a>
-    				<a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp" class="btn btn-lg btn-warning">  Button </a>
-    				<a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp" class="btn btn-lg btn-danger">Colors</a>
-    			</div>
-    		</div><!-- End container -->
-    	</div><!-- End jumbotron-->
+        <div class="btn-group">
+          <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp" class="btn btn-lg btn-info">Bootstrap</a>
+          <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp" class="btn btn-lg btn-warning">  Button </a>
+          <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp" class="btn btn-lg btn-danger">Colors</a>
+        </div>
+      </div><!-- End container -->
+    </div><!-- End jumbotron-->
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+    <!-- Feedback-->
+    <div class="container">
+      <section>
+        <div class="page-header" id="quotes">
+          <h2>Quotes<small> Check out the famous words</small></h2>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-4">
+            <blockquote>
+              <p>
+                That's been one of my mantras - focus and simplicity. Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple. But it's worth it in the end because once you get there, you can move mountains.
+              </p>
+              <footer>Steve Jobs</footer>
+            </blockquote>
+          </div>
+          <div class="col-xs-4">
+            <blockquote>
+              <p>I find that nothing but very close and intense application to subjects of a scientific nature now seems at all to keep my imagination from running wild, or to stop up the void which seems to be left in my mind from a want of excitement.
+              </p>
+              <footer>Ada Lovelace</footer>
+            </blockquote>
+          </div>
+          <div class="col-xs-4">
+            <blockquote>
+              <p>Three can keep a secret, if two of them are dead.
+              </p>
+              <footer>Benjamin Franklin </footer>
+            </blockquote>
+          </div>
+        </div><!-- End row -->
+      </section>
+    </div><!--End Container-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+  </html>
