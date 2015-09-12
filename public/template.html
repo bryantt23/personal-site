@@ -13,6 +13,14 @@
 body{
   padding-top: 40px;
 }
+.carousel-inner > .item > img {
+    margin: 0 auto;
+        width: 80%;
+}
+.carousel   {
+    margin: 0 auto;
+        width: 50%;
+}
 </style>
 
 <body>
@@ -49,7 +57,7 @@ body{
   <div class="jumbotron">
     <div class="container text-center">
       <h1>Bootstrap Site</h1>
-      <p>Learn how to build this <a href="https://www.youtube.com/watch?v=e6VYRVRoC40">here<a/> </p>
+      <p>Learn how to build this site <a href="https://www.youtube.com/watch?v=e6VYRVRoC40">here<a/> </p>
 
         <div class="btn-group">
           <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_buttons.asp" class="btn btn-lg btn-info">Bootstrap</a>
@@ -95,7 +103,65 @@ body{
     </div><!--End Container-->
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  </body>
-  </html>
+
+    <!-- Gallery -->
+    <div class="container">
+      <section>
+        <div class="page-header" id="gallery">
+          <h2>Gallery.<small> Check out the Awesome Gallery</small></h2>
+        </div>
+
+        <div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#screenshot-carousel" data-slide-to="1"></li>
+            <li data-target="#screenshot-carousel" data-slide-to="2"></li>
+            <li data-target="#screenshot-carousel" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="images/bootstrap/highway.jpg" alt="Text of the image">
+              <div class="carousel-caption">
+                <h3>Highway</h3>
+                <p>Images from Unsplash.com</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/bootstrap/river.jpg" alt="Text of the image">
+              <div class="carousel-caption">
+                <h3>River</h3>
+                <p>Images from Unsplash.com</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/bootstrap/street.jpg" alt="Text of the image">
+              <div class="carousel-caption">
+                <h3>Street</h3>
+                <p>Images from Unsplash.com</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/bootstrap/painting.jpg" alt="Text of the image">
+              <div class="carousel-caption">
+                <h3>Painting</h3>
+                <p>Images from Unsplash.com</p>
+              </div>
+            </div>
+
+          </div><!-- End Carousel inner -->
+          <a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a href="#screenshot-carousel" class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div><!-- End Carousel -->
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+      </body>
+      </html>
