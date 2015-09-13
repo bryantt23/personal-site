@@ -4,6 +4,18 @@
   <title>Pomodoro Timer</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/pomodoro_signin.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+  <style>
+
+  .btn{
+    display: block; width: 100%; border-radius:25px;
+  }
+
+  </style>
+
 </head>
 <body>
 
@@ -28,50 +40,52 @@
 
 
 
-<!-- Contact -->
 
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-1">
 
-      <div class="row">
+      <form action="" class="form-horizontal">
+        <div class="form-group">
+          <div class="col-sm-4"><h2 style="text-align:right">Log in</h2></div>
+          <div class="col-sm-8"></div>
+        </div>
 
-        <form action="" class="form-horizontal">
-
-
-                    <div class="form-group">
-        <div class="col-sm-4"><h2 style="text-align:right">Log in</h2></div>
-        <div class="col-sm-8"></div>
-      </div>
-
-
-          <div class="form-group">
-            <label for="user-name" class="col-sm-4 control-label">Email / username</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="user-name" placeholder="Enter your email/username">
-            </div>
-          </div><!-- End form group -->
-
-          <div class="form-group">
-            <label for="user-email" class="col-sm-4 control-label">Password</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="user-email" placeholder="Enter your password">
-            </div>
-          </div>
-
-
-          <div class="col-sm-4"></div>
+        <div class="form-group">
+          <label for="user-name" class="col-sm-4 control-label">Email / username</label>
           <div class="col-sm-8">
-            <input class="btn btn-lg btn-success btn-100" name="commit" type="submit" value="Log in">
-          </div><!-- End form group -->
+            <input type="text" class="form-control" id="user-name" placeholder="Enter your email/username">
+          </div>
+        </div><!-- End form group -->
 
-        </form>
-      </div>
+        <div class="form-group">
+          <label for="user-email" class="col-sm-4 control-label">Password</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="user-email" placeholder="Enter your password">
+          </div>
+        </div>
+
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8">
+          <input class="btn btn-lg btn-success btn-100" name="commit" type="submit" value="Log in">
+        </div><!-- End form group -->
+
+      </form>
     </div><!-- End the row -->
 
-  </div>
+    <div class="col-sm-3 col-sm-offset-1">
+      <br>
 
-  <div class="col-sm-3 col-sm-offset-1">
+      <h4>or log in with:</h4>
+      <div>
+        <a href="#" class="btn btn-lg btn-primary btn-100"><i class="fa fa-facebook"></i> | Facebook</a>
+      </div>
+      <div>
+        <a href="#" class="btn btn-lg btn-danger btn-100"><i class="fa fa-google-plus"></i> | Google</a>        
+      </div>
+
+    </div>
+
 
   </div>
 </div><!-- end row -->
