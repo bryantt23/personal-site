@@ -1,0 +1,50 @@
+
+.nav {
+  height: 52px;
+  line-height: 52px;
+  background-color: darkslateblue;
+
+}
+.nav a{
+  color: white ;
+  /*font-weight: bold;*/
+  border-right: 15px solid darkslateblue;
+  float: right;
+}
+.text-footer{
+  color: white ;
+  text-align: center;
+}
+
+body{
+  background-color: linen;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+.footer, .push {
+  height: 4em;
+}
+
+#clock{
+  font-size: 100px;
+  line-height: 100%;
+}
+
+.timer{
+  margin-top: 100px;
+}
+
+#button_start_timer{
+  padding-top: 25px;
+}
