@@ -16,20 +16,6 @@
   text-align: center;
 }
 
-body{
-  background-color: linen;
-}
-
-* {
-  margin: 0;
-}
-html, body {
-  height: 100%;
-}
-.footer, .push {
-  height: 4em;
-}
-
 #clock{
   font-size: 100px;
   line-height: 100%;
@@ -41,4 +27,30 @@ html, body {
 
 #button_start_timer{
   padding-top: 25px;
+}
+
+.btn{
+  display: block; width: 100%; border-radius:25px; margin: 20px 0 20px;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+body{
+  background-color: linen;
 }
