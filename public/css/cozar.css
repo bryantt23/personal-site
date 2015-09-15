@@ -1,18 +1,13 @@
 
-@font-face{
-	font-family: 'edmondbold';
-	src: url('../fonts/edmondbold.eot');
-	src: url('../fonts/edmondbold.eot?#iefix') format('embedded-opentype'),
-	     url('../fonts/edmondbold.woff') format('woff'),
-	     url('../fonts/edmondbold.ttf') format('truetype'),
-	     url('../fonts/edmondbold.svg#webfont') format('svg');
-}
-body{
-	font-family: 'edmondbold', Arial, sans-serif;
-	color: #000;
-	text-rendering: optimizeLegibility;
-}
+
+
+
+
+
+
 
 .navbar{
   height: 100px;
+	margin-bottom: 0px;
+    width:100%;
 }
