@@ -10,29 +10,86 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="jumbotron">
-    <h1><a href="http://www.w3schools.com/bootstrap/default.asp">  This is a Bootstrap Jumbotron Section</h1></a>
-    <p>Resize this responsive page to see the effect!</p>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>This is a <a href="http://www.w3schools.com/bootstrap/default.asp">Bootstrap</a> Jumbotron Section</h1>
+      <p>Be sure to check out <a href="http://www.w3schools.com/bootstrap/default.asp">W3 Schools</a> for the full tutorial, explanations, and examples.</p>
+      <p>Resize this responsive page to see the effect!</p>
+      <p>Also this is a fixed container that does not span the entire page.</p>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Column 1</h3>
+        <p>On a medium size screen there are 3 columns</p>
+        <p>When the screen size is small there will be only 1 column</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 2</h3>
+        <p>On a medium size screen there are 3 columns</p>
+        <p>When the screen size is small there will be only 1 column</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 3</h3>
+        <p>On a medium size screen there are 3 columns</p>
+        <p>When the screen size is small there will be only 1 column</p>
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>On a medium size screen there are 3 columns</p>
-      <p>When the screen size is small there will be only 1 column</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>On a medium size screen there are 3 columns</p>
-      <p>When the screen size is small there will be only 1 column</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>
-      <p>On a medium size screen there are 3 columns</p>
-      <p>When the screen size is small there will be only 1 column</p>
-    </div>
-  </div>
-</div>
 
-</body>
-</html>
+  <div class="container-fluid">
+    <h1>This is a fluid container that spans the entire page</h1>
+    <p>Resize the browser window to see the effect.</p>
+    <p>This will have 3 columns when the browser size is medium (desktop size) but when it
+      it shrinks smaller than that the colors will stack on top of each other. </p>
+      <div class="row">
+        <div class="col-md-4" style="background-color:lavender;">.col-sm-4</div>
+        <div class="col-md-4" style="background-color:lavenderblush;">.col-sm-4</div>
+        <div class="col-md-4" style="background-color:lavender;">.col-sm-4</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>Bootstrap heading sizes along with the small element which creates a lighter, secondary text in the heading:</p>
+      <h1>h1 Bootstrap heading (36px) <small>secondary text</small></h1>
+      <h2>h2 Bootstrap heading (30px) <small>secondary text</small></h2>
+      <h3>h3 Bootstrap heading (24px) <small>secondary text</small></h3>
+      <h4>h4 Bootstrap heading (18px) <small>secondary text</small></h4>
+      <h5>h5 Bootstrap heading (14px) <small>secondary text</small></h5>
+      <h6>h6 Bootstrap heading (12px) <small>secondary text</small></h6>
+    </div>
+
+
+    <div class="container">
+      <h1>Code Snippets</h1>
+      <p>Inline snippets of code should be embedded in the code element:</p>
+      <p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section in a document.</p>
+    </div>
+
+
+    <div class="container">
+      <h2>Text Colors</h2>
+      <p>Bootstrap's text colors</p>
+      <p class="text-muted">Muted Color.</p>
+      <p class="text-primary">Important Color.</p>
+      <p class="text-success">Success Color.</p>
+      <p class="text-info">Information Color.</p>
+      <p class="text-warning">Warning Color.</p>
+      <p class="text-danger">Danger Color.</p>
+    </div>
+
+    <div class="container">
+      <h2>Background Colors</h2>
+      <p>Bootstrap's background colors</p>
+      <p class="bg-primary">Important Color.</p>
+      <p class="bg-success">Success Color.</p>
+      <p class="bg-info">Information Color.</p>
+      <p class="bg-warning">Warning Color.</p>
+      <p class="bg-danger">Danger Color.</p>
+    </div>
+    
+
+
+
+
+  </body>
+  </html>
