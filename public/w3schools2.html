@@ -16,6 +16,40 @@
 </head>
 <body>
 
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
   <div class="container">
     <div class="jumbotron">
       <h1>W3 Schools <a href="http://www.w3schools.com/bootstrap/default.asp">Bootstrap</a> Part 2</h1>
@@ -23,6 +57,12 @@
       <p>Click <a href="http://www.bryanttunbutr.com/w3schools.html">here</a> for part 1.</p>
     </div>
   </div>
+
+<div class="container">
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+</div>
 
   <div class="container">
     <h2>Dropdowns</h2>
@@ -117,11 +157,15 @@
               <li><a href="#">Menu 3</a></li>
             </ul>
           </div>
-
+To make the tabs toggable, add the data-toggle="tab" attribute to each link.
+Then add a .tab-pane class with a unique ID for every tab and wrap them inside a <div> element with class .tab-content.
 
           <div class="container">
             <h2>Dynamic Pills</h2>
             <p>Clicking on the pill changes the pane's content.</p>
+            <p>To make the pill toggable, add the data-toggle="pill" attribute to each link. </p>
+            <p>Next create a tab-pane class that has a unique ID for each tab.
+              Wrap all of these tabs inside a <code>div</code> element with the class name tab-content. </p>
             <ul class="nav nav-pills">
               <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
               <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
