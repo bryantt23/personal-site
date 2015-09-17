@@ -30,19 +30,125 @@
     <p>To actually build the dropdown menu use the dropdown-menu class.</p>
     <p>Use a button or a link with the class dropdown-toggle and also set data-toggle equal to "dropdown" in
       order to open the dropdown menu.</p>
-    <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-        </ul>
+      <p>Notice the divider between the JavaScript and SQL and also the use of a Dropdown Header.</p>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Front End Languages</li>
+
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li class="divider"></li>
+            <li><a href="#">SQL</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
+
+      <div class="container">
+        <h2>Bootstrap Collapsible</h2>
+        <p>This feature lets you hide a large amount of content.</p>
+        <a href="#demo" class="btn btn-info" data-toggle="collapse">Click here to see more...</a>
+        <div id="demo" class="collapse">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+
+
+      <div class="container">
+        <h2>Collapsible List Group</h2>
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse2">Collapsible list group</a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <ul class="list-group">
+                <li class="list-group-item">One</li>
+                <li class="list-group-item">Two</li>
+                <li class="list-group-item">Three</li>
+              </ul>
+              <div class="panel-footer">Footer</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
+      <div class="container">
+        <h3>Tabs</h3>
+        <p>Bootstrap lets you display your navigation menu as tabs. Tabs can also have a dropdown menu.</p>
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Submenu 1-1</a></li>
+                <li><a href="#">Submenu 1-2</a></li>
+                <li><a href="#">Submenu 1-3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+          </div>
 
-  </body>
-  </html>
+          <div class="container">
+            <h3>Vertical Pills</h3>
+            <p>These are Bootstrap's nav pills. The first pill has a submenu as well.</p>
+
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Submenu 1-1</a></li>
+                  <li><a href="#">Submenu 1-2</a></li>
+                  <li><a href="#">Submenu 1-3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Menu 2</a></li>
+              <li><a href="#">Menu 3</a></li>
+            </ul>
+          </div>
+
+
+          <div class="container">
+            <h2>Dynamic Pills</h2>
+            <p>Clicking on the pill changes the pane's content.</p>
+            <ul class="nav nav-pills">
+              <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+              <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
+              <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
+              <li><a data-toggle="pill" href="#menu3">Menu 3</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div id="home" class="tab-pane fade in active">
+                <h3>HOME</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div id="menu1" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+              <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+              </div>
+              <div id="menu3" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              </div>
+            </div>
+          </div>
+
+
+        </body>
+        </html>
