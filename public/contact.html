@@ -1,14 +1,20 @@
 <!doctype html>
 
 <head>
-  <title>Cozar Clone</title>
+  <title>Contact Us</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <style>
 
+  <style>
+  .dropdown-submenu{position:relative;}
+  .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+  .dropdown-submenu:hover>.dropdown-menu{display:block;}
+  .dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+  .dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+  .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
   </style>
 
 </head>
@@ -20,9 +26,9 @@
   <!-- Navbar -->
   <ul class="nav" style="background-color:orangered">
     <div class="row">
-      <div class="col-sm-2">
+      <div class="col-sm-1">
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-10">
         <a class="navbar-brand" href="#" style="font-weight: bold; color:firebrick;">
           CALL US NOW! <span style="font-weight: bold; color:white;">1.800.123.4567</span>
         </a>
@@ -31,13 +37,72 @@
         <a class="navbar-brand" href="https://www.persevy.com/"
         style="float:right;font-weight: bold; color:firebrick">
         LOGIN  <span style="font-weight: bold; color:white;"> SIGNUP</span>
-        
       </a>
 
-      <div class="col-sm-2">
+      <div class="col-sm-1">
       </div>
     </div>
   </div>
+
+
+
+  <!-- Navbar -->
+  <ul class="nav" style="background-color:snow">
+    <div class="row">
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-10">
+        <h1 class="navbar-brand" href="#"
+        style="font-weight: bold;font-size: 400%; ">
+        YOUR<span style="font-weight: bold; color:orangered;">LOGO</span>
+      </h1>
+
+      <ul class="nav">
+        <a href="#" >TITLE 1</a>
+        <a href="#" >TITLE 2</a>
+        <a href="#" >TITLE 3</a>
+        <a href="#" >TITLE 4</a>
+        <a href="#" >TITLE 5</a>
+        <a href="#" >TITLE 6</a>
+        <a href="#" >TITLE 7</a>
+      </ul>
+
+      <div class="col-sm-1">
+      </div>
+    </div>
+  </div>
+
+
+ <div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropdown class is used to indicate a dropdown menu.</p>
+    <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+    <div class="dropdown">
+      <a href="#"  class="dropdown-toggle" id="menu1" data-toggle="dropdown">TITLE 1</a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">SUBMENU 1</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">SUBMENU 2</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">SUBMENU 3</a></li>
+
+        <li class="divider"></li>
+        <li class="dropdown-submenu">
+          <a tabindex="-1" href="#">More options</a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="#">Second level</a></li>
+            <li><a href="#">Second level</a></li>
+            <li><a href="#">Second level</a></li>
+          </ul>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
 
 
 
