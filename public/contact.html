@@ -16,20 +16,27 @@
   .dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
   .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
 
-#header_links{
-  height: 80px;
-  line-height: 80px; /* <-- this is what you must define */
-  vertical-align: middle;
-}
-header_links a:link {
-  color: black;
-}
+  #header_links{
+    height: 80px;
+    line-height: 80px; /* <-- this is what you must define */
+    vertical-align: middle;
+  }
+  #header_links a:link {
+    color: black;
+  }
 
-/* visited link */
-a:visited {
-  color: black;
-}
+  /* visited link */
+  #header_links a:visited {
+    color: black;
+  }
 
+  #header_links a:hover {
+    text-decoration: none;
+  }
+  .orange_underline:hover {
+    text-decoration: none;
+    border-bottom: 5px solid orangered ;
+  }
   </style>
 
 </head>
@@ -76,10 +83,10 @@ a:visited {
   <div class="col-sm-5">
     <div id="header_links">
       <ul class="nav">
-        <a href="#" >TITLE 1</a>
+        <a href="#"class="orange_underline">TITLE 1</a>
 
         <!-- <div class="dropdown"> -->
-        <a href="#"  class="dropdown-toggle" id="menu1" data-toggle="dropdown">TITLE 2</a>
+        <a href="#"  class="dropdown-toggle orange_underline" id="menu1" data-toggle="dropdown">TITLE 2</a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">SUBMENU 1</a></li>
           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">SUBMENU 2</a></li>
@@ -95,11 +102,11 @@ a:visited {
         </ul>
         <!-- </div> -->
 
-        <a href="#" >TITLE 3</a>
-        <a href="#" >TITLE 4</a>
-        <a href="#" >TITLE 5</a>
-        <a href="#" >TITLE 6</a>
-        <a href="#" >TITLE 7</a>
+        <a href="#"  class="orange_underline">TITLE 3</a>
+        <a href="#"  class="orange_underline">TITLE 4</a>
+        <a href="#"  class="orange_underline">TITLE 5</a>
+        <a href="#" class="orange_underline">TITLE 6</a>
+        <a href="#" class="orange_underline">TITLE 7</a>
       </ul>
     </div>
   </div>
@@ -109,6 +116,38 @@ a:visited {
 </div>
 </ul>
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-5">
+      <div class="form-group">
+        <input type="email" class="form-control" id="name" placeholder="Name *" disabled>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <input type="phone" class="form-control" id="name" placeholder="Phone *" disabled>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <input type="phone" class="form-control" id="email" placeholder="Email *" disabled>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <textarea class="form-control" rows="5" id="message" placeholder="Message *" disabled></textarea>
+      </div>
+      <div class="col-sm-5">
+      </div>
+
+      <div class="col-sm-1">
+      </div>
+    </div>
+  </div>
 
 
 
