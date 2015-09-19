@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <style>
   .dropdown-submenu{position:relative;}
   .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
@@ -39,18 +41,37 @@
   }
 
 
-.myButton {
-	background-color:orangered;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:9px 23px;
-	text-decoration:none;
-}
+  .myButton {
+    background-color:orangered;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 23px;
+    text-decoration:none;
+  }
 
 
+  .line-separator{
+    height:1px;
+    border-bottom:5px solid black;
+  }
+
+  h3{
+    color: orangered;
+  }
+
+  .nav{
+    margin-bottom: 0;
+  }
+
+  /* if you are using responsive bootstrap */
+  @media (max-width: 480px) {
+      .form-horizontal .controls {
+          margin-left: 0;
+      }
+  }
   </style>
 
 </head>
@@ -84,7 +105,7 @@
 
 
 <!-- Navbar -->
-<ul class="nav" style="background-color:snow">
+<ul class="nav" style="background-color:whitesmoke">
   <div class="row">
     <div class="col-sm-1">
     </div>
@@ -131,37 +152,73 @@
 </ul>
 
 
-<div class="container">
+<div class="container-fluid">
+
+
   <div class="row">
     <div class="col-sm-1">
     </div>
     <div class="col-sm-5">
-      <div class="form-group">
-        <input type="email" class="form-control" id="name" placeholder="Name *" disabled>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="form-group">
-            <input type="phone" class="form-control" id="name" placeholder="Phone *" disabled>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="form-group">
-            <input type="phone" class="form-control" id="email" placeholder="Email *" disabled>
-          </div>
-        </div>
-      </div>
+      <br>
+      <p>Home/Who we are/<strong>Contact</strong></p>
 
-      <div class="form-group">
-        <textarea class="form-control" rows="5" id="message" placeholder="Message *" disabled></textarea>
+    </div>
+    <div class="col-sm-1">
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-5">
+      <h3>CONTACT US</h3>
+      <div class="line-separator"></div>
+      <br>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Name *" disabled>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Phone *" disabled>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <input type="text" class="form-control" id="email" placeholder="Email *" disabled>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <textarea class="form-control" rows="5" id="message" placeholder="Message *" disabled></textarea>
 
             <button type="button" class="myButton">SUBMIT</button>
-      </div>
-      <div class="col-sm-5">
+          </div>
+
+        </div>
       </div>
 
-      <div class="col-sm-1">
-      </div>
+    </div>
+    <div class="col-sm-5">
+      <h3>REACH US</h3>
+      <div class="line-separator"></div>
+      <br>
+      <p>Southern California Web Developers</p>
+      <br>
+      <p>12345 Nowhere Road</p>
+      <p>Los Angeles CA 90210</p>
+      <br>
+
+
+      <i class="icon-facebook-sign icon-3"  style="font-size: 3em;"></i>
+    </div>
+
+    <div class="col-sm-1">
     </div>
 
 
