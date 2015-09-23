@@ -22,7 +22,31 @@
   	margin: 0;
   }
 
+
+  .canvasContainer
+  {
+      position: fixed;
+      left: 0px;
+      right: 0px;
+      top: 100px;
+      bottom: 100px;
+      z-index: 1;
+      background-color: Black;
+  }
+
+  .canvas
+  {   position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+        background: #000;
+      	cursor: crosshair;
+  }
+
   canvas {
+    background: #000;
   	cursor: crosshair;
   	display: block;
   }
@@ -42,7 +66,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="https://bryanttunbutr.wordpress.com/">Bryant Tunbutr</a>
+        <a class="navbar-brand" href="https://bryanttunbutr.wordpress.com/">Fireworks</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -54,23 +78,13 @@
   </nav>
 
 
-  <div class="container" style="text-align:center">
+  <!-- <div class="container" style="text-align:center">
 
-    <h1>Fireworks</h1>
+    <h1>Fireworks</h1> -->
 
-      <div class="row">
-        <div class="col-md-4">
-        </div> <!-- /col-md-4 -->
-        <div class="col-md-4">
-          <!-- setup our canvas element -->
-          <canvas id="canvas">Canvas is not supported in your browser.</canvas>
-        </div> <!-- /col-md-4 -->
-        <div class="col-md-4">
-        </div> <!-- /col-md-4 -->
-      </div> <!-- /row -->
-
+  <div class="canvasContainer">
+      <canvas id="canvas">Canvas is not supported in your browser.</canvas>
   </div>
-
 
 
   <script src="javascripts/fireworks.js"></script>
