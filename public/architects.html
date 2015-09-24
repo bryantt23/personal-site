@@ -19,13 +19,21 @@
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-
+  a{
+    text-decoration: overline;
+    color:white !important;
+  }
+  a:hover {
+    text-decoration: overline !important;
+    text-decoration-color: #39FF14 !important;
+    color: #39FF14 !important;
+  }
   </style>
 </head>
 <body>
 
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -46,15 +54,16 @@
 
 
 
-          <li>
-            <div class="dropdown">
-              <div data-toggle="dropdown"><a title="recognition" href="#">Recognitions</a>
-                <ul class="dropdown-menu">
-                  <li><a href="http://www.hydearchitects.com/recognition/?cat=4">Awards</a></li>
-                  <li><a href="http://www.hydearchitects.com/recognition/?cat=6">Exhibitions</a></li>
-                  <li><a href="http://www.hydearchitects.com/recognition/?cat=5">Publications</a></li>
-                </ul>
-              </div>
+          <li class="dropdown"><a href="#">Recognition</a>
+            <!-- </li> -->
+            <!-- <li>
+            <div class="dropdown"> -->
+            <div data-toggle="dropdown"><a title="recognition" href="#"></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://www.hydearchitects.com/recognition/?cat=4">Awards</a></li>
+                <li><a href="http://www.hydearchitects.com/recognition/?cat=6">Exhibitions</a></li>
+                <li><a href="http://www.hydearchitects.com/recognition/?cat=5">Publications</a></li>
+              </ul>
             </div>
           </li>
 
@@ -63,7 +72,8 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
 
 </body>
