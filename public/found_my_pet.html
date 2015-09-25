@@ -24,15 +24,55 @@
     background-color: black;
   }
 
-  .carousel-inner > .item > img {position:relative;width:100%;overflow:hidden
+  .carousel-inner > .item > img {
+    position:relative;
+    width:100%;
+    overflow:hidden
   }
 
+
+
+  .ribbon {
+    background-color: rgb(211, 84, 0);
+    background-color: rgba(211, 84, 0,0.7);
+    overflow: hidden;
+    white-space: nowrap;
+    /* top left corner */
+    position: fixed;
+    right: -55px;
+    top: 55px;
+    z-index: 999;
+    /* 45 deg ccw rotation */
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    /* shadow */
+    -webkit-box-shadow: 0 0 10px #222;
+       -moz-box-shadow: 0 0 10px #222;
+            box-shadow: 0 0 10px #222;
+  }
+  .ribbon a {
+    border: 1px solid rgba(192, 57, 43,0.7);
+    cursor: default;
+    color: #fff;
+    display: block;
+    font: 700 80% Inconsolata, monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 1px 0;
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration: none;
+    /* shadow */
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(250,250,250,0.004);
+  }
 
   </style>
 </head>
 <body>
-
-
 
 
   <nav class="navbar navbar-inverse">
@@ -59,13 +99,13 @@
           <div class="container subnav-shop">
             <ul class="nav navbar-inverse navbar-right nav-pills subnav-style">
               <li>
-                <a href="http://www.foundmyanimal.com/#leashes">Leashes</a>
+                <a href="#">Leashes</a>
               </li>
               <li>
-                <a href="http://www.foundmyanimal.com/#collars">Collars &amp; Harnesses</a>
+                <a href="#">Collars &amp; Harnesses</a>
               </li>
               <li>
-                <a href="http://www.foundmyanimal.com/#accessories">Accessories</a>
+                <a href="#">Accessories</a>
               </li>
             </ul>
           </div>
@@ -73,6 +113,12 @@
 
       </div>
     </nav>
+
+        <div class="container">
+      <div class="ribbon">
+                     <a href="javascript: void(0)">Free Tail Wags</a>
+                </div>
+           </div>
 
 
     <div class="container-fluid">
@@ -89,14 +135,29 @@
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <img src="images/found_pet/dog1.jpg" alt="dog1" >
+              <div class="carousel-caption">
+                <p>
+                  <a class="btn btn-lg btn-danger" href="#">Adopt me!</a>
+                </p>
+              </div>
           </div>
 
           <div class="item">
             <img src="images/found_pet/dog2.jpg" alt="dog2" >
+              <div class="carousel-caption">
+                <p>
+                  <a class="btn btn-lg btn-info" href="#">Adopt me!</a>
+                </p>
+              </div>
           </div>
 
           <div class="item">
             <img src="images/found_pet/dog3.jpg" alt="dog3" >
+              <div class="carousel-caption">
+                <p>
+                  <a class="btn btn-lg btn-primary" href="#">Adopt me!</a>
+                </p>
+              </div>
           </div>
         </div>
 
