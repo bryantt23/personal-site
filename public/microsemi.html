@@ -25,13 +25,23 @@
   </script>
 
   <style>
+  .navbar-default {
+    height: 100px;
+  }
+
+  .carousel-inner > .item > img {
+    position:relative;
+    width:100%;
+    overflow:hidden;
+  }
+
 
   </style>
 </head>
 <body>
 
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default ">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -44,29 +54,67 @@
         <a class="navbar-brand" href="#"><img src="images/micros/logo.png" alt="logo" ></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
+        <!-- <ul class="nav navbar-nav"> -->
 
+        <!-- </ul> -->
+        <ul class="nav navbar-nav navbar-right">
           <li class="item-509"><a href="/company/quality">Quality</a></li>
           <li class="item-510"><a href="/company/careers/careers">Careers</a></li>
           <li class="item-511"><a href="http://investor.microsemi.com/">Investors</a></li>
           <li class="item-3701"><a href="/salescontacts">Sales Contacts</a></li>
           <li class="item-508 lastmenu last_item"><a href="/corporate-contacts">Contact Us</a></li>
 
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
+          <li class="input-group">
+            <!-- <span class="input-group-btn"> -->
+            <button class="btn btn-default" type="button">&#10148</button>
+            <!-- </span> -->
+            <input type="text" placeholder="Search by Part # or Keyword">
+          </li>
           <!-- <div class="col-lg-6"> -->
-          <div class="input-group">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">&#10148</button>
-            </span>
-            <input type="text" class="form-control" placeholder="Search by Part # or Keyword">
-          </div><!-- /input-group -->
           <!-- </div><! /.col-lg-6 -->
         </div><!-- /.row -->
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
+
+
+<div class="container-fluid  hidden-xs" >
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <a href="#"><img src="images/micros/img1.jpg" alt="img1" ></a>
+      </div>
+
+      <div class="item">
+        <a href="#"><img src="images/micros/img2.png" alt="img2" ></a>
+      </div>
+
+      <div class="item">
+        <a href="#"><img src="images/micros/img3.jpg" alt="img3" ></a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
 
 
 
