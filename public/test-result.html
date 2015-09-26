@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <style>
+  body {font-family:sans-serif;}
+  table {border-collapse:collapse;}
+  th {background-color:#c1c1c1;}
+  th, td {border:1px solid #454545;padding:5px 8px;}
+  </style>
+</head>
+<body>
+
+<div id="partsData">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Part Number</th>
+        <th>Status</th>
+        <th>Part Package</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+  $(function() {
+
+    var microsemiJSON = "http://api.microsemi.com/parts/1511";
+    $.getJSON( microsemiJSON, function(data) {
+
+      $.each(data, function(i, part) {
+        var tblRow = "<tr>" + "<td>" + part.id + "</td>" + "<td>" + part.part_number + "</td>" + "<td>" + part.status + "</td>" + "<td> " + part.part_package + "</td>" +   "</tr>"
+        $(tblRow).appendTo("#partsData tbody");
+      });
+    });
+
+  });
+  </script>
+</body>
+</html>
