@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for does not exist (404)</title>
+  <title>Make It Rain - Landing Page </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -13,6 +13,8 @@
 
   <!-- Custom styles for this template -->
   <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'>
 
   <style>
 
@@ -58,12 +60,45 @@
     background-color: #eeeeee;
     color: #0085a1;
   }
-  #body_error{
-    text-align: center;
+
+
+  /* http://css-tricks.com/perfect-full-page-background-image/ */
+  html {
+    /*background: url("images/desert.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
   }
+  body {
+    background: url('images/desert.jpg')  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+  }
+
+
+  #rain_message{
+    text-align: center;
+    font-size: 16px;
+    font-family: "Open Sans",serif;
+  }
+  h1 {
+    font-family: "Abel", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+  }
+
+
+
+
+
   .footer{
-    background-color: white !important;
     height: 40px;
+    background-color: transparent;
+
   }
   </style>
 </head>
@@ -73,7 +108,7 @@
     <div class="container">
       <nav>
         <ul class="nav navbar-nav navbar-left" id="home_link">
-          <li><a href="/">Bryant Tunbutr</a></li>
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
@@ -86,36 +121,56 @@
 
 
 
-  <div class="container" id="body_error">
-    <div>
-      <h1>404 Error</h1>
-      <br>
-      <p>Unfortunately this page does not exist...</p>
-      <br>
-    </div>
-    <p>Return to the <a href="http://www.bryanttunbutr.com/"><button type="button" class="btn btn-primary">Home Page</button></a></p>
+  <div class="container" id="rain_message">
+
+    <div class="col-xs-8 col-xs-offset-2">
+      <h1>Have you ever seen the rain?</h1>
+
+      <p>
+        Someone told me long ago there's a calm before the storm. I know, It's been comin for some time.
+      </p>
+      <p>
+        When it's over, so they say, it'll rain a sunny day. I know, Shinin down like water.
+      </p>
+
+      <p>
+        I want to know, have you ever seen the rain?
+      </p>
+
+      <form action="/mailing-list" method="post">
+        <p class="input-group">
+          <span class="input-group-addon">@</span>
+          <input type="text" class="form-control input-lg" name="email" placeholder="jonsnow@knowsnothi.ng" />
+        </p>
+        <p class="help-block"><small>We won't send you spam. Unsubscribe at any time.</small></p>
+        <p>
+          <button type="submit" class="btn btn-success btn-lg">Keep me posted</button>
+        </p>
+      </span>
+    </form>
   </div>
+</div>
 
 
 
 
 
 
-  <!-- Footer -->
+<!-- Footer -->
 
-  <footer class="footer">
-    <div class="container">
+<footer class="footer">
+  <div class="container">
 
-      <span style="float:left;">©2015 Bryant Tunbutr</span>
+    <span style="float:left;">©2015 Bryant Tunbutr</span>
 
-      <span style="float:right;">
-        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
-        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
-      </div><!-- end Container-->
-    </footer>
+    <span style="float:right;">
+      <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+      <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+    </div><!-- end Container-->
+  </footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  </body>
-  </html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
