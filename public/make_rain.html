@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 
 
@@ -82,13 +83,15 @@
 
   #rain_message{
     text-align: center;
-    font-size: 16px;
     font-family: "Open Sans",serif;
+    /*font-size: 16px;*/
+    font-size: 1.3em;
   }
   h1 {
     font-family: "Abel", Arial, sans-serif;
     font-weight: 400;
-    font-size: 40px;
+    /*font-size: 40px;*/
+    font-size: 2.5em;
   }
 
 
@@ -124,27 +127,27 @@
   <div class="container" id="rain_message">
 
     <div class="col-xs-8 col-xs-offset-2">
-      <h1>Have you ever seen the rain?</h1>
+      <h1>Do you need to make it rain?</h1>
 
+      <p>Are you in the middle of a dry spell?</p>
+      <p>Do you feel like the desert and the heat will never end?</p>
       <p>
-        Someone told me long ago there's a calm before the storm. I know, It's been comin for some time.
-      </p>
-      <p>
-        When it's over, so they say, it'll rain a sunny day. I know, Shinin down like water.
+        If you are ready to make it rain dollars and coins, sign up and click the button below...
       </p>
 
-      <p>
-        I want to know, have you ever seen the rain?
-      </p>
+      <br>
 
       <form action="/mailing-list" method="post">
         <p class="input-group">
           <span class="input-group-addon">@</span>
-          <input type="text" class="form-control input-lg" name="email" placeholder="jonsnow@knowsnothi.ng" />
+          <input type="text" class="form-control input-lg" name="email" placeholder="money@moneymaker.coin" disabled/>
         </p>
-        <p class="help-block"><small>We won't send you spam. Unsubscribe at any time.</small></p>
+        <p><small>Ok this form does not actually do anything :) </small></p>
         <p>
-          <button type="submit" class="btn btn-success btn-lg">Keep me posted</button>
+          But please click the button below...
+        </p>
+        <a href="http://www.bryanttunbutr.com/rain.html"<button type="submit" class="btn btn-primary btn-lg">
+          <i class="fa fa-cloud"></i> Make It Rain <i class="fa fa-cloud"></i></button></a>
         </p>
       </span>
     </form>
