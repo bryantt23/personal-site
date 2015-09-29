@@ -6,185 +6,179 @@
   <title>Bootstrap Filtered Portfolio</title>
   <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
   <style>
-      /*body { margin: 50px 0; }
-      .well { background: #fff; text-align: center; }
-      .filter {}*/
+  /*body { margin: 50px 0; }
+  .well { background: #fff; text-align: center; }
+  .filter {}*/
 
-        .plain-header {
-          a{
-            color:#428bca;
-          }
-          a:hover,
-          a:focus {
-            background-color: #FFF;
-            color: #0085a1;
-          }
-          position: relative;
-          padding: 30px 15px;
-          text-align: center;
-          font-size: 20px;
-        }
+  .plain-header {
+    position: relative;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 20px;
+  }
 
-        #home_link{
-          font-size: 1.7em;
-          color: white;
-          text-transform: uppercase;
-          letter-spacing: -1px;
-          padding: 9px 15px;
-          font-weight: bold;
-        }
+  #links {
+    a{
+      color:#428bca;
+    }
+    a:hover{
+      background-color: #FFF;
+      color: #0085a1;
+      text-decoration: none !important;
+    }
+    a:focus {
+      background-color: #FFF;
+      color: #0085a1;
+      text-decoration: none;
+    }
+  }
 
-
-        #logo {
-          color:#428bca;
-          position: relative;
-          text-align: center;
-          font-size: 20px;
-          padding: 30px 15px;
-          text-align: left;
-          :hover,:focus {
-            background-color: #eeeeee;
-            color: #0085a1;
-          }
-        }
-        #logo:hover,
-        #logo:focus {
-          background-color: #eeeeee;
-          color: #0085a1;
-        }
+  #home_link{
+    font-size: 1.7em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 9px 15px;
+    font-weight: bold;
+  }
 
 
 
-        .footer{
-          height: 40px;
-          background-color: transparent;
 
-        }
+  .footer{
+    height: 40px;
+    background-color: transparent;
+
+  }
 
   </style>
 </head>
 <body>
 
-    <header class="plain-header">
-      <div class="container">
-        <nav>
-          <ul class="nav navbar-nav navbar-left" id="home_link">
-            <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <div class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav pull-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <div id="links">
+            <a href="https://bryanttunbutr.wordpress.com/" style="padding-right: 15px;">Blog</a>
+            <a href="/projects" style="padding-right: 15px;">Projects</a>
+            <a href="mailto:BTunbutr@gmail.com">Contact</a>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
 
 
-<div class="container well well-large">
 
-  <h1>Bootstrap Filtered Portfolio</h1>
 
-  <hr>
+  <div class="container well well-large">
 
-  <ul class="filter nav nav-pills">
-    <li data-value="all"><a href="#">All</a></li>
-    <li data-value="dog"><a href="#">Dog</a></li>
-    <li data-value="cat"><a href="#">Cat</a></li>
-    <li data-value="bird"><a href="#">Birds</a></li>
-  </ul>
+    <h1>Bootstrap Filtered Portfolio</h1>
 
-  <hr>
+    <hr>
 
-  <ul class="thumbnails">
-    <li data-type="dog" data-id="id-1" class="span3">
-      <a href="#" class="thumbnail" id="dog1"><img src="images/quicksand/dog1.jpg" alt=""></a>
-    </li>
-    <li data-type="cat" data-id="id-2" class="span3">
-      <a href="#" class="thumbnail" id="cat1"><img src="images/quicksand/cat1.jpg" alt=""></a>
-    </li>
-    <li data-type="bird" data-id="id-3" class="span3">
-      <a href="#" class="thumbnail" id="bird1"><img src="images/quicksand/bird1.jpg" alt=""></a>
-    </li>
-    <li data-type="dog" data-id="id-4" class="span3">
-      <a href="#" class="thumbnail" id="dog2"><img src="images/quicksand/dog2.jpg" alt=""></a>
-    </li>
-    <li data-type="cat" data-id="id-5" class="span3">
-      <a href="#" class="thumbnail" id="cat2"><img src="images/quicksand/cat2.jpg" alt=""></a>
-    </li>
-    <li data-type="bird" data-id="id-6" class="span3">
-      <a href="#" class="thumbnail" id="bird2"><img src="images/quicksand/bird2.jpg" alt=""></a>
-    </li>
-    <li data-type="dog" data-id="id-7" class="span3">
-      <a href="#" class="thumbnail" id="dog3"><img src="images/quicksand/dog3.jpg" alt=""></a>
-    </li>
-    <li data-type="cat" data-id="id-8" class="span3">
-      <a href="#" class="thumbnail" id="cat3"><img src="images/quicksand/cat3.jpg" alt=""></a>
-    </li>
-    <li data-type="bird" data-id="id-9" class="span3">
-      <a href="#" class="thumbnail" id="bird3"><img src="images/quicksand/bird3.jpg" alt=""></a>
-    </li>
-    <li data-type="dog" data-id="id-10" class="span3">
-      <a href="#" class="thumbnail" id="dog4"><img src="images/quicksand/dog4.jpg" alt=""></a>
-    </li>
-    <li data-type="cat" data-id="id-11" class="span3">
-      <a href="#" class="thumbnail" id="cat4"><img src="images/quicksand/cat4.jpg" alt=""></a>
-    </li>
-    <li data-type="bird" data-id="id-12" class="span3">
-      <a href="#" class="thumbnail" id="bird4"><img src="images/quicksand/bird4.jpg" alt=""></a>
-    </li>
-    <li data-type="dog" data-id="id-13" class="span3">
-      <a href="#" class="thumbnail" id="dog5"><img src="images/quicksand/dog5.jpg" alt=""></a>
-    </li>
-    <li data-type="cat" data-id="id-14" class="span3">
-      <a href="#" class="thumbnail" id="cat5"><img src="images/quicksand/cat5.jpg" alt=""></a>
-    </li>
-    <li data-type="bird" data-id="id-15" class="span3">
-      <a href="#" class="thumbnail" id="bird5"><img src="images/quicksand/bird5.jpg" alt=""></a>
-    </li>
-  </ul>
+    <ul class="filter nav nav-pills">
+      <li data-value="all"><a href="#">All</a></li>
+      <li data-value="dog"><a href="#">Dog</a></li>
+      <li data-value="cat"><a href="#">Cat</a></li>
+      <li data-value="bird"><a href="#">Birds</a></li>
+    </ul>
 
-</div>
+    <hr>
 
-<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-<script src="javascripts/vendor/bootstrap.min.js"></script>
-<script type='text/javascript' src="javascripts/vendor/bootbox.min.js"></script>
-<script type="text/javascript" src="javascripts/vendor/jquery.quicksand.js"></script>
-<script>
-    function gallery(){
-            $('#dog1').click(function() { bootbox.alert('<img src="images/quicksand/dog1.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
-            $('#cat1').click(function() { bootbox.alert('<img src="images/quicksand/cat1.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
-            $('#bird1').click(function() { bootbox.alert('<img src="images/quicksand/bird1.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
-            $('#dog2').click(function() { bootbox.alert('<img src="images/quicksand/dog2.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
-            $('#cat2').click(function() { bootbox.alert('<img src="images/quicksand/cat2.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
-            $('#bird2').click(function() { bootbox.alert('<img src="images/quicksand/bird2.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
-            $('#dog3').click(function() { bootbox.alert('<img src="images/quicksand/dog3.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
-            $('#cat3').click(function() { bootbox.alert('<img src="images/quicksand/cat3.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
-            $('#bird3').click(function() { bootbox.alert('<img src="images/quicksand/bird3.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
-            $('#dog4').click(function() { bootbox.alert('<img src="images/quicksand/dog4.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
-            $('#cat4').click(function() { bootbox.alert('<img src="images/quicksand/cat4.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
-            $('#bird4').click(function() { bootbox.alert('<img src="images/quicksand/bird4.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
-            $('#dog5').click(function() { bootbox.alert('<img src="images/quicksand/dog5.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
-            $('#cat5').click(function() { bootbox.alert('<img src="images/quicksand/cat5.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
-            $('#bird5').click(function() { bootbox.alert('<img src="images/quicksand/bird5.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
-        }
-    var $itemsHolder = $('ul.thumbnails');
-    var $itemsClone = $itemsHolder.clone();
-    var $filterClass = "";
-    $('ul.filter li').click(function(e) {
+    <ul class="thumbnails">
+      <li data-type="dog" data-id="id-1" class="span3">
+        <a href="#" class="thumbnail" id="dog1"><img src="images/quicksand/dog1.jpg" alt=""></a>
+      </li>
+      <li data-type="cat" data-id="id-2" class="span3">
+        <a href="#" class="thumbnail" id="cat1"><img src="images/quicksand/cat1.jpg" alt=""></a>
+      </li>
+      <li data-type="bird" data-id="id-3" class="span3">
+        <a href="#" class="thumbnail" id="bird1"><img src="images/quicksand/bird1.jpg" alt=""></a>
+      </li>
+      <li data-type="dog" data-id="id-4" class="span3">
+        <a href="#" class="thumbnail" id="dog2"><img src="images/quicksand/dog2.jpg" alt=""></a>
+      </li>
+      <li data-type="cat" data-id="id-5" class="span3">
+        <a href="#" class="thumbnail" id="cat2"><img src="images/quicksand/cat2.jpg" alt=""></a>
+      </li>
+      <li data-type="bird" data-id="id-6" class="span3">
+        <a href="#" class="thumbnail" id="bird2"><img src="images/quicksand/bird2.jpg" alt=""></a>
+      </li>
+      <li data-type="dog" data-id="id-7" class="span3">
+        <a href="#" class="thumbnail" id="dog3"><img src="images/quicksand/dog3.jpg" alt=""></a>
+      </li>
+      <li data-type="cat" data-id="id-8" class="span3">
+        <a href="#" class="thumbnail" id="cat3"><img src="images/quicksand/cat3.jpg" alt=""></a>
+      </li>
+      <li data-type="bird" data-id="id-9" class="span3">
+        <a href="#" class="thumbnail" id="bird3"><img src="images/quicksand/bird3.jpg" alt=""></a>
+      </li>
+      <li data-type="dog" data-id="id-10" class="span3">
+        <a href="#" class="thumbnail" id="dog4"><img src="images/quicksand/dog4.jpg" alt=""></a>
+      </li>
+      <li data-type="cat" data-id="id-11" class="span3">
+        <a href="#" class="thumbnail" id="cat4"><img src="images/quicksand/cat4.jpg" alt=""></a>
+      </li>
+      <li data-type="bird" data-id="id-12" class="span3">
+        <a href="#" class="thumbnail" id="bird4"><img src="images/quicksand/bird4.jpg" alt=""></a>
+      </li>
+      <li data-type="dog" data-id="id-13" class="span3">
+        <a href="#" class="thumbnail" id="dog5"><img src="images/quicksand/dog5.jpg" alt=""></a>
+      </li>
+      <li data-type="cat" data-id="id-14" class="span3">
+        <a href="#" class="thumbnail" id="cat5"><img src="images/quicksand/cat5.jpg" alt=""></a>
+      </li>
+      <li data-type="bird" data-id="id-15" class="span3">
+        <a href="#" class="thumbnail" id="bird5"><img src="images/quicksand/bird5.jpg" alt=""></a>
+      </li>
+    </ul>
+
+  </div>
+
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+  <script src="javascripts/vendor/bootstrap.min.js"></script>
+  <script type='text/javascript' src="javascripts/vendor/bootbox.min.js"></script>
+  <script type="text/javascript" src="javascripts/vendor/jquery.quicksand.js"></script>
+  <script>
+  function gallery(){
+    $('#dog1').click(function() { bootbox.alert('<img src="images/quicksand/dog1.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
+    $('#cat1').click(function() { bootbox.alert('<img src="images/quicksand/cat1.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
+    $('#bird1').click(function() { bootbox.alert('<img src="images/quicksand/bird1.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
+    $('#dog2').click(function() { bootbox.alert('<img src="images/quicksand/dog2.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
+    $('#cat2').click(function() { bootbox.alert('<img src="images/quicksand/cat2.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
+    $('#bird2').click(function() { bootbox.alert('<img src="images/quicksand/bird2.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
+    $('#dog3').click(function() { bootbox.alert('<img src="images/quicksand/dog3.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
+    $('#cat3').click(function() { bootbox.alert('<img src="images/quicksand/cat3.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
+    $('#bird3').click(function() { bootbox.alert('<img src="images/quicksand/bird3.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
+    $('#dog4').click(function() { bootbox.alert('<img src="images/quicksand/dog4.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
+    $('#cat4').click(function() { bootbox.alert('<img src="images/quicksand/cat4.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
+    $('#bird4').click(function() { bootbox.alert('<img src="images/quicksand/bird4.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
+    $('#dog5').click(function() { bootbox.alert('<img src="images/quicksand/dog5.jpg"><h4>Dog ipsum dolor sit amet</h4>'); });
+    $('#cat5').click(function() { bootbox.alert('<img src="images/quicksand/cat5.jpg"><h4>Cat ipsum dolor sit amet</h4>'); });
+    $('#bird5').click(function() { bootbox.alert('<img src="images/quicksand/bird5.jpg"><h4>Bird ipsum dolor sit amet</h4>'); });
+  }
+  var $itemsHolder = $('ul.thumbnails');
+  var $itemsClone = $itemsHolder.clone();
+  var $filterClass = "";
+  $('ul.filter li').click(function(e) {
     e.preventDefault();
     $filterClass = $(this).attr('data-value');
-        if($filterClass == 'all'){ var $filters = $itemsClone.find('li'); }
-        else { var $filters = $itemsClone.find('li[data-type='+ $filterClass +']'); }
-        $itemsHolder.quicksand(
-          $filters,
-          { duration: 1000 },
-          gallery
-          );
-    });
-    $(document).ready(gallery);
-</script>
+    if($filterClass == 'all'){ var $filters = $itemsClone.find('li'); }
+    else { var $filters = $itemsClone.find('li[data-type='+ $filterClass +']'); }
+    $itemsHolder.quicksand(
+      $filters,
+      { duration: 1000 },
+      gallery
+    );
+  });
+  $(document).ready(gallery);
+  </script>
 
 
 </body>
