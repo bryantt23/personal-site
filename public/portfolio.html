@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Make It Rain - Landing Page </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'>
+
+  <style>
+
+  .plain-header {
+    a{
+      color:#428bca;
+    }
+    a:hover,
+    a:focus {
+      background-color: #FFF;
+      color: #0085a1;
+    }
+    position: relative;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #home_link{
+    font-size: 1.7em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 9px 15px;
+    font-weight: bold;
+  }
+
+
+  #logo {
+    color:#428bca;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px 15px;
+    text-align: left;
+    :hover,:focus {
+      background-color: #eeeeee;
+      color: #0085a1;
+    }
+  }
+  #logo:hover,
+  #logo:focus {
+    background-color: #eeeeee;
+    color: #0085a1;
+  }
+  .footer{
+    height: 40px;
+    background-color: transparent;
+
+  }
+
+
+  ul#filter {
+    float: left;
+    font-size: 16px;
+    list-style: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  ul#filter li {
+    border-right: 1px solid #dedede;
+    float: left;
+    line-height: 16px;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+
+  ul#filter li:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  ul#filter a { color: #999; text-decoration: none; }
+
+  ul#filter li.current a, ul#filter a:hover { text-decoration: underline; }
+  ul#filter li.current a { color: #333; font-weight: bold; }
+
+  ul#portfolio {
+    float: left;
+    list-style: none;
+    margin-left: 0;
+    /*width: 672px;*/
+  }
+  ul#portfolio li {
+    border: 1px solid #dedede;
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    /*width: 202px;*/
+  }
+  ul#portfolio a { display: block; width: 100%; }
+  ul#portfolio a:hover { text-decoration: none; }
+  ul#portfolio img { border: 1px solid #dedede; display: block; padding-bottom: 5px; }
+
+  </style>
+</head>
+
+<body>
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="container-fluid" id="portfolio_container">
+
+    <ul id="filter" style="text-align: center;">
+      <li class="current"><a href="#">All</a></li>
+      <li><a href="#">Design</a></li>
+      <li><a href="#">Development</a></li>
+      <li><a href="#">CMS</a></li>
+      <li><a href="#">Integration</a></li>
+      <li><a href="#">Information Architecture</a></li>
+    </ul>
+
+    <ul id="portfolio">
+      <li class="cms integration">
+        <a href="#"><img src="images/city-sky.jpg" alt="" height="115" width="200" />A List Apart</a>
+      </li>
+      <li class="integration design">
+        <a href="#"><img src="images/apple.png" alt="" height="115" width="200" />Apple</a>
+      </li>
+      <li class="design development">
+        <a href="#"><img src="images/cnn.png" alt="" height="115" width="200" />CNN</a>
+      </li>
+      <li class="cms">
+        <a href="#"><img src="images/digg.png" alt="" height="115" width="200" />Digg</a>
+      </li>
+      <li class="design cms integration">
+        <a href="#"><img src="images/espn.png" alt="" height="115" width="200" />ESPN</a>
+      </li>
+      <li class="design integration">
+        <a href="#"><img src="images/facebook.png" alt="" height="115" width="200" />Facebook</a>
+      </li>
+      <li class="cms information-architecture">
+        <a href="#"><img src="images/google.png" alt="" height="115" width="200" />Google</a>
+      </li>
+      <li class="integration development">
+        <a href="#"><img src="images/netflix.png" alt="" height="115" width="200" />Netflix</a>
+      </li>
+      <li class="information-architecture">
+        <a href="#"><img src="images/nettuts.png" alt="" height="115" width="200" />NETTUTS</a>
+      </li>
+      <li class="design information-architecture cms">
+        <a href="#"><img src="images/twitter.png" alt="" height="115" width="200" />Twitter</a>
+      </li>
+      <li class="development">
+        <a href="#"><img src="images/white-house.png" alt="" height="115" width="200" />White House</a>
+      </li>
+      <li class="cms design">
+        <a href="#"><img src="images/youtube.png" alt="" height="115" width="200" />YouTube</a>
+      </li>
+    </ul>
+
+  </div>
+
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+      <span style="float:right;">
+        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+      </div><!-- end Container-->
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('ul#filter a').click(function() {
+        $(this).css('outline','none');
+        $('ul#filter .current').removeClass('current');
+        $(this).parent().addClass('current');
+
+        var filterVal = $(this).text().toLowerCase().replace(' ','-');
+
+        if(filterVal == 'all') {
+          $('ul#portfolio li.hidden').fadeIn('slow').removeClass('hidden');
+        } else {
+          $('ul#portfolio li').each(function() {
+            if(!$(this).hasClass(filterVal)) {
+              $(this).fadeOut('normal').addClass('hidden');
+            } else {
+              $(this).fadeIn('slow').removeClass('hidden');
+            }
+          });
+        }
+
+        return false;
+      });
+    });</script>
+
+
+  </body>
+  </html>
