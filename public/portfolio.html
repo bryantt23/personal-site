@@ -106,6 +106,27 @@
   ul#portfolio a:hover { text-decoration: none; }
   ul#portfolio img { border: 1px solid #dedede; display: block; padding-bottom: 5px; }
 
+
+  .transition {
+      -webkit-transform: scale(1.6);
+      -moz-transform: scale(1.6);
+      -o-transform: scale(1.6);
+      transform: scale(1.6);
+  }
+  #content {
+  	-webkit-transition: all .4s ease-in-out;
+  	-moz-transition: all .4s ease-in-out;
+  	-o-transition: all .4s ease-in-out;
+  	-ms-transition: all .4s ease-in-out;
+  }
+
+  #content {
+      width:80px;
+      margin:25px;
+  }
+
+
+
   </style>
 </head>
 
@@ -125,7 +146,6 @@
     </div>
   </header>
 
-
   <div class="container-fluid" id="portfolio_container">
 
     <ul id="filter" style="text-align: center;">
@@ -138,7 +158,7 @@
     </ul>
 
     <ul id="portfolio">
-      <li class="cms integration">
+      <li class="cms integration" id="content1">
         <a href="#"><img src="images/city-sky.jpg" alt="" height="115" width="200" />A List Apart</a>
       </li>
       <li class="integration design">
@@ -219,7 +239,22 @@
 
         return false;
       });
-    });</script>
+    });
+
+    //
+    // $('#content').hover(function() {
+    //   $("#content").addClass('transition');
+    //
+    // }, function() {
+    //   $("#content").removeClass('transition');
+    // });
+    //
+    $("[id^=content]").hover(function() {
+        $(this).addClass('transition');
+    }, function() {
+        $(this).removeClass('transition');
+    });
+    </script>
 
 
   </body>
