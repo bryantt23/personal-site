@@ -71,6 +71,8 @@
     color: #ccc;
   }
 
+.myList{ list-style-type: none;}
+
   </style>
 </head>
 
@@ -96,18 +98,18 @@
     <div ng-controller="todoController">
       <form name="frm" ng-submit="addTodo()">
         <input type="text" name="newTodo" ng-model="newTodo" required />
-        <button ng-disabled="frm.$invalid">Go</button>
+        <button ng-disabled="frm.$invalid">Add To do</button>
       </form>
-      <button ng-click="clearCompleted()">Clear Completed</button>
       <!-- show to dos -->
       <ul>
-        <li ng-repeat="todo in todos">
+        <li ng-repeat="todo in todos" class="myList">
           <input type="checkbox" ng-model="todo.done" />
           <span ng-class="{'done':todo.done}">
             {{todo.title}}
           </span>
         </li>
       </ul>
+      <button ng-click="clearCompleted()">Clear Completed</button>
 
     </div>
 
