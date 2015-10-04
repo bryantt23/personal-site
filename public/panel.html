@@ -137,7 +137,7 @@
     <div class="logo"><a href="#">Zero<span>Source</span></a></div>
   </div>
 
-<a class="mobile" href="#">MENU</a>
+  <a class="mobile" href="#">MENU</a>
 
   <div id="container">
     <div class="sidebar">
@@ -177,6 +177,22 @@
     </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("a.mobile").click(function(){
+        $(".sidebar").slideToggle('fast');
+      });
+
+      window.onresize = function(event){
+        if($(window).width() > 320){
+          $(".sidebar").show();
+        }
+      }
+    });
+
+
+    </script>
 
   </body>
   </html>
