@@ -32,17 +32,51 @@
   .logo a span{
     font-weight: 300;
   }
+  div#container{
+    width: 100%;
+    margin: 0 auto;
+  }
   .sidebar{
     width: 250px;
-    height: 500px;
-    background-color: #010101;
+    height:100vh;
+    background-color: #202020;
     float: left;
   }
   .content{
     width: auto;
-    height: 500px;
-    background-color: #ff0000;
+    margin-left: 250px;
+    height: 100%;
+    background-color: #fff;
+    padding: 15px;
   }
+
+  ul#nav{
+
+  }
+  ul#nav li{
+    list-style: none;
+  }
+  ul#nav li a{
+    color: #ccc;
+    display: block;
+    padding: 10px;
+    font-size: 0.8em;
+    border-bottom: 1px solid #0A0A0A;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 02.s;
+    transition: 0.2s;
+  }
+  ul#nav li a:hover{
+    background-color: black;
+    color: #fff;
+  }
+  ul#nav li a.selected{
+    background-color: black;
+    color: #fff;
+  }
+
+
   </style>
 </head>
 
@@ -53,9 +87,17 @@
 
   <div id="container">
     <div class="sidebar">
+      <ul id="nav">
+        <li><a class="selected" href="#">Dashboard</a></li>
+        <li><a href="#">Connect</a></li>
+        <li><a href="#">Upgrade</a></li>
+        <li><a href="#">Purchase</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
     </div>
 
     <div class="content">
+      xxxxxxxxx
     </div>
   </div>
 
