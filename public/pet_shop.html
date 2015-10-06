@@ -57,7 +57,10 @@
   .footer{
     height: 40px;
     background-color: transparent;
+  }
 
+  h1{
+    text-align: center;
   }
 
 
@@ -82,18 +85,28 @@
 
 
 
+  <h1>Pet Shop</h1>
+
   <div class="container">
+
     <div class="row">
       <div class="col-xs-6">
         <p>
-          <label for="spinner">Select a value:</label>
+          <label for="spinner">How many puppies?</label>
           <input id="spinner" name="value">
         </p>
-
         <div id="dogs">
         </div>
-
       </div>
+      <div class="col-xs-6">
+        <p>
+          <label for="spinner2">How many kittens?</label>
+          <input id="spinner2" name="value2">
+        </p>
+        <div id="kittens">
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -122,21 +135,40 @@
     <script>
 
     $(document).ready(function() {
+      var initvalue = 1;
+      setSpinners(initvalue);
+      handleSpinnerValue(initvalue);
+      handleSpinnerValue2(initvalue);
+
+      function setSpinners(initvalue) {
+        $("#spinner").spinner().val(initvalue);
+        $("#spinner2").spinner().val(initvalue);
+      }
 
 
       $(function () {
         var spinner = $("#spinner").spinner({
-          min: 0,
-          max: 5,
+          min: 1,
+          max: 3,
           step: 1,
           spin: function( event, ui ){
             handleSpinnerValue(ui.value);
           }
         });
       });
+      $(function () {
+        var spinner = $("#spinner2").spinner({
+          min: 1,
+          max: 3,
+          step: 1,
+          spin: function( event, ui ){
+            handleSpinnerValue2(ui.value);
+          }
+        });
+      });
+
       function handleSpinnerValue(txtValue)
       {
-
         var textDisplay="";
         //do here whatever you want with the value;
         // console.log(txtValue);
@@ -146,10 +178,20 @@
         // "<img src=\"images/found_pet/dog1.jpg\" alt=\"\dog1\" >";
 
         for(var i=0;i<txtValue;i++){
-          textDisplay+="<img src=\"images/found_pet/dog1.jpg\" alt=\"\dog1\" >"
+          textDisplay+="<img src=\"images/pet_shop/puppy.jpg\" alt=\"\puppy\"  class=\"img-responsive\">"
+        }
+        document.getElementById("dogs").innerHTML = textDisplay;
+      }
+
+      function handleSpinnerValue2(txtValue)
+      {
+        var textDisplay="";
+
+        for(var i=0;i<txtValue;i++){
+          textDisplay+="<img src=\"images/pet_shop/kitten.jpg\" alt=\"\kitten\"  class=\"img-responsive\">"
         }
 
-        document.getElementById("dogs").innerHTML = textDisplay;
+        document.getElementById("kittens").innerHTML = textDisplay;
       }
 
 
