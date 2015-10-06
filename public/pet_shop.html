@@ -82,16 +82,21 @@
 
 
 
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <p>
+          <label for="spinner">Select a value:</label>
+          <input id="spinner" name="value">
+        </p>
 
+        <div id="dogs">
+        </div>
 
-
-  <p>
-    <label for="spinner">Select a value:</label>
-    <input id="spinner" name="value">
-  </p>
-
-  <div id="dogs">
+      </div>
+    </div>
   </div>
+
 
 
 
@@ -131,9 +136,20 @@
       });
       function handleSpinnerValue(txtValue)
       {
+
+        var textDisplay="";
         //do here whatever you want with the value;
-        console.log(txtValue);
-        document.getElementById("dogs").innerHTML = txtValue;
+        // console.log(txtValue);
+        // document.getElementById("dogs").innerHTML = txtValue;
+        // document.getElementById("dogs").innerHTML =
+        // "<img src=\"images/found_pet/dog1.jpg\" alt=\"\dog1\" >"+
+        // "<img src=\"images/found_pet/dog1.jpg\" alt=\"\dog1\" >";
+
+        for(var i=0;i<txtValue;i++){
+          textDisplay+="<img src=\"images/found_pet/dog1.jpg\" alt=\"\dog1\" >"
+        }
+
+        document.getElementById("dogs").innerHTML = textDisplay;
       }
 
 
