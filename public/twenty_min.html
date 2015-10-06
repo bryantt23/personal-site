@@ -2,6 +2,15 @@
 <html ng-app="customersApp">
 <head>
   <title>AngularJS in Twenty Minutes</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
 </head>
 
 <body ng-init="customers=['Ted', 'Tim','Michelle', 'Zed']">
@@ -16,8 +25,8 @@
       <table class="table">
 
         <tr ng-repeat="cust in customers | filter:searchText">
-          <td>{{cust}}</td>
-          <td></td>
+          <td>{{cust.name}}</td>
+          <td>{{cust.total | currency}}</td>
         </tr>
       </table>
 
