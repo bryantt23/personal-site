@@ -90,24 +90,23 @@
   </header>
 
   <h1>AngularJS Calculator</h1>
-
+<br>
   <div class="container">
     <div ng-controller="calcNumbersController">
 
       <form ng-submit="calcNumbersController()">
         <input type="number" name="numOne" ng-model="numOne" size="20"/><br><br>
-        <input type="number" name="numTwo" ng-model="numTwo" size="20"/><br><br>
 
         <input type="radio" name="myOper" ng-model="myOper" value="+" selected>Add
         <input type="radio" name="myOper" ng-model="myOper" value="-">Subtract
         <input type="radio" name="myOper" ng-model="myOper" value="*">Multiply
         <input type="radio" name="myOper" ng-model="myOper" value="/">Divide
+<br><br>
+      <input type="number" name="numTwo" ng-model="numTwo" size="20"/><br><br>
+
       </form>
       {{numOne}} {{myOper}} {{numTwo}} = {{doCalculation(myOper).toFixed(2)}}
 
-      <div class="table-responsive">
-
-      </div>
     </div>
 
 
@@ -140,8 +139,8 @@
     var app = angular.module('calcNumbers', []);
 
     app.controller('calcNumbersController', function($scope){
-      $scope.numOne = 0;
-      $scope.numTwo = 0;
+      $scope.numOne = 10;
+      $scope.numTwo = 15;
       $scope.myOper = "+";
 
 
