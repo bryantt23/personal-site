@@ -28,7 +28,7 @@
       <li>Vegetables</li>
       <li>Desserts</li>
     </ul>
-    <input type="text" id="item"><button id="addButton">Add item</button>
+    <input type="text" id="itemInput"><button id="addButton">Add item</button>
     <br>
   </div>
   <div class="col-xs-6" style="border-left: 2px solid black; margin-left:-2px;">
@@ -52,11 +52,17 @@ $("#item").keypress(function (e) {
 });
 
 $("#addButton").click(function(){
-  
-  $("#groceryList").append("<li>yolo</li>");
 
+  var textInput = $('#itemInput').val();
 
-
+  if (textInput == null || textInput == "") {
+    alert("Name must be filled out");
+  }
+  else{
+    $("#groceryList").append("<li>"+textInput+"</li>");
+    $('#itemInput').val("");
+  }
+    
 });
 
 
