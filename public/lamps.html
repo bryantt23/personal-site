@@ -28,14 +28,11 @@
       <li>Vegetables</li>
       <li>Desserts</li>
     </ul>
+    <input type="text" id="item"><button id="addButton">Add item</button>
+    <br>
   </div>
   <div class="col-xs-6" style="border-left: 2px solid black; margin-left:-2px;">
     <p>My favorite animal is the dog, aka man's best friend</p>
-      <p>My favorite animal is the dog, aka man's best friend</p>
-        <p>My favorite animal is the dog, aka man's best friend</p>
-          <p>My favorite animal is the dog, aka man's best friend</p>
-            <p>My favorite animal is the dog, aka man's best friend</p>
-              <p>My favorite animal is the dog, aka man's best friend</p>
   </div>
 </div>
 </div>
@@ -46,6 +43,19 @@
 
 <script>
 
+$("#item").keypress(function (e) {
+  var key = e.which;
+  if(key == 13)  // the enter key code
+  {
+    $('#addButton').click();
+  }
+});
+
+$("#addButton").click(function(){
+  console.log("yolo");
+
+
+});
 
 
 </script>
