@@ -11,10 +11,15 @@
   <!-- Bootstrap core CSS -->
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <style>
+  #left-column{
+    background: repeating-linear-gradient(rgba(0,0,0,0.3), rgba(255,255,255,0.3));
+  }
+  </style>
 </head>
 
 <div class="container">
-  <div class="col-xs-6" style="background-color:red;">
+  <div class="col-xs-6" id="left-column">
     <ul>
       <li>Fruits</li>
       <li>Vegetables</li>
@@ -22,6 +27,7 @@
     </ul>
   </div>
   <div class="col-xs-6" style="background-color:blue;">
+    <p>My favorite animal is the dog, aka man's best friend</p>
   </div>
 </div>
 </div>
