@@ -23,7 +23,7 @@
 
 <div class="container">
   <div class="col-xs-6" id="left-column" style="border-right: 2px solid black;">
-    <ul>
+    <ul id="groceryList">
       <li>Fruits</li>
       <li>Vegetables</li>
       <li>Desserts</li>
@@ -52,7 +52,9 @@ $("#item").keypress(function (e) {
 });
 
 $("#addButton").click(function(){
-  console.log("yolo");
+  
+  $("#groceryList").append("<li>yolo</li>");
+
 
 
 });
