@@ -56,13 +56,13 @@ $("#addButton").click(function(){
   var textInput = $('#itemInput').val();
 
   if (textInput == null || textInput == "") {
-    alert("Name must be filled out");
+    alert("Item must be filled out");
   }
   else{
     $("#groceryList").append("<li>"+textInput+"</li>");
     $('#itemInput').val("");
   }
-    
+
 });
 
 
