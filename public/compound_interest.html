@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html ng-app="calcNumbers">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AngularJS Compound Interest Calculator</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+  <style>
+
+  .plain-header {
+    a{
+      color:#428bca;
+    }
+    a:hover,
+    a:focus {
+      background-color: #FFF;
+      color: #0085a1;
+    }
+    position: relative;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #home_link{
+    font-size: 1.7em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 9px 15px;
+    font-weight: bold;
+  }
+
+
+  #logo {
+    color:#428bca;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px 15px;
+    text-align: left;
+    :hover,:focus {
+      background-color: #eeeeee;
+      color: #0085a1;
+    }
+  }
+  #logo:hover,
+  #logo:focus {
+    background-color: #eeeeee;
+    color: #0085a1;
+  }
+  .footer{
+    height: 40px;
+    background-color: transparent;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h1>AngularJS Compound Interest Calculator</h1>
+  <br>
+  <div class="container">
+    <div ng-controller="calcNumbersController">
+
+      <form ng-submit="calcNumbersController()">
+        <input type="number" name="numOne" ng-model="numOne" size="20"/><br><br>
+
+        <input type="radio" name="myOper" ng-model="myOper" value="+" selected>Add
+        <input type="radio" name="myOper" ng-model="myOper" value="-">Subtract
+        <input type="radio" name="myOper" ng-model="myOper" value="*">Multiply
+        <input type="radio" name="myOper" ng-model="myOper" value="/">Divide
+        <br><br>
+        <input type="number" name="numTwo" ng-model="numTwo" size="20"/><br><br>
+
+      </form>
+      {{numOne}} {{myOper}} {{numTwo}} = {{doCalculation(myOper).toFixed(2)}}
+
+<li ng-repeat="n in range(2015,2025)">{{n}}</li>
+
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+      <span style="float:right;">
+        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+      </div><!-- end Container-->
+    </footer>
+
+
+
+
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+    <script>
+    var app = angular.module('calcNumbers', []);
+
+    app.controller('calcNumbersController', function($scope){
+      $scope.numOne = 10;
+      $scope.numTwo = 15;
+      $scope.myOper = "+";
+
+
+      $scope.doCalculation = function(myOper){
+        switch (myOper) {
+          case ("+"):
+          return parseFloat($scope.numOne.toFixed(2)) + parseFloat($scope.numTwo.toFixed(2));
+          break;
+          case ("-"):
+          return parseFloat($scope.numOne.toFixed(2)) - parseFloat($scope.numTwo.toFixed(2));
+          break;
+
+          case ("*"):
+          return parseFloat($scope.numOne.toFixed(2)) * parseFloat($scope.numTwo.toFixed(2));
+          break;
+
+          case ("/"):
+          return parseFloat($scope.numOne.toFixed(2)) / parseFloat($scope.numTwo.toFixed(2));
+          break;
+        }
+      }
+
+
+
+
+        $scope.range = function(min, max, step){
+          step = step || 1;
+          var input = [];
+          for (var i = min; i <= max; i += step) input.push(i);
+          return input;
+        };
+
+    });
+
+
+    </script>
+
+  </body>
+  </html>
