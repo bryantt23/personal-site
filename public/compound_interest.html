@@ -94,21 +94,16 @@
   <div class="container">
     <div ng-controller="calcNumbersController">
 
-      <form ng-submit="calcNumbersController()">
-        <input type="number" name="numOne" ng-model="numOne" size="20"/><br><br>
+      <li ng-repeat="n in range(2015,2025)">{{n}}</li>
 
-        <input type="radio" name="myOper" ng-model="myOper" value="+" selected>Add
-        <input type="radio" name="myOper" ng-model="myOper" value="-">Subtract
-        <input type="radio" name="myOper" ng-model="myOper" value="*">Multiply
-        <input type="radio" name="myOper" ng-model="myOper" value="/">Divide
-        <br><br>
-        <input type="number" name="numTwo" ng-model="numTwo" size="20"/><br><br>
+      <p ng-repeat="person in persons">
+        Hello {{person}}!
+      </p>
 
-      </form>
-      {{numOne}} {{myOper}} {{numTwo}} = {{doCalculation(myOper).toFixed(2)}}
 
-<li ng-repeat="n in range(2015,2025)">{{n}}</li>
-
+      <p ng-repeat="number in numbers">
+        {{number}}
+      </p>
 
     </div>
 
@@ -142,39 +137,29 @@
     var app = angular.module('calcNumbers', []);
 
     app.controller('calcNumbersController', function($scope){
-      $scope.numOne = 10;
-      $scope.numTwo = 15;
-      $scope.myOper = "+";
 
 
-      $scope.doCalculation = function(myOper){
-        switch (myOper) {
-          case ("+"):
-          return parseFloat($scope.numOne.toFixed(2)) + parseFloat($scope.numTwo.toFixed(2));
-          break;
-          case ("-"):
-          return parseFloat($scope.numOne.toFixed(2)) - parseFloat($scope.numTwo.toFixed(2));
-          break;
 
-          case ("*"):
-          return parseFloat($scope.numOne.toFixed(2)) * parseFloat($scope.numTwo.toFixed(2));
-          break;
 
-          case ("/"):
-          return parseFloat($scope.numOne.toFixed(2)) / parseFloat($scope.numTwo.toFixed(2));
-          break;
-        }
+      $scope.range = function(min, max, step){
+        step = step || 1;
+        var input = [];
+        for (var i = min; i <= max; i += step) input.push(i);
+        return input;
+      };
+
+
+
+      var people=['Jack','Jill','Tom','Harvey'];
+      $scope.persons = people;
+
+      var nums=[];
+      for(var i=0;i<50;i+=10){
+        nums.push(i);
       }
+      $scope.numbers = nums;
 
 
-
-
-        $scope.range = function(min, max, step){
-          step = step || 1;
-          var input = [];
-          for (var i = min; i <= max; i += step) input.push(i);
-          return input;
-        };
 
     });
 
