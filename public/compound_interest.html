@@ -89,11 +89,12 @@
     </div>
   </header>
 
-  <h1>How much will your money be worth when you retire?</h1>
-  <br>
 
 
   <div class="container">
+    <h1>How much will your money be worth when you retire?</h1>
+    <br>
+    
     <div ng-controller="calcNumbersController">
 
       Enter your age: <input type="number" ng-model="age" min=1 max=64 >
@@ -105,49 +106,57 @@
       <br>
 
 
-        <p>You are {{age}} years old.</p>
-          <p>Your initial contribution is {{initialContribution | currency:currencySymbol}}
-          and the annual interest rate is {{annualInterestRate}}%. </p>
-        <p>When you are 65 years old you will have: <b>{{result | currency:currencySymbol}}</b>
-    </div>
+      <p>You are {{age}} years old.</p>
+      <p>Your initial contribution is {{initialContribution | currency:currencySymbol}}
+        and the annual interest rate is {{annualInterestRate}}%. </p>
+        <p>When you are 65 years old you will have: <b>{{doCalculation() | currency:currencySymbol}}</b>
+        </div>
+
+      </div>
 
 
 
-  </div>
+      <!-- Footer -->
 
+      <footer class="footer">
+        <div class="container">
 
+          <span style="float:left;">©2015 Bryant Tunbutr</span>
 
-  <!-- Footer -->
-
-  <footer class="footer">
-    <div class="container">
-
-      <span style="float:left;">©2015 Bryant Tunbutr</span>
-
-      <span style="float:right;">
-        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
-        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
-      </div><!-- end Container-->
-    </footer>
-
-
-
-
-    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-
-    <script>
-    var app = angular.module('calcNumbers', []);
-
-    app.controller('calcNumbersController', function($scope){
+          <span style="float:right;">
+            <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+            <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+          </div><!-- end Container-->
+        </footer>
 
 
 
 
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
-    });
+        <script>
+        var app = angular.module('calcNumbers', []);
+
+        app.controller('calcNumbersController', function($scope){
 
 
-    </script>
 
-  </body>
-  </html>
+          $scope.doCalculation = function(){
+            var yearsUntilRetirement = 65 - $scope.age;
+
+            if($scope.annualInterestRate===0){
+              return $scope.initialContribution;
+            }
+            else{
+              return $scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), yearsUntilRetirement);
+            }
+          }
+
+
+        });
+
+
+        </script>
+
+      </body>
+      </html>
