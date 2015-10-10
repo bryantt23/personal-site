@@ -89,25 +89,27 @@
     </div>
   </header>
 
-  <h1>AngularJS Compound Interest Calculator</h1>
+  <h1>How much will your money be worth when you retire?</h1>
   <br>
+
+
   <div class="container">
     <div ng-controller="calcNumbersController">
 
-      <li ng-repeat="n in range(2015,2025)">{{n}}</li>
+      Enter your age: <input type="number" ng-model="age" min=1 max=64 >
+      <br>
+      Enter initial contribution: <input type="number" ng-model="initialContribution" min=0>
+      <br>
+      Enter annual interest rate: <input type="number" ng-model="annualInterestRate" min=0>
+      <br>
+      <br>
 
-      <p ng-repeat="person in persons">
-        Hello {{person}}!
-      </p>
 
-
-      <p ng-repeat="number in numbers">
-        {{number}}
-      </p>
-
+        <p>You are {{age}} years old.</p>
+          <p>Your initial contribution is {{initialContribution | currency:currencySymbol}}
+          and the annual interest rate is {{annualInterestRate}}%. </p>
+        <p>When you are 65 years old you will have: <b>{{result | currency:currencySymbol}}</b>
     </div>
-
-
 
 
 
@@ -139,25 +141,6 @@
     app.controller('calcNumbersController', function($scope){
 
 
-
-
-      $scope.range = function(min, max, step){
-        step = step || 1;
-        var input = [];
-        for (var i = min; i <= max; i += step) input.push(i);
-        return input;
-      };
-
-
-
-      var people=['Jack','Jill','Tom','Harvey'];
-      $scope.persons = people;
-
-      var nums=[];
-      for(var i=0;i<50;i+=10){
-        nums.push(i);
-      }
-      $scope.numbers = nums;
 
 
 
