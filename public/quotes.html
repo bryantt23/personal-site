@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -68,7 +68,9 @@
     text-align: center;
   }
 
-
+  /*#nextButton{
+  margin: 0 auto;
+  }*/
   </style>
 </head>
 
@@ -90,86 +92,75 @@
   </header>
 
 
-  <section ng-app="simpsonsQuote" ng-controller="randomQuote as quote">
-    <h1>Random Simpsons Quote</h1>
+  <div class="container">
+    <section ng-app="randomQuotes" ng-controller="randomQuote as quote">
+      <h1>Random Quotes</h1>
 
-    <blockquote>
-      {{quote.info.line}}
-      <cite>{{quote.info.character}}</cite>
-      <button ng-click="quote.pick()"></button>
-    </blockquote>
-  </section>
+      <blockquote>
+        {{quote.info.line}}
+        <br>
+        <cite class="btn ">{{quote.info.company}}</cite>
+      </blockquote>
+      <div class=" pull-right">
+        <button type="button" class="btn-success pull-right" ng-click="quote.pick()" id="nextButton">Next Quote</button>
+      </div>
 
-  <!-- Footer -->
+    </section>
 
-  <footer class="footer">
-    <div class="container">
+    <!-- Footer -->
 
-      <span style="float:left;">©2015 Bryant Tunbutr</span>
+    <footer class="footer">
+      <div class="container">
 
-      <span style="float:right;">
-        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
-        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
-      </div><!-- end Container-->
-    </footer>
+        <span style="float:left;">©2015 Bryant Tunbutr</span>
 
-
-
-    <script>
-    //
-    // var myApp = angular.module('myApp', []);
-    //
-    //
-    // myApp.controller("MainController", function($scope){
-    //   // $scope.getRandomIndex = function(length){
-    //   //   return Math.floor(Math.random() * length);
-    //   // }
-    //   return $scope.randomQuote = $scope.quotes[Math.floor(Math.random() * $scope.quotes.length)];
-    //
-    //   $scope.quotes = [
-    //     {
-    //       value: "q1"
-    //     },
-    //     {
-    //       value: "q2"
-    //     },
-    //
-    //   ];
-    // });
+        <span style="float:right;">
+          <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+          <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+        </div><!-- end Container-->
+      </footer>
 
 
 
-    var app = angular.module('simpsonsQuote', []);
+      <script>
 
-    app.controller('randomQuote', function(){
-      this.info = quotes[Math.floor(Math.random()*quotes.length)];
-      this.pick = function(){
+      var lastLine;
+      var randomLine;
+
+      var app = angular.module('randomQuotes', []);
+
+      app.controller('randomQuote', function(){
         this.info = quotes[Math.floor(Math.random()*quotes.length)];
-      };
-    });
 
-    var quotes = [
-      {
-        line: "Me fail english? That's unpossible.",
-        character: "Ralph Wiggum"
-      },
-      {
-        line: "When I grow up, I'm going to Bovine University.",
-        character: "Ralph Wiggum"
-      },
-      {
-        line: "How can someone with glasses so thick be so stupid.",
-        character: "Bart Simpson"
-      },
-      {
-        line: "Internet? Is that thing still around?",
-        character: "Homer Simpson"
-      }
-    ];
+        this.pick = function(){
+          this.info = quotes[Math.floor(Math.random()*quotes.length)];
+        };
+      });
 
+      var quotes = [
+        {
+          line: "Just Do It",
+          company: "Nike"
+        },
+        {
+          line: "Think Different",
+          company: "Apple"
+        },
+        {
+          line: "I'm Lovin' It",
+          company: "McDonald's"
+        },
+        {
+          line: "Like a Good Neighbor, State Farm is There",
+          company: "State Farm"
+        },
+        {
+          line: "The Few. The Proud. The Marines.",
+          company: "U.S. Marine Corps"
+        }
+      ];
 
+      </script>
 
-    </script>
-
-  </body>
-  </html>
+    </body>
+    </html>
