@@ -1,76 +1,76 @@
 <!doctype html>
 <html ng-app="myApp">
 <head>
-<script src="http://code.angularjs.org/angular-1.0.0rc11.min.js"></script>
-<!-- <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script> -->
+  <script src="http://code.angularjs.org/angular-1.0.0rc11.min.js"></script>
+  <!-- <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script> -->
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>AngularJS Countdown Timer</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <title>AngularJS Countdown Timer</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<!-- Bootstrap core CSS -->
-<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Custom styles for this template -->
-<link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
 
-<style>
+  <style>
 
-.plain-header {
-  a{
+  .plain-header {
+    a{
+      color:#428bca;
+    }
+    a:hover,
+    a:focus {
+      background-color: #FFF;
+      color: #0085a1;
+    }
+    position: relative;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #home_link{
+    font-size: 1.7em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 9px 15px;
+    font-weight: bold;
+  }
+
+
+  #logo {
     color:#428bca;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px 15px;
+    text-align: left;
+    :hover,:focus {
+      background-color: #eeeeee;
+      color: #0085a1;
+    }
   }
-  a:hover,
-  a:focus {
-    background-color: #FFF;
-    color: #0085a1;
-  }
-  position: relative;
-  padding: 30px 15px;
-  text-align: center;
-  font-size: 20px;
-}
-
-#home_link{
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding: 9px 15px;
-  font-weight: bold;
-}
-
-
-#logo {
-  color:#428bca;
-  position: relative;
-  text-align: center;
-  font-size: 20px;
-  padding: 30px 15px;
-  text-align: left;
-  :hover,:focus {
+  #logo:hover,
+  #logo:focus {
     background-color: #eeeeee;
     color: #0085a1;
   }
-}
-#logo:hover,
-#logo:focus {
-  background-color: #eeeeee;
-  color: #0085a1;
-}
-.footer{
-  height: 40px;
-  background-color: transparent;
-}
+  .footer{
+    height: 40px;
+    background-color: transparent;
+  }
 
-h1{
-  text-align: center;
-}
+  h1{
+    text-align: center;
+  }
 
 
-</style>
+  </style>
 </head>
 
 <body>
@@ -96,7 +96,7 @@ h1{
     <h1>AngularJS Countdown Timer</h1>
     <br>
     <div ng-controller="AlbumCtrl">
-      {{counter|formatTimer}}
+      <h3>{{counter|formatTimer}}</h3>
       <button type="button" ng-click="takeAction()" class="btn-primary" >{{buttonText}}</button>
     </div>
   </div>
@@ -117,26 +117,25 @@ h1{
     </footer>
 
 
-
+    
     <script>
     'use strict';
     var myApp = angular.module('myApp', []);
     myApp.controller('AlbumCtrl', function($scope,$timeout) {
-      $scope.counter = 3;
+      $scope.counter = 10;
       $scope.stopped = false;
       $scope.buttonText='Stop';
       $scope.onTimeout = function(){
 
         if($scope.counter===0){
           $timeout.cancel(mytimeout);
-          $scope.counter = 3;
+          $scope.counter = 10;
           $scope.buttonText='Resume';
           $scope.stopped=!$scope.stopped;
         }
         else{
           $scope.counter--;
           mytimeout = $timeout($scope.onTimeout,1000);
-
         }
       }
       var mytimeout = $timeout($scope.onTimeout,1000);
@@ -164,20 +163,6 @@ h1{
         return (z(hours) +':'+z(minutes)+':'+z(seconds));
       };
 
-
-
-      (function() {
-    var s = document.getElementById('titleTable').style,
-        f = false,
-        c1 = '#000000',
-        c2 = '#ffffff';
-
-    setInterval(function() {
-        s.backgroundColor = f ? c1 : c2;
-        s.color = f ? c2 : c1;
-        f = !f;
-    }, 500);
-})();
     });
 
 
