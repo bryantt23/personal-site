@@ -33,7 +33,7 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
-<style>
+  <style>
 
 
   ul#filter {
@@ -96,8 +96,11 @@
   .thumbnails{
     overflow: hidden;
   }
-
-</style>
+.portfolio-box{
+  height: 300px;
+  width: 400px;
+}
+  </style>
 </head>
 
 <body id="page-top">
@@ -193,6 +196,120 @@
       </div>
     </div>
   </section>
+
+
+
+
+  <div class="container-fluid" id="portfolio_container">
+
+    <ul id="filter" style="text-align: center;">
+      <li class="current"><a href="#">All</a></li>
+      <li><a href="#">Angular</a></li>
+      <li><a href="#">Rails</a></li>
+      <li><a href="#">Bootstrap</a></li>
+    </ul>
+
+    <ul id="portfolio">
+      <li class="rails thumbnails portfolio-box">
+        <a href="http://www.bryanttunbutr.com/pets"><img src="images/portfolio/pets.png" alt="" id="content1"/>
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                Ruby on Rails
+              </div>
+              <div class="project-name">
+                Likable Pets
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li class="rails thumbnails portfolio-box">
+        <a href="http://www.bryanttunbutr.com/tasks"><img src="images/portfolio/carousel10.PNG" alt="" id="content2"/>
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                Ruby on Rails
+              </div>
+              <div class="project-name">
+                Sticky Notes
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="angular thumbnails portfolio-box">
+        <a href="http://www.bryanttunbutr.com/tv_shows.html"><img src="images/portfolio/tvshows.png" alt="" height="200" width="300" id="content3"/>
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                AngularJS
+              </div>
+              <div class="project-name">
+                TV Shows
+              </div>
+            </div>
+          </div>
+
+        </a>
+      </li>
+      <li class="angular thumbnails portfolio-box">
+        <a href="http://www.bryanttunbutr.com/bill_splitter.html"><img src="images/portfolio/tip.png" alt="" height="200" width="300" id="content4"/>
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                AngularJS
+              </div>
+              <div class="project-name">
+                Tip Calculator
+              </div>
+            </div>
+          </div>
+
+        </a>
+      </li>
+      <li class="bootstrap thumbnails portfolio-box">
+        <a href="http://www.bryanttunbutr.com/pomodoro.html"><img src="images/portfolio/pomodoro.png" alt="" height="200" width="300" id="content2"/>
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                JavaScript
+              </div>
+              <div class="project-name">
+                Pomodoro Timer
+              </div>
+            </div>
+          </div>
+
+        </a>
+      </li>
+      <li class="bootstrap thumbnails portfolio-box">
+        <a href="http://www.bryanttunbutr.com/make_rain.html"><img src="images/portfolio/rain.png" alt="" height="200" width="300" id="content2"/>
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                Bootstrap
+              </div>
+              <div class="project-name">
+                Make It Rain
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+
+  <!--
+  <li class="bootstrap thumbnails ">
+  <a href="http://www.bryanttunbutr.com/tasks" class="portfolio-box">
+  <img src="images/creative/1.png" class="img-responsive" alt="">
+  </a>
+  </li> -->
+
 
   <section class="no-padding" id="portfolio">
     <div class="container-fluid">
@@ -308,38 +425,6 @@
     </div>
   </aside>
 
-    <div class="container-fluid" id="portfolio_container">
-
-      <ul id="filter" style="text-align: center;">
-        <li class="current"><a href="#">All</a></li>
-        <li><a href="#">Angular</a></li>
-        <li><a href="#">Rails</a></li>
-        <li><a href="#">Bootstrap</a></li>
-      </ul>
-
-      <ul id="portfolio">
-        <li class="rails thumbnails">
-          <a href="http://www.bryanttunbutr.com/pets"><img src="images/portfolio/pets.png" alt="" height="200" width="300"  id="content1"/>Likable Pets</a>
-        </li>
-        <li class="rails thumbnails">
-          <a href="http://www.bryanttunbutr.com/tasks"><img src="images/portfolio/carousel10.PNG" alt="" height="200" width="300" id="content2"/>Sticky Notes</a>
-        </li>
-        <li class="angular thumbnails">
-          <a href="http://www.bryanttunbutr.com/tv_shows.html"><img src="images/portfolio/tvshows.png" alt="" height="200" width="300" id="content3"/>TV Shows</a>
-        </li>
-        <li class="angular thumbnails">
-          <a href="http://www.bryanttunbutr.com/bill_splitter.html"><img src="images/portfolio/tip.png" alt="" height="200" width="300" id="content4"/>Tip Calculator</a>
-        </li>
-        <li class="bootstrap thumbnails">
-          <a href="http://www.bryanttunbutr.com/pomodoro.html"><img src="images/portfolio/pomodoro.png" alt="" height="200" width="300" id="content2"/>Pomodoro Timer</a>
-        </li>
-        <li class="bootstrap thumbnails">
-          <a href="http://www.bryanttunbutr.com/make_rain.html"><img src="images/portfolio/rain.png" alt="" height="200" width="300" id="content2"/>Make It Rain</a>
-        </li>
-      </ul>
-
-    </div>
-
 
   <section id="contact">
     <div class="container">
@@ -392,19 +477,11 @@
     });
   });
 
-  //
-  // $('#content').hover(function() {
-  //   $("#content").addClass('transition');
-  //
+  // $("[id^=content]").hover(function() {
+  //   $(this).addClass('transition');
   // }, function() {
-  //   $("#content").removeClass('transition');
+  //   $(this).removeClass('transition');
   // });
-  //
-  $("[id^=content]").hover(function() {
-    $(this).addClass('transition');
-  }, function() {
-    $(this).removeClass('transition');
-  });
   </script>
 
 </body>
