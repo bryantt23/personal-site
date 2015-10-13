@@ -107,57 +107,85 @@
 
 
       <p>You are {{age}} years old.</p>
-            <p>You have {{65-age}} years until retirement.</p>
+      <p>You have {{65-age}} years until retirement.</p>
       <p>Your initial contribution is {{initialContribution | currency:currencySymbol}}
         and the annual interest rate is {{annualInterestRate}}%. </p>
         <p>When you are 65 years old you will have: <b>{{doCalculation() | currency:currencySymbol}}</b>
+
+
+          <ul>
+            <li data-ng-repeat="item in items track by $index">
+              {{item}}
+              <button data-ng-click="removeItem($index)">Remove</button>
+            </li>
+          </ul>
+          <!-- <input data-ng-model="newItem" type="number"> -->
+          <button data-ng-click="addItem(age)">Add</button>
+
+
+
+
+
         </div>
 
-      </div>
 
 
+        <!-- Footer -->
 
-      <!-- Footer -->
+        <footer class="footer">
+          <div class="container">
 
-      <footer class="footer">
-        <div class="container">
+            <span style="float:left;">©2015 Bryant Tunbutr</span>
 
-          <span style="float:left;">©2015 Bryant Tunbutr</span>
-
-          <span style="float:right;">
-            <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
-            <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
-          </div><!-- end Container-->
-        </footer>
+            <span style="float:right;">
+              <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+              <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+            </div><!-- end Container-->
+          </footer>
 
 
 
 
-        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+          <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
-        <script>
-        var app = angular.module('calcNumbers', []);
+          <script>
+          var app = angular.module('calcNumbers', []);
 
-        app.controller('calcNumbersController', function($scope){
+          app.controller('calcNumbersController', function($scope){
 
 
+            $scope.doCalculation = function(){
+              yearsUntilRetirement = 65 - $scope.age;
 
-          $scope.doCalculation = function(){
-            var yearsUntilRetirement = 65 - $scope.age;
-
-            if($scope.annualInterestRate===0){
-              return $scope.initialContribution;
+              if($scope.annualInterestRate===0){
+                return $scope.initialContribution;
+              }
+              else{
+                return $scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), yearsUntilRetirement);
+              }
             }
-            else{
-              return $scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), yearsUntilRetirement);
+
+
+            var today = new Date();
+            var year = today.getFullYear();
+
+            $scope.items = [];
+
+            $scope.addItem = function(item){
+              yearsUntilRetirement = 65 - $scope.age;
+
+              $scope.items = [];
+              for(var i=item;i<=item+yearsUntilRetirement;i++){
+                $scope.items.push(year+" "+i);
+                year++;
+              }
             }
-          }
 
 
-        });
+          });
 
 
-        </script>
+          </script>
 
-      </body>
-      </html>
+        </body>
+        </html>
