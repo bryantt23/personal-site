@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Creative Portfolio</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="css/vendor/animate.min.css" type="text/css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/vendor/creative.css" type="text/css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+<style>
+
+
+  ul#filter {
+    float: left;
+    font-size: 16px;
+    list-style: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  ul#filter li {
+    border-right: 1px solid #dedede;
+    float: left;
+    line-height: 16px;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+
+  ul#filter li:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  ul#filter a { color: #999; text-decoration: none; }
+
+  ul#filter li.current a, ul#filter a:hover { text-decoration: underline; }
+  ul#filter li.current a { color: #333; font-weight: bold; }
+
+  ul#portfolio {
+    float: left;
+    list-style: none;
+    margin-left: 0;
+    /*width: 672px;*/
+  }
+  ul#portfolio li {
+    border: 1px solid #dedede;
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    /*width: 202px;*/
+  }
+  ul#portfolio a { display: block; width: 100%; }
+  ul#portfolio a:hover { text-decoration: none; }
+  ul#portfolio img { border: 1px solid #dedede; display: block; padding-bottom: 5px; }
+
+
+  .transition {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  #content {
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+  }
+
+  #content {
+    width:80px;
+    margin:25px;
+  }
+
+  .thumbnails{
+    overflow: hidden;
+  }
+
+</style>
+</head>
+
+<body id="page-top">
+
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">Bryant Tunbutr</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="page-scroll" href="#about">About</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#services">Services</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <header>
+    <div class="header-content">
+      <div class="header-content-inner">
+        <h1>Bryant Tunbutr</h1>
+        <hr>
+        <p>Web Developer - HTML5, CSS3, JavaScript</p>
+        <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-primary" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h2 class="section-heading">Developing and Designing Customized Web Solutions</h2>
+          <hr class="light">
+          <p class="text-faded"></p>
+          <i class="fa fa-4x fa-globe"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">At Your Service</h2>
+          <hr class="primary">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 text-center">
+          <div class="service-box">
+            <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+            <h3>Beautiful Designs</h3>
+          </div>
+        </div>
+        <div class="col-sm-4 text-center">
+          <div class="service-box">
+            <i class="fa fa-4x fa-scissors wow bounceIn text-primary" data-wow-delay=".1s"></i>
+            <h3>Cutting Edge Technologies</h3>
+          </div>
+        </div>
+        <div class="col-sm-4 text-center">
+          <div class="service-box">
+            <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+            <h3>Made with Love</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="no-padding" id="portfolio">
+    <div class="container-fluid">
+      <div class="row no-gutter">
+        <div class="col-md-6">
+          <a href="http://www.bryanttunbutr.com/tasks" class="portfolio-box">
+            <img src="images/creative/1.png" class="img-responsive" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  Ruby on Rails
+                </div>
+                <div class="project-name">
+                  Sticky Notes
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="http://www.bryanttunbutr.com/pomodoro.html" class="portfolio-box">
+            <img src="images/creative/2.png" class="img-responsive" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  JavaScript
+                </div>
+                <div class="project-name">
+                  Pomodoro Timer
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row no-gutter ">
+        <div class="col-md-6">
+          <a href="http://www.bryanttunbutr.com/architects.html" class="portfolio-box">
+            <img src="images/creative/3.png" class="img-responsive" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  Bootstrap
+                </div>
+                <div class="project-name">
+                  Architects
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="http://www.bryanttunbutr.com/bill_splitter.html" class="portfolio-box">
+            <img src="images/creative/4.png" class="img-responsive" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  AngularJS
+                </div>
+                <div class="project-name">
+                  Bill Splitter
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="row no-gutter ">
+        <div class="col-md-6">
+          <a href="http://www.bryanttunbutr.com/found_my_pet.html" class="portfolio-box">
+            <img src="images/creative/5.png" class="img-responsive" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  Bootstrap
+                </div>
+                <div class="project-name">
+                  Found My Pet
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="http://www.bryanttunbutr.com/etch_a_sketch" class="portfolio-box">
+            <img src="images/creative/6.png" class="img-responsive" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  JQuery
+                </div>
+                <div class="project-name">
+                  Etch a Sketch
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <aside class="bg-dark">
+    <div class="container text-center">
+      <div class="call-to-action">
+        <h2>Follow me as I learn, build, and share</h2>
+        <a href="https://bryanttunbutr.wordpress.com/" class="btn btn-default btn-xl wow tada">Read my blog</a>
+      </div>
+    </div>
+  </aside>
+
+    <div class="container-fluid" id="portfolio_container">
+
+      <ul id="filter" style="text-align: center;">
+        <li class="current"><a href="#">All</a></li>
+        <li><a href="#">Angular</a></li>
+        <li><a href="#">Rails</a></li>
+        <li><a href="#">Bootstrap</a></li>
+      </ul>
+
+      <ul id="portfolio">
+        <li class="rails thumbnails">
+          <a href="http://www.bryanttunbutr.com/pets"><img src="images/portfolio/pets.png" alt="" height="200" width="300"  id="content1"/>Likable Pets</a>
+        </li>
+        <li class="rails thumbnails">
+          <a href="http://www.bryanttunbutr.com/tasks"><img src="images/portfolio/carousel10.PNG" alt="" height="200" width="300" id="content2"/>Sticky Notes</a>
+        </li>
+        <li class="angular thumbnails">
+          <a href="http://www.bryanttunbutr.com/tv_shows.html"><img src="images/portfolio/tvshows.png" alt="" height="200" width="300" id="content3"/>TV Shows</a>
+        </li>
+        <li class="angular thumbnails">
+          <a href="http://www.bryanttunbutr.com/bill_splitter.html"><img src="images/portfolio/tip.png" alt="" height="200" width="300" id="content4"/>Tip Calculator</a>
+        </li>
+        <li class="bootstrap thumbnails">
+          <a href="http://www.bryanttunbutr.com/pomodoro.html"><img src="images/portfolio/pomodoro.png" alt="" height="200" width="300" id="content2"/>Pomodoro Timer</a>
+        </li>
+        <li class="bootstrap thumbnails">
+          <a href="http://www.bryanttunbutr.com/make_rain.html"><img src="images/portfolio/rain.png" alt="" height="200" width="300" id="content2"/>Make It Rain</a>
+        </li>
+      </ul>
+
+    </div>
+
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <hr class="primary">
+          <p>Ready to start your next project? Awesome! Contact me and I'll help you get started...</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+          <p><a href="mailto:btunbutr@gmail.com">Email Me</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="javascripts/vendor/creative/jquery.easing.min.js"></script>
+  <script src="javascripts/vendor/creative/jquery.fittext.js"></script>
+  <script src="javascripts/vendor/creative/wow.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script src="javascripts/vendor/creative/creative.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('ul#filter a').click(function() {
+      $(this).css('outline','none');
+      $('ul#filter .current').removeClass('current');
+      $(this).parent().addClass('current');
+
+      var filterVal = $(this).text().toLowerCase().replace(' ','-');
+
+      if(filterVal == 'all') {
+        $('ul#portfolio li.hidden').fadeIn('slow').removeClass('hidden');
+      } else {
+        $('ul#portfolio li').each(function() {
+          if(!$(this).hasClass(filterVal)) {
+            $(this).fadeOut('normal').addClass('hidden');
+          } else {
+            $(this).fadeIn('slow').removeClass('hidden');
+          }
+        });
+      }
+
+      return false;
+    });
+  });
+
+  //
+  // $('#content').hover(function() {
+  //   $("#content").addClass('transition');
+  //
+  // }, function() {
+  //   $("#content").removeClass('transition');
+  // });
+  //
+  $("[id^=content]").hover(function() {
+    $(this).addClass('transition');
+  }, function() {
+    $(this).removeClass('transition');
+  });
+  </script>
+
+</body>
+
+</html>
