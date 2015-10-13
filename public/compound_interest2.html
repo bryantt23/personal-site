@@ -113,98 +113,86 @@
         <p>When you are 65 years old you will have: <b>{{doCalculation() | currency:currencySymbol}}</b>
 
 
-          <ul>
-            <p data-ng-repeat="item in items track by $index">
-              {{item.yearAge}} {{item.balance  | currency:currencySymbol}}
-            </p>
-            <!-- <li data-ng-repeat="yearlyBalance in yearlyBalances track by $index">
-              {{yearlyBalance  | currency:currencySymbol}}
-            </li> -->
-            </ul>
-            <!-- <input data-ng-model="newItem" type="number"> -->
-            <button data-ng-click="addItem(age)">Add</button>
+          <p data-ng-repeat="item in items track by $index">
+            <strong>{{item.balance  | currency:currencySymbol}}</strong> {{item.yearAge}}
+          </p>
+
+          <button data-ng-click="addItem(age)">Add</button>
 
 
 
 
-          </div>
+        </div>
+      </div>
 
 
 
-          <!-- Footer -->
+      <!-- Footer -->
 
-          <footer class="footer">
-            <div class="container">
+      <footer class="footer">
+        <div class="container">
 
-              <span style="float:left;">©2015 Bryant Tunbutr</span>
+          <span style="float:left;">©2015 Bryant Tunbutr</span>
 
-              <span style="float:right;">
-                <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
-                <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
-              </div><!-- end Container-->
-            </footer>
-
-
-
-
-            <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-
-            <script>
-            var app = angular.module('calcNumbers', []);
-
-            app.controller('calcNumbersController', function($scope){
-
-
-              $scope.doCalculation = function(){
-                yearsUntilRetirement = 65 - $scope.age;
-
-                if($scope.annualInterestRate===0){
-                  return $scope.initialContribution;
-                }
-                else{
-                  return $scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), yearsUntilRetirement);
-                }
-              }
+          <span style="float:right;">
+            <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+            <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+          </div><!-- end Container-->
+        </footer>
 
 
 
 
-              // var balanceEachYear=[];
-              var balanceEachYear = new Array(64)        // an empty array of length 100
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
-              $scope.addItem = function(item){
-                var today = new Date();
-                var year = today.getFullYear();
-                var startYear=0;
-                // balanceEachYear=[];
+        <script>
+        var app = angular.module('calcNumbers', []);
 
-                // yearsUntilRetirement = 65 - $scope.age;
-
-                // $scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), yearsUntilRetirement);
-
-                for(var j=$scope.age;j<=65;j++){
-                  balanceEachYear[j]=$scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), startYear);
-                  startYear++;
-                }
+        app.controller('calcNumbersController', function($scope){
 
 
-                $scope.items = [];
-                $scope.yearlyBalances = [];
+          $scope.doCalculation = function(){
+            yearsUntilRetirement = 65 - $scope.age;
 
-                for(var i=$scope.age;i<=65;i++){
-                  // $scope.items.push(year+" "+i+" "+balanceEachYear[i]);
-                  $scope.items.push({yearAge: year+" "+i+" "});
-                  $scope.items.push({balance: balanceEachYear[i]});
-
-                  year++;
-                }
-              }
-
-
-            });
+            if($scope.annualInterestRate===0){
+              return $scope.initialContribution;
+            }
+            else{
+              return $scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), yearsUntilRetirement);
+            }
+          }
 
 
-            </script>
 
-          </body>
-          </html>
+
+          // var balanceEachYear=[];
+          var balanceEachYear = new Array(64)        // an empty array of length 100
+
+          $scope.addItem = function(item){
+            var today = new Date();
+            var year = today.getFullYear();
+            var startYear=0;
+
+            for(var j=$scope.age;j<=65;j++){
+              balanceEachYear[j]=$scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), startYear);
+              startYear++;
+            }
+
+            $scope.items = [];
+
+            for(var i=$scope.age;i<=65;i++){
+              $scope.items.push({yearAge: "Year: " + year+" Age: "+i});
+              $scope.items.push({balance: balanceEachYear[i]});
+
+              year++;
+            }
+          }
+
+
+        });
+
+
+        </script>
+
+      </body>
+      </html>
