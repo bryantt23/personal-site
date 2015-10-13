@@ -97,11 +97,11 @@
 
     <div ng-controller="calcNumbersController">
 
-      <p>Enter your age: <input type="number" ng-model="age" min=1 max=65 >
+      <p>Enter your age: <input type="number" ng-model="age" min=1 max=65 ng-change="addItem()">
       </p>
-      <p>Enter initial contribution: <input type="number" ng-model="initialContribution" min=0>
+      <p>Enter initial contribution: <input type="number" ng-model="initialContribution" min=0 ng-change="addItem()">
       </p>
-      <p>Enter annual interest rate: <input type="number" ng-model="annualInterestRate" min=0>
+      <p>Enter annual interest rate: <input type="number" ng-model="annualInterestRate" min=0 ng-change="addItem()">
       </p>
       <br>
 
@@ -117,7 +117,6 @@
             <strong>{{item.balance  | currency:currencySymbol}}</strong> {{item.yearAge}}
           </p>
 
-          <button data-ng-click="addItem(age)">Add</button>
 
 
 
