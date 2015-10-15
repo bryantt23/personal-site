@@ -94,8 +94,7 @@
   <div class="container">
     <h1>Currency Calculator</h1>
 
-
-    <div ng-app="invoice2" ng-controller="InvoiceController as invoice">
+    <div ng-app="invoice3" ng-controller="InvoiceController as invoice">
       <b>Invoice:</b>
       <div>
         Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
@@ -111,7 +110,7 @@
         <span ng-repeat="c in invoice.currencies">
           {{invoice.total(c) | currency:c}}
         </span>
-        <button class="btn" ng-click="invoice.pay()">Pay</button>
+        <button class="btn-danger" ng-click="invoice.pay()">Pay</button>
       </div>
     </div>
 
@@ -139,7 +138,43 @@
     <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
     <script>
-    angular.module('invoice2', ['finance2'])
+    angular.module('finance3', [])
+    .factory('currencyConverter', ['$http', function($http) {
+      var YAHOO_FINANCE_URL_PATTERN =
+      '//query.yahooapis.com/v1/public/yql?q=select * from '+
+      'yahoo.finance.xchange where pair in ("PAIRS")&format=json&'+
+      'env=store://datatables.org/alltableswithkeys&callback=JSON_CALLBACK';
+      var currencies = ['USD', 'EUR', 'CNY'];
+      var usdToForeignRates = {};
+
+      var convert = function (amount, inCurr, outCurr) {
+        return amount * usdToForeignRates[outCurr] / usdToForeignRates[inCurr];
+      };
+
+      var refresh = function() {
+        var url = YAHOO_FINANCE_URL_PATTERN.
+        replace('PAIRS', 'USD' + currencies.join('","USD'));
+        return $http.jsonp(url).success(function(data) {
+          var newUsdToForeignRates = {};
+          angular.forEach(data.query.results.rate, function(rate) {
+            var currency = rate.id.substring(3,6);
+            newUsdToForeignRates[currency] = window.parseFloat(rate.Rate);
+          });
+          usdToForeignRates = newUsdToForeignRates;
+        });
+      };
+
+      refresh();
+
+      return {
+        currencies: currencies,
+        convert: convert,
+        refresh: refresh
+      };
+    }]);
+
+
+    angular.module('invoice3', ['finance3'])
     .controller('InvoiceController', ['currencyConverter', function(currencyConverter) {
       this.qty = 1;
       this.cost = 2;
@@ -154,23 +189,6 @@
       };
     }]);
 
-    angular.module('finance2', [])
-    .factory('currencyConverter', function() {
-      var currencies = ['USD', 'EUR', 'CNY'];
-      var usdToForeignRates = {
-        USD: 1,
-        EUR: 0.74,
-        CNY: 6.09
-      };
-      var convert = function (amount, inCurr, outCurr) {
-        return amount * usdToForeignRates[outCurr] / usdToForeignRates[inCurr];
-      };
-
-      return {
-        currencies: currencies,
-        convert: convert
-      };
-    });
 
     </script>
 
