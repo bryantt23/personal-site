@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html ng-app="calcNumbers">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AngularJS Compound Interest Calculator 2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+  <style>
+
+  .plain-header {
+    a{
+      color:#428bca;
+    }
+    a:hover,
+    a:focus {
+      background-color: #FFF;
+      color: #0085a1;
+    }
+    position: relative;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #home_link{
+    font-size: 1.7em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 9px 15px;
+    font-weight: bold;
+  }
+
+
+  #logo {
+    color:#428bca;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px 15px;
+    text-align: left;
+    :hover,:focus {
+      background-color: #eeeeee;
+      color: #0085a1;
+    }
+  }
+  #logo:hover,
+  #logo:focus {
+    background-color: #eeeeee;
+    color: #0085a1;
+  }
+  .footer{
+    height: 40px;
+    background-color: transparent;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <div class="container">
+    <h1>How much will your money be worth when you retire?</h1>
+    <br>
+
+    <div ng-controller="calcNumbersController">
+
+      <p>Enter your age: <input type="number" ng-model="age" min=1 max=65 ng-change="addItem()">
+      </p>
+      <p>Enter initial contribution: <input type="number" ng-model="initialContribution" min=0 ng-change="addItem()">
+      </p>
+      <p>Enter annual interest rate: <input type="number" ng-model="annualInterestRate" min=0 ng-change="addItem()">
+      </p>
+      <br>
+
+
+      <p>You are {{age}} years old.</p>
+      <p>You have {{65-age}} years until retirement.</p>
+      <p>Your initial contribution is {{initialContribution | currency:currencySymbol}}
+        and the annual interest rate is {{annualInterestRate}}%. </p>
+        <p>When you are 65 years old you will have: <b>{{doCalculation() | currency:currencySymbol}}</b>
+
+
+          <p data-ng-repeat="item in items track by $index">
+            <strong>{{item.balance  | currency:currencySymbol}}</strong> {{item.yearAge}}
+          </p>
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+      <!-- Footer -->
+
+      <footer class="footer">
+        <div class="container">
+
+          <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+          <span style="float:right;">
+            <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+            <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+          </div><!-- end Container-->
+        </footer>
+
+
+
+
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+        <script>
+        var app = angular.module('calcNumbers', []);
+
+        app.controller('calcNumbersController', function($scope){
+
+
+          $scope.doCalculation = function(){
+            yearsUntilRetirement = 65 - $scope.age;
+
+            if($scope.annualInterestRate===0){
+              return $scope.initialContribution;
+            }
+            else{
+              return $scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), yearsUntilRetirement);
+            }
+          }
+
+
+
+
+          // var balanceEachYear=[];
+          var balanceEachYear = new Array(64)        // an empty array of length 100
+
+          $scope.addItem = function(item){
+            var today = new Date();
+            var year = today.getFullYear();
+            var startYear=0;
+
+            for(var j=$scope.age;j<=65;j++){
+              balanceEachYear[j]=$scope.initialContribution*Math.pow((1+$scope.annualInterestRate/100), startYear);
+              startYear++;
+            }
+
+            $scope.items = [];
+
+            for(var i=$scope.age;i<=65;i++){
+              $scope.items.push({yearAge: "Year: " + year+" Age: "+i});
+              $scope.items.push({balance: balanceEachYear[i]});
+
+              year++;
+            }
+          }
+
+
+        });
+
+
+        </script>
+
+      </body>
+      </html>
