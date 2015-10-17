@@ -44,29 +44,29 @@
 
   <div class="container">
     <h1>String Interview Problems</h1>
+    <br>
 
 
     <div ng-app="stringProblems"  ng-controller="stringProblemsController">
 
-      <p>Enter a String: <input type="text" ng-model="inputString" ng-init="inputString=''" ng-change="addItem()" ng-init="">
+      <p>Enter a String: <input type="text" ng-model="inputString" ng-init="inputString='ab c'" ng-change="addItem()" ng-init="">
       </p>
-      <br>
 
       <p>You entered: {{inputString}} </p>
 
-
-      <p>The reversed String: <b>{{reverseString()}}</b>
+      <p>The Reversed String: <b>{{reverseString()}}</b>
 
         <p>How many times would you like to repeat the string?
           <input type="number" ng-model="repeats" min=1 max=5 ng-init="repeats=3">
         </p>
 
-          <p>The String Repeated: <b>{{repeatString()}}</b>
+        <p>The Repeated String: <b>{{repeatString()}}</b>
 
+          <p>Is this a Palindrome? {{isPalindrome()}}</b>
+            <br>
 
-
-
-
+              <br>
+            <p>For more information on where to find practice problems like these check out my <a href="https://bryanttunbutr.wordpress.com/2015/10/15/string-interview-problems/">blog entry</a>.</p>
           </div>
         </div>
 
@@ -89,10 +89,6 @@
         </footer>
 
 
-
-
-
-
         <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
         <script>
@@ -108,9 +104,15 @@
             return repeatString($scope.inputString, $scope.repeats);
           }
 
+          $scope.isPalindrome = function(){
+            return isPalindrome($scope.inputString);
+          }
+
         });
 
         function reverseString(str) {
+
+          str = str.replace(/\W/g, '');
 
           var outputStrings = [];
 
@@ -128,6 +130,7 @@
         }
 
         function repeatString(str, num) {
+          str = str.replace(/\W/g, '');
 
           var newString="";
           // repeat after me
@@ -138,6 +141,21 @@
           return newString;
         }
 
+        function isPalindrome(str) {
+          str = str.replace(/\W/g, '');
+
+          var reversedString = reverseString(str);
+
+          var isPalindrome = "This is a Palindrome.";
+
+          // Good luck!
+          str = str.replace(/\W/g, '').toLowerCase();
+
+          if(reversedString != str){
+            isPalindrome = "This is NOT a Palindrome.";
+          }
+          return isPalindrome;
+        }
         </script>
 
 
