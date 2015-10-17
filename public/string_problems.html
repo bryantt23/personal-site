@@ -48,7 +48,7 @@
 
     <div ng-app="stringProblems"  ng-controller="stringProblemsController">
 
-      <p>Enter a String: <input type="text" ng-model="inputString" min=1 max=50 ng-change="addItem()" ng-init="">
+      <p>Enter a String: <input type="text" ng-model="inputString" ng-init="inputString=''" ng-change="addItem()" ng-init="">
       </p>
       <br>
 
@@ -57,6 +57,8 @@
 
 
       <p>The reversed String: <b>{{reverseString()}}</b>
+
+            <p>The String Repeated: <b>{{repeatString()}}</b>
 
 
 
@@ -99,6 +101,9 @@
       $scope.reverseString = function(){
         return reverseString($scope.inputString);
       }
+            $scope.repeatString = function(){
+              return repeatString($scope.inputString);
+            }
 
 
 
@@ -123,6 +128,16 @@
       return outputStrings;
     }
 
+    function repeatString(str, num) {
+
+      var newString="";
+      // repeat after me
+      for(i=0;i<3;i++){
+        newString+=str;
+      }
+
+      return newString;
+    }
 
     </script>
 
