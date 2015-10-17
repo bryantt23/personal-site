@@ -55,92 +55,91 @@
       <p>You entered: {{inputString}} </p>
 
 
-
       <p>The reversed String: <b>{{reverseString()}}</b>
 
-            <p>The String Repeated: <b>{{repeatString()}}</b>
+        <p>How many times would you like to repeat the string?
+          <input type="number" ng-model="repeats" min=1 max=5 ng-init="repeats=3">
+        </p>
+
+          <p>The String Repeated: <b>{{repeatString()}}</b>
 
 
 
+
+
+          </div>
+        </div>
 
 
       </div>
-    </div>
-
-
-  </div>
 
 
 
-  <!-- Footer -->
+      <!-- Footer -->
 
-  <footer class="footer">
-    <div class="container">
+      <footer class="footer">
+        <div class="container">
 
-      <span style="float:left;">©2015 Bryant Tunbutr</span>
+          <span style="float:left;">©2015 Bryant Tunbutr</span>
 
-      <span style="float:right;">
-        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
-        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
-      </div><!-- end Container-->
-    </footer>
+          <span style="float:right;">
+            <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+            <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+          </div><!-- end Container-->
+        </footer>
 
 
 
 
 
 
-    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
-    <script>
-    var app = angular.module('stringProblems', []);
+        <script>
+        var app = angular.module('stringProblems', []);
 
-    app.controller('stringProblemsController', function($scope){
+        app.controller('stringProblemsController', function($scope){
 
+          $scope.reverseString = function(){
+            return reverseString($scope.inputString);
+          }
 
-      $scope.reverseString = function(){
-        return reverseString($scope.inputString);
-      }
-            $scope.repeatString = function(){
-              return repeatString($scope.inputString);
-            }
+          $scope.repeatString = function(){
+            return repeatString($scope.inputString, $scope.repeats);
+          }
 
+        });
 
+        function reverseString(str) {
 
+          var outputStrings = [];
 
+          // loop through the entire string
+          for (var i = 0, n = str.length; i < n; ++i) {
 
-    });
+            //push starting from the back of the string forwards by subtracting i
+            outputStrings[str.length-1-i]=str[i];
+          }
 
-    function reverseString(str) {
+          //join everything together
+          outputStrings = outputStrings.join([separator = '']);
 
-      var outputStrings = [];
+          return outputStrings;
+        }
 
-      // loop through the entire string
-      for (var i = 0, n = str.length; i < n; ++i) {
+        function repeatString(str, num) {
 
-        //push starting from the back of the string forwards by subtracting i
-        outputStrings[str.length-1-i]=str[i];
-      }
+          var newString="";
+          // repeat after me
+          for(i=0;i<num;i++){
+            newString+=str;
+          }
 
-      //join everything together
-      outputStrings = outputStrings.join([separator = '']);
+          return newString;
+        }
 
-      return outputStrings;
-    }
-
-    function repeatString(str, num) {
-
-      var newString="";
-      // repeat after me
-      for(i=0;i<3;i++){
-        newString+=str;
-      }
-
-      return newString;
-    }
-
-    </script>
+        </script>
 
 
-  </body>
-  </html>
+      </body>
+      </html>
