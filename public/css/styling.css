@@ -1,0 +1,51 @@
+
+  .plain-header {
+    a{
+      color:#428bca;
+    }
+    a:hover,
+    a:focus {
+      background-color: #FFF;
+      color: #0085a1;
+    }
+    position: relative;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #home_link{
+    font-size: 1.7em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 9px 15px;
+    font-weight: bold;
+  }
+
+
+  #logo {
+    color:#428bca;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px 15px;
+    text-align: left;
+    :hover,:focus {
+      background-color: #eeeeee;
+      color: #0085a1;
+    }
+  }
+  #logo:hover,
+  #logo:focus {
+    background-color: #eeeeee;
+    color: #0085a1;
+  }
+  .footer{
+    height: 40px;
+    background-color: transparent;
+  }
+
+  h1{
+    text-align: center;
+  }
