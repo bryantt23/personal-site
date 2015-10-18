@@ -70,6 +70,7 @@ Rails.application.routes.draw do
   get 'litebrite'    => 'litebrite#litebrite'
 
   get "/blog" => redirect("http://bryanttunbutr.wordpress.com")
+  get "/routing" => redirect("http://codepen.io/bryantt23/pen/dYZdOY")
 
 
   get 'calculations/index'
