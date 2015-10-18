@@ -61,6 +61,36 @@
     left: 70%;
     z-index: 4;
   }
+
+    @import url(http://fonts.googleapis.com/css?family=Arvo);
+
+h1, h2 {
+  margin-left: 50px;
+  font-family: 'Arvo';
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p{
+  color: white;
+}
+
+h1, h2  {
+
+  color:	#D5AD6D; /*if no support for background-clip*/
+
+	background: -webkit-linear-gradient(transparent, transparent),
+             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+	background: -o-linear-gradient(transparent, transparent);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
   </style>
 </head>
 
@@ -68,15 +98,36 @@
 <body>
 
 
-  <div class="container">
+
+
+
+  <div class="container ">
     <div class="leftcurtain"><img src="images/curtains/frontcurtain.jpg"/></div>
     <div class="rightcurtain"><img src="images/curtains/frontcurtain.jpg"/></div>
-    <img class="logo" src="images/curtains/buildinter.png"/>
+    <!-- <img class="logo" src="images/curtains/buildinter.png"/> -->
+    <h1  class="logo gold" >75 sites!</h1><br><br><br>
+    <p>Check out my <a href="#">blog entry</a><br>
+      to read about my lessons learned...
     <a class="rope" href="#">
       <img src="images/curtains/rope.png"/>
     </a>
   </div>
 
+
+  <div class="gold"></div>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+          <div class="container">
+
+            <span style="float:left;color: white;">©2015 Bryant Tunbutr</span>
+
+            <span style="float:right;">
+              <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+              <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+            </div><!-- end Container-->
+          </footer>
 
 
     <script>
