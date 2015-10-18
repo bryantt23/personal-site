@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Curtain Opening</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/styling.css" type="text/css">
+
+  <style>
+  *{
+    margin:0;
+    padding:0;
+  }
+  body {
+    text-align: center;
+    background: #4f3722 url('images/curtains/darkcurtain.jpg') repeat-x;
+  }
+  img{
+    border: none;
+  }
+  .leftcurtain{
+    width: 50%;
+    height: 495px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: 2;
+  }
+  .rightcurtain{
+    width: 51%;
+    height: 495px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    z-index: 3;
+  }
+  .rightcurtain img, .leftcurtain img{
+    width: 100%;
+    height: 100%;
+  }
+  .logo{
+    margin: 0px auto;
+    margin-top: 150px;
+  }
+  .rope{
+    position: absolute;
+    top: -40px;
+    left: 70%;
+    z-index: 4;
+  }
+  </style>
+</head>
+
+
+<body>
+
+
+  <div class="container">
+    <div class="leftcurtain"><img src="images/curtains/frontcurtain.jpg"/></div>
+    <div class="rightcurtain"><img src="images/curtains/frontcurtain.jpg"/></div>
+    <img class="logo" src="images/curtains/buildinter.png"/>
+    <a class="rope" href="#">
+      <img src="images/curtains/rope.png"/>
+    </a>
+  </div>
+
+
+
+    <script>
+    $(document).ready(function() {
+
+      $curtainopen = false;
+
+      $(".rope").click(function(){
+
+        $(this).blur();
+
+        if ($curtainopen == false){
+
+          $(this).stop().animate({top: '0px' }, {queue:false, duration:350, easing:'easeOutBounce'});
+          $(".leftcurtain").stop().animate({width:'60px'}, 2000 );
+          $(".rightcurtain").stop().animate({width:'60px'},2000 );
+          $curtainopen = true;
+
+        }else{
+
+          $(this).stop().animate({top: '-40px' }, {queue:false, duration:350, easing:'easeOutBounce'});
+          $(".leftcurtain").stop().animate({width:'50%'}, 2000 );
+          $(".rightcurtain").stop().animate({width:'51%'}, 2000 );
+          $curtainopen = false;
+
+        }
+
+        return false;
+
+      });
+
+    });
+    </script>
+
+
+  </body>
+  </html>
