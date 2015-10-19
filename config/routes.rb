@@ -71,6 +71,7 @@ Rails.application.routes.draw do
 
   get "/blog" => redirect("http://bryanttunbutr.wordpress.com")
   get "/routing" => redirect("http://codepen.io/bryantt23/full/dYZdOY/")
+  get "/templates" => redirect("http://embed.plnkr.co/B6ThROXNyD9IWduNXllI/preview")
 
 
   get 'calculations/index'
