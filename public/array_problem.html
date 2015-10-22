@@ -76,138 +76,150 @@
         In this case it would have been...
       </p>
       <table class="table">
-          <thead>
-            <tr>
-              <th>Input</th>
-              <th>Output</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>[1,2,10,3,4]</code></td>
-              <td>Largest number: 10, Index: 2</td>
-            </tr>
-            <tr>
+        <thead>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>[1,2,10,3,4]</code></td>
+            <td>Largest number: 10, Index: 2</td>
+          </tr>
+          <tr>
           </tbody>
         </table>
 
 
-      <p>
-      </p>
-      <p>
-      </p>
-
-      <div ng-app="stringProblems"  ng-controller="stringProblemsController">
-
-        <p>Enter a String: <input type="text" ng-model="inputString" ng-init="inputString='ab c'" ng-change="addItem()" ng-init="">
+        <p>The great news is that after I knew the exact problem, I was able to quickly solve the problem in 2 minutes. Check out working the code below.
         </p>
 
-        <p>You entered: {{inputString}} </p>
+        <pre>
+          //array of numbers, find the largest number,
+          //find the largest number's index
+          var nums = [1,2,10,3,4];
 
-        <p>The Reversed String: <b>{{reverseString()}}</b>
+          //set largest index to the first array item
+          var largestIndex=0;
 
-          <p>How many times would you like to repeat the string?
-            <input type="number" ng-model="repeats" min=1 max=5 ng-init="repeats=3">
-          </p>
+          //set largest number to the first array item
+          var largestNum=nums[0];
 
-          <p>The Repeated String: <b>{{repeatString()}}</b>
+          //loop through every element in the array except the first element
+          for(var i=1;i< nums.length;i++){
 
-            <p>Is this a Palindrome? {{isPalindrome()}}</b>
-              <br>
+            //if the current element is larger than the largest number
+            if(nums[i]>largestNum){
 
-              <br>
-              <p>For more information on where to find practice problems like these check out my <a href="https://bryanttunbutr.wordpress.com/2015/10/15/string-interview-problems/">blog entry</a>.</p>
-            </div>
-          </div>
+              //set this current number to be the largest number
+              largestNum=nums[i];
 
-
-        </div>
-
-
-
-        <!-- Footer -->
-
-        <footer class="footer">
-          <div class="container">
-
-            <span style="float:left;">©2015 Bryant Tunbutr</span>
-
-            <span style="float:right;">
-              <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
-              <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
-            </div><!-- end Container-->
-          </footer>
-
-
-          <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-
-          <script>
-          var app = angular.module('stringProblems', []);
-
-          app.controller('stringProblemsController', function($scope){
-
-            $scope.reverseString = function(){
-              return reverseString($scope.inputString);
+              //set the current index to be the largest index
+              largestIndex=i;
             }
-
-            $scope.repeatString = function(){
-              return repeatString($scope.inputString, $scope.repeats);
-            }
-
-            $scope.isPalindrome = function(){
-              return isPalindrome($scope.inputString);
-            }
-
-          });
-
-          function reverseString(str) {
-
-            str = str.replace(/\W/g, '');
-
-            var outputStrings = [];
-
-            // loop through the entire string
-            for (var i = 0, n = str.length; i < n; ++i) {
-
-              //push starting from the back of the string forwards by subtracting i
-              outputStrings[str.length-1-i]=str[i];
-            }
-
-            //join everything together
-            outputStrings = outputStrings.join([separator = '']);
-
-            return outputStrings;
           }
 
-          function repeatString(str, num) {
-            str = str.replace(/\W/g, '');
+          //print out results
+          console.log(largestNum);
+          console.log(largestIndex);
 
-            var newString="";
-            // repeat after me
-            for(i=0;i<num;i++){
-              newString+=str;
-            }
+        </pre>
 
-            return newString;
+        <p>My work was not completely finished, however, because I was given an additional challenge.
+          The previous array was modified.
+        </p>
+        <p>
+          <code>[1,2,10,3,10]</code>
+        </p>
+
+
+        <p>
+        </p>
+        <p>
+        </p>
+        <p>
+        </p>
+        <p>
+        </p>
+
+      </div>
+
+
+
+      <!-- Footer -->
+
+      <footer class="footer">
+        <div class="container">
+
+          <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+          <span style="float:right;">
+            <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+            <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+          </div><!-- end Container-->
+        </footer>
+
+
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+        <script>
+        var app = angular.module('arrayProblems', []);
+
+        app.controller('arrayProblemsCtrl', function($scope){
+
+          var randomList;
+
+          $scope.list = [1,2,3,4,5];
+          $scope.random = function() {
+            randomList =  0.5 - Math.random();
+            return randomList;
           }
 
-          function isPalindrome(str) {
-            str = str.replace(/\W/g, '');
 
-            var reversedString = reverseString(str);
 
-            var isPalindrome = "This is a Palindrome.";
-
-            // Good luck!
-            str = str.replace(/\W/g, '').toLowerCase();
-
-            if(reversedString != str){
-              isPalindrome = "This is NOT a Palindrome.";
-            }
-            return isPalindrome;
+          $scope.arrayOutput = function(){
+            console.log(randomList);
+            return findLargest(randomList);
           }
-          </script>
 
 
-        </body>
-        </html>
+        });
+
+
+        function findLargest(randomList) {
+          //array of numbers, find the largest number,
+          //find the largest number's index
+          var nums = randomList;
+
+          //set largest index to the first array item
+          var largestIndex=0;
+
+          //set largest number to the first array item
+          var largestNum=nums[0];
+
+          //loop through every element in the array except the first element
+          for(var i=1;i< nums.length;i++){
+
+            //if the current element is larger than the largest number
+            if(nums[i]>largestNum){
+
+              //set this current number to be the largest number
+              largestNum=nums[i];
+
+              //set the current index to be the largest index
+              largestIndex=i;
+            }
+          }
+
+          //print out results
+          return "The largest number is: "+ largestNum +
+          " and the largest index is "+largestIndex;
+        }
+
+
+        </script>
+
+
+      </body>
+      </html>
