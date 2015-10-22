@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AngularJS Clock</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/styling.css" type="text/css">
+
+  <style>
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <div class="container">
+    <h1>AngularJS Clock</h1>
+    <br>
+
+
+    <div ng-app="myApp">
+      <div ng-controller='TimeCtrl'>
+        <p>{{ clock | date:'HH:mm:ss'}}</p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+      <span style="float:right;">
+        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+      </div><!-- end Container-->
+    </footer>
+
+
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+    <script>
+    var module = angular.module('myApp', []);
+
+    module.controller('TimeCtrl', function($scope, $interval) {
+      var tick = function() {
+        $scope.clock = Date.now();
+      }
+      tick();
+      $interval(tick, 1000);
+    });
+    </script>
+
+
+  </body>
+  </html>
