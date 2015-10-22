@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Array Interview Question</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/styling.css" type="text/css">
+
+  <style>
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <div class="container">
+    <h1>Array Interview Question</h1>
+    <br>
+    <p>A few weeks ago I had this interview question (via Google Hangouts).
+    I thought I would share here what I did well as well as the mistakes I made.
+    Hopefully others can learn from both :)</p>
+
+    <p>The challenge was to find the largest number and index in this array</p>
+    <code>[1,2,10,3,4]</code>
+
+
+
+    <div ng-app="stringProblems"  ng-controller="stringProblemsController">
+
+      <p>Enter a String: <input type="text" ng-model="inputString" ng-init="inputString='ab c'" ng-change="addItem()" ng-init="">
+      </p>
+
+      <p>You entered: {{inputString}} </p>
+
+      <p>The Reversed String: <b>{{reverseString()}}</b>
+
+        <p>How many times would you like to repeat the string?
+          <input type="number" ng-model="repeats" min=1 max=5 ng-init="repeats=3">
+        </p>
+
+        <p>The Repeated String: <b>{{repeatString()}}</b>
+
+          <p>Is this a Palindrome? {{isPalindrome()}}</b>
+            <br>
+
+              <br>
+            <p>For more information on where to find practice problems like these check out my <a href="https://bryanttunbutr.wordpress.com/2015/10/15/string-interview-problems/">blog entry</a>.</p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+      <!-- Footer -->
+
+      <footer class="footer">
+        <div class="container">
+
+          <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+          <span style="float:right;">
+            <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+            <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+          </div><!-- end Container-->
+        </footer>
+
+
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+        <script>
+        var app = angular.module('stringProblems', []);
+
+        app.controller('stringProblemsController', function($scope){
+
+          $scope.reverseString = function(){
+            return reverseString($scope.inputString);
+          }
+
+          $scope.repeatString = function(){
+            return repeatString($scope.inputString, $scope.repeats);
+          }
+
+          $scope.isPalindrome = function(){
+            return isPalindrome($scope.inputString);
+          }
+
+        });
+
+        function reverseString(str) {
+
+          str = str.replace(/\W/g, '');
+
+          var outputStrings = [];
+
+          // loop through the entire string
+          for (var i = 0, n = str.length; i < n; ++i) {
+
+            //push starting from the back of the string forwards by subtracting i
+            outputStrings[str.length-1-i]=str[i];
+          }
+
+          //join everything together
+          outputStrings = outputStrings.join([separator = '']);
+
+          return outputStrings;
+        }
+
+        function repeatString(str, num) {
+          str = str.replace(/\W/g, '');
+
+          var newString="";
+          // repeat after me
+          for(i=0;i<num;i++){
+            newString+=str;
+          }
+
+          return newString;
+        }
+
+        function isPalindrome(str) {
+          str = str.replace(/\W/g, '');
+
+          var reversedString = reverseString(str);
+
+          var isPalindrome = "This is a Palindrome.";
+
+          // Good luck!
+          str = str.replace(/\W/g, '').toLowerCase();
+
+          if(reversedString != str){
+            isPalindrome = "This is NOT a Palindrome.";
+          }
+          return isPalindrome;
+        }
+        </script>
+
+
+      </body>
+      </html>
