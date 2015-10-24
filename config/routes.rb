@@ -73,6 +73,7 @@ Rails.application.routes.draw do
   get "/routing" => redirect("http://codepen.io/bryantt23/full/dYZdOY/")
   get "/templates" => redirect("http://embed.plnkr.co/B6ThROXNyD9IWduNXllI/preview")
   get "/routes" => redirect("http://embed.plnkr.co/DxwnL1r2lhWnOzYPj7av/preview")
+  get "/korra" => redirect("http://embed.plnkr.co/gauyXUgVBsC3PXz3cUCz/preview")
 
 
   get 'calculations/index'
