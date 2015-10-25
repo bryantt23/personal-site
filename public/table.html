@@ -59,6 +59,17 @@
       <p>Search Query: {{ searchFish }}</p>
     </div>
 
+    <form>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+          <input type="text" class="form-control" placeholder="Fish Search" ng-model="searchFish">
+
+        </div>
+      </div>
+    </form>
+
     <table class="table table-bordered table-striped">
 
       <thead>
@@ -88,7 +99,7 @@
       </thead>
 
       <tbody>
-        <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse">
+        <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchFish">
           <td>{{ roll.name }}</td>
           <td>{{ roll.fish }}</td>
           <td>{{ roll.tastiness }}</td>
