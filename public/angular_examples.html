@@ -52,7 +52,8 @@
 
     <h1>AngularJS Examples</h1>
     <br>
-    <p>Be sure to check out <a href="https://www.airpair.com/angularjs/posts/angularjs-tutorial">AngularJS: A 10,000 Word Guide</a> for the full demonstration, explanations, and examples.</p>
+    <p>Be sure to check out <a href="https://www.airpair.com/angularjs/posts/angularjs-tutorial">AngularJS: A 10,000 Word Guide</a>
+      and also <a href="http://toddmotto.com/ultimate-guide-to-learning-angular-js-in-one-day/">AngularJS In One Day</a> for the full demonstration, explanations, and examples.</p>
     <br>
 
     <h4>The list below is the result of ng-repeat looping through and displaying an array:</h4>
@@ -83,6 +84,24 @@
 
         <input ng-model="msg" type="text" ng-init="msg='abcDEf'"/>
         <p>This pipe capitalizes the entire input: {{msg | uppercase}}</p>
+
+
+        <h4>This example uses a filter to display only the numbers larger than the input</h4>
+        <input type="number" ng-model="lowerBound" />
+        <ul>
+          <li ng-repeat="number in numbers | filter:greaterThanNum">
+            {{ number }}
+          </li>
+        </ul>
+
+        <h4>This example uses the directives ng-show and ng-click to Toggle the text below</h4>
+        <a href="" ng-click="toggle = !toggle">Show/Hide</a>
+        <ul ng-show="toggle">
+          <li>Link 1</li>
+          <li>Link 2</li>
+          <li>Link 3</li>
+        </ul>
+
 
 
 
@@ -126,6 +145,14 @@
         }];
 
         $scope.timeNow = new Date().getTime();
+
+        $scope.numbers = [10, 25, 35, 45, 60, 80, 100];
+
+        $scope.lowerBound = 42;
+
+        $scope.greaterThanNum = function (item) {
+          return item > $scope.lowerBound;
+        };
 
 
       });
