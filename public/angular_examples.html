@@ -52,6 +52,8 @@
 
     <h1>AngularJS Examples</h1>
     <br>
+    <p>Be sure to check out <a href="https://www.airpair.com/angularjs/posts/angularjs-tutorial">AngularJS: A 10,000 Word Guide</a> for the full demonstration, explanations, and examples.</p>
+    <br>
 
     <h4>The list below is the result of ng-repeat looping through and displaying an array:</h4>
     <div ng-controller="MainCtrl as main">
@@ -61,50 +63,76 @@
         </li>
       </ul>
 
-          <h4>This shows that Angular can display the current array length:</h4>        
-      {{ main.items.length }} in stock
+      <h4>The list below is from the same data as above. However it uses limitTo to gather only the first 3 items and then uses
+        orderby to display these first 3 items in reverse alphabetical order.</h4>
+        <ul>
+          <li ng-repeat="item in main.items | limitTo:3 | orderBy:'-name'">
+            {{ item.name }}
+          </li>
+        </ul>
+
+        <h4>Display the current array length with .length</h4>
+        {{ main.items.length }} in stock
+
+        <h4>Displaying the <a href="https://docs.angularjs.org/api/ng/filter/date">date with formatting</a></h4>
+        <p>
+          Today's date: {{ timeNow | date:'fullDate' }}
+        </p>
+
+        <h4>This example uses | uppercase</h4>
+
+        <input ng-model="msg" type="text" ng-init="msg='abcDEf'"/>
+        <p>This pipe capitalizes the entire input: {{msg | uppercase}}</p>
+
+
+
+      </div>
     </div>
-  </div>
 
 
 
-  <!-- Footer -->
+    <!-- Footer -->
 
-  <footer class="footer">
-    <div class="container">
+    <footer class="footer">
+      <div class="container">
 
-      <span style="float:left;">©2015 Bryant Tunbutr</span>
+        <span style="float:left;">©2015 Bryant Tunbutr</span>
 
-      <span style="float:right;">
-        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
-        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
-      </div><!-- end Container-->
-    </footer>
-
-
-    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-
-    <script>
-    angular.module('sortApp', [])
-
-    .controller('MainCtrl', function($scope) {
-      this.items = [{
-        name: 'Scuba Diving Kit',
-        id: 7297510
-      },{
-        name: 'Snorkel',
-        id: 0278916
-      },{
-        name: 'Wet Suit',
-        id: 2389017
-      },{
-        name: 'Beach Towel',
-        id: 1000983
-      }];
-
-    });
-    </script>
+        <span style="float:right;">
+          <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+          <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+        </div><!-- end Container-->
+      </footer>
 
 
-  </body>
-  </html>
+      <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+      <script>
+      angular.module('sortApp', [])
+
+      .controller('MainCtrl', function($scope) {
+        this.items = [{
+          name: 'Scuba Diving Kit',
+          id: 7297510
+        },{
+          name: 'Snorkel',
+          id: 0278916
+        },{
+          name: 'Wet Suit',
+          id: 2389017
+        },{
+          name: 'Beach Towel',
+          id: 1000983
+        }];
+
+        $scope.timeNow = new Date().getTime();
+
+
+      });
+
+
+      </script>
+
+
+    </body>
+    </html>
