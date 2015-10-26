@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AngularJS Questions</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styling.css" type="text/css">
+  <style>
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+  <div class="container"  ng-controller="AccordionDemoCtrl">
+    <h1>AngularJS Questions</h1>
+    <br>
+    <label class="checkbox">
+      <input type="checkbox" ng-model="oneAtATime">Open only one at a time
+    </label>
+    <accordion close-others="oneAtATime">
+      <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+        <accordion close-others="oneAtATime">
+          <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+            {{group.content}}
+          </accordion-group>
+        </accordion>
+      </accordion-group>
+    </accordion>
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+      <span style="float:right;">
+        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+      </div><!-- end Container-->
+    </footer>
+
+
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+      <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script>
+
+    angular.module('plunker', ['ui.bootstrap']);
+    function AccordionDemoCtrl($scope) {
+      $scope.oneAtATime = true;
+
+      $scope.groups = [
+        {
+          title: 'Dynamic Group Header - 1',
+          content: 'Dynamic Group Body - 1'
+        },
+        {
+          title: 'Dynamic Group Header - 2',
+          content: 'Dynamic Group Body - 2'
+        }
+      ];
+
+      $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+    }
+    </script>
+
+
+  </body>
+  </html>
