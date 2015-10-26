@@ -2,7 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
   <head>
+    <meta charset="UTF-8">
     <title>AngularJS Quiz</title>
+      <!-- Custom styles for this template -->
+      <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="css/styling.css" type="text/css">
+
     <link data-require="bootstrap-css@3.1.1" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
     <script data-require="angular.js@*" data-semver="1.3.0-beta.5" src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
@@ -11,10 +17,13 @@
         var app = angular.module('app', []);
         app.controller('ctrl', function ($scope) {
             $scope.model = [];
-            $scope.model.push({ title: 'Oranges', subitems: ['item1','item2','item3','item4'] });
-            $scope.model.push({ title: 'Apples', subitems: ['item1', 'item2', 'item3', 'item4'] });
-            $scope.model.push({ title: 'Tomatoes', subitems: ['item1', 'item2', 'item3', 'item4'] });
-            $scope.model.push({ title: 'Cucumbers', subitems: ['item1', 'item2', 'item3', 'item4'] });
+            $scope.model.push({ title: 'module', subitems: ["Is an Angular object with methods for adding any combination of controllers, directives, services, factories, providers, filters and/or init functions. It also defines dependencies upon other modules."] });
+            $scope.model.push({ title: 'directive', subitems: ['Defines a set of behaviors for a DOM element with an element (<colorpicker>), attribute (<div colorpicker></div>), or class (e.g. <div class="colorpicker"></div>).'] });
+            $scope.model.push({ title: 'service', subitems: ['Is a catch-all term to describe singletons created by [module].service(), [module].factory() and [module].provider().'] });
+            $scope.model.push({ title: 'Where is the best place to put scripts in an HTML page?', subitems: ['It is a good idea to place scripts at the bottom of the <body> element. This improves page loading, because HTML loading is not blocked by scripts loading.'] });
+            $scope.model.push({ title: 'The ng-model directive does what?', subitems: ['The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.'] });
+            $scope.model.push({ title: 'Double braces, {{ }}, means what? ', subitems: ['AngularJS expressions are written inside double braces: {{ expression }}.'] });
+            $scope.model.push({ title: 'AngularJS applications are controlled by _________.', subitems: ['AngularJS applications are controlled by controllers.'] });
         });
         app.directive('accordion', function () {
             return {
@@ -31,8 +40,31 @@
   </head>
 
   <body ng-app="app" ng-controller="ctrl">
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    
+
+
+
+
+        <div class="container">
+              <h1>AngularJS Quiz</h1>
+              <br>
+              <p>Define the following...</p>
+              <br>
+
     <script type="text/ng-template" id="panelTemplate.html">
         <div id="{{parentId}}">
             <div class="panel" ng-repeat="item in model">
@@ -40,13 +72,30 @@
                 </a>
                 <div id="child{{$index}}" ng-class="{'collapse':true}">
                     <ul>
-                        <li ng-repeat="subitem in item.subitems">{{subitem}}</li>
+                        <p ng-repeat="subitem in item.subitems">{{subitem}}</p>
                     </ul>
                 </div>
             </div>
         </div>
     </script>
     <accordion model="model" id="test"></accordion>
+
+  </div>
+
+      <!-- Footer -->
+
+      <footer class="footer">
+        <div class="container">
+
+          <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+          <span style="float:right;">
+            <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+            <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+          </div><!-- end Container-->
+        </footer>
+
+
   </body>
 
 </html>
