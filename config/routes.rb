@@ -74,6 +74,7 @@ Rails.application.routes.draw do
   get "/templates" => redirect("http://embed.plnkr.co/B6ThROXNyD9IWduNXllI/preview")
   get "/routes" => redirect("http://embed.plnkr.co/DxwnL1r2lhWnOzYPj7av/preview")
   get "/korra" => redirect("http://embed.plnkr.co/gauyXUgVBsC3PXz3cUCz/preview")
+  get "/phonecat" => redirect("http://embed.plnkr.co/ednt5b3mgtIeKrhqUinA/preview")
 
 
   get 'calculations/index'
