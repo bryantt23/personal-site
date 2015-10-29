@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AngularJS Examples</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/styling.css" type="text/css">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <style>
+
+
+
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+  <div class="container" ng-app="myapp" ng-controller="MyController">
+    <h1>AngularJS Examples 2</h1>
+    <br>
+    <p>Be sure to check out <a href="http://tutorials.jenkov.com/angularjs/index.html">AngularJS</a> for the full demonstration, explanations, and examples.</p>
+    <h3>Interpolation Directive</h3>
+    <p>This uses the handle bars or double curly braces to display an expression from a JavaScript function: Hello {{helloTo.title}} !</p>
+
+    <p>This can also evaluate expressions: Add 5+7 = {{5+7}}</p>
+    <p>And even display information not from the HTML:
+      <span>{{myData.textf()}}</span>
+
+
+      <h3>ng-repeat Directive</h3>
+      <p>This loops through a collection and generates HTML for each element</p>
+      <ol>
+        <li ng-repeat="theItem in myData.items">{{theItem.text}}</li>
+      </ol>
+      <p>This is powerful because using the dot notation you can iterate over the properties of the array</p>
+
+
+      <h3>AngularJS $scope Hierarchy</h3>
+      <p>Both of the variables below have the same variable name and property:</p>
+      <div ng-controller="myController1">
+        {{data.theVar}}
+      </div>
+      <div ng-controller="myController2">
+        {{data.theVar}}
+      </div>
+      <p>However since they belong to different controllers their values are different because their scopes are different</p>
+
+
+      <h3>AngularJS Event Listener</h3>
+      <p>Similar to JQuery, AngularJS can call a function after an event. In this example, a mouse click will trigger an alert:</p>
+      <div ng-click="myData.doClick($event)">Click here</div>
+
+
+      <ul>
+        <li ng-repeat="item in myData.items2" ng-click="myData.doClick(item, $event)">Click here</li>
+      </ul>
+
+      <h3>AngularJS $watch() , $digest() and $apply()</h3>
+      <p>This example demonstrates how Angular watches for changes in the variable and then applies the changes using the digest function:</p>
+      <div ng-controller="myController3">
+        {{data.time | date:'medium'}}
+
+        <br/>
+        <button id="updateTimeButton">Update time</button>
+        <p>The complete <a href="
+          http://tutorials.jenkov.com/angularjs/watch-digest-apply.html">explanation</a>
+        </p>
+      </div>
+
+      <h3>Binding Select Boxes</h3>
+      <p>This example demonstrates two-way binding of a JavaScript array</p>
+
+
+      <div ng-controller="myController4">
+        <form>
+          <select ng-model="myForm.car" ng-options="obj.id as obj.name for obj in myForm.options">
+          </select>
+        </form>
+
+        <div>
+          {{myForm.car}}
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="container">
+
+        <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+        <span style="float:right;">
+          <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+          <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+        </div><!-- end Container-->
+      </footer>
+
+
+      <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+      <script>
+      var module = angular.module("myapp", []);
+
+      var myController = module.controller("MyController", function($scope) {
+        $scope.helloTo = {};
+        $scope.helloTo.title = "World, AngularJS";
+
+        $scope.myData = {};
+        $scope.myData.textf = function() {
+          return "I am text from a function";
+        };
+
+        $scope.myData = {};
+        $scope.myData.items = [{
+          text: "one"
+        }, {
+          text: "two"
+        }, {
+          text: "three"
+        }];
+
+        $scope.myData.doClick = function(event) {
+          alert("clicked: " + event.clientX + ", " + event.clientY);
+        }
+      });
+
+      var myController1 = module.controller("myController1", function($scope) {
+        $scope.data = {
+          theVar: "Value One"
+        };
+      });
+      var myController2 = module.controller("myController2", function($scope) {
+        $scope.data = {
+          theVar: "Value Two"
+        };
+      });
+      var myController3 = module.controller("myController3", function($scope) {
+
+        $scope.data = {
+          time: new Date()
+        };
+
+        $scope.updateTime = function() {
+          $scope.data.time = new Date();
+        }
+
+        document.getElementById("updateTimeButton")
+        .addEventListener('click', function() {
+          console.log("update time clicked");
+          $scope.data.time = new Date();
+          $scope.$digest();
+        });
+      });
+      var myController4 = module.controller("myController4", function($scope) {
+
+        $scope.myForm = {};
+        $scope.myForm.car = "nissan";
+
+        $scope.myForm.options = [{
+          id: "nissan",
+          name: "Nissan"
+        }, {
+          id: "toyota",
+          name: "Toyota"
+        }, {
+          id: "fiat",
+          name: "Fiat"
+        }, {
+          id: "honda",
+          name: "Honda"
+        }];
+      });
+
+      </script>
+
+
+    </body>
+    </html>
