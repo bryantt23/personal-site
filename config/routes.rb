@@ -76,6 +76,7 @@ Rails.application.routes.draw do
   get "/korra" => redirect("http://embed.plnkr.co/gauyXUgVBsC3PXz3cUCz/preview")
   get "/phonecat" => redirect("http://embed.plnkr.co/ednt5b3mgtIeKrhqUinA/preview")
   get "/motorsport" => redirect("http://embed.plnkr.co/DSdr7fK70t32nEbFbDPU/preview")
+  get "/pet_speak" => redirect("http://embed.plnkr.co/1wPCXq/preview")
 
 
   get 'calculations/index'
