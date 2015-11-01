@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AngularJS Animate</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/styling.css" type="text/css">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <style>
+
+  .animate-show, .animate-hide {
+    -webkit-transition:all linear 1s;
+    -moz-transition:all linear 1s;
+    -ms-transition:all linear 1s;
+    -o-transition:all linear 1s;
+    transition:all linear 1s;
+
+  }
+
+  .animate-show {
+    opacity:0;
+  }
+
+  .animate-show.animate-show-active {
+    opacity:1;
+  }
+
+  .animate-hide {
+    opacity:1;
+  }
+
+  .animate-hide.animate-hide-active {
+    opacity:0;
+  }
+
+
+   .centering {
+     text-align: center;
+   }
+
+
+
+  </style>
+</head>
+
+
+<body ng-app="myApp" ng-controller="myController">
+
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="http://bryanttunbutr.com/">Bryant Tunbutr</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://bryanttunbutr.wordpress.com/">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="mailto:BTunbutr@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+  <div class="container centering">
+    <h1>Happiness is...</h1>
+    <br>
+    <image-slider-nav>
+      <a href ng-click="setSelected(0)">Choice 1</a> <a href ng-click="setSelected(1)">Choice 2</a> <a href ng-click="setSelected(2)">Choice 3</a> {{selectedSliderImage}}
+    </image-slider-nav>
+
+
+
+  </div>
+
+      <!-- NEW: I added a "container" class to this div -->
+      <div class="container centering">
+      <br>
+        <!-- NEW: I added an "image-repeat" class to this div -->
+        <div data-ng-repeat="k in kitties" class="image-repeat">
+          <img ng-src="{{k}}" ng-show="selectedImage==$index" ng-animate="{show:'animate-show', hide:'animate-hide'}" />
+        </div>
+      </div>
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <span style="float:left;">©2015 Bryant Tunbutr</span>
+
+      <span style="float:right;">
+        <a href="https://bryanttunbutr.wordpress.com/projects/" id="home">Projects</a>
+        <a href="https://bryanttunbutr.wordpress.com/" id="blog" style="padding-left:20px">Blog</a></span>
+      </div><!-- end Container-->
+    </footer>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.min.js"></script>
+
+    <script>
+    var myApp = angular.module("myApp", []);
+
+    myApp.controller("myController", function($scope) {
+
+      $scope.kitties = ["/images/warm_puppy.jpg", "/images/ice_cream.jpg", "/images/journey.jpg"];
+
+      $scope.selectedImage = 0;
+      $scope.setSelected = function (selected) {
+        $scope.selectedImage = selected;
+      }
+    })
+    </script>
+
+
+  </body>
+  </html>
