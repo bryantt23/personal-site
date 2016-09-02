@@ -36,7 +36,8 @@ Rails.application.routes.draw do
 
   resources :contact_forms, only: [:new, :create]
 
-  root                  'static_pages#home'
+  # root                  'static_pages#home'
+    root                  'main#index'
   get 'resources'    => 'static_pages#resources'
   get 'carousel'    => 'static_pages#carousel'
   get 'stress'    => 'static_pages#stress'

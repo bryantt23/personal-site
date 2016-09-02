@@ -20,4 +20,7 @@ class ApplicationController < ActionController::Base
     posts_path
   end
 
+         def index
+           redirect_to '/index.html'
+         end
 end
